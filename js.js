@@ -36,7 +36,8 @@ function shuffle(array) {
   }
   return array;
 }
-let linkss = [ ["https://dood.pm/e/y1ivf73ii3jlr4883jcbvrvpsklwpgc",
+let links = [["","",""],["","",""]]
+//let linkss = [ ["https://dood.pm/e/y1ivf73ii3jlr4883jcbvrvpsklwpgc",
          "https://img.doodcdn.co/splash/fmf8uwri5402060l.jpg","01:01:24 mins",  0],
          [ "https://dood.pm/e/1az14e0kxmrihwy1gaxffh3odquz1rp9",
                "https://i.postimg.cc/zGnkZpsP/ch2-31.jpg","14:54 mins", 1 ]
