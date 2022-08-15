@@ -37,7 +37,7 @@ function shuffle(array) {
   return array;
 }
 let links = [["","",""],["","",""]]
-//let linkss = [ ["https://dood.pm/e/y1ivf73ii3jlr4883jcbvrvpsklwpgc",
+/*let linkss = [ ["https://dood.pm/e/y1ivf73ii3jlr4883jcbvrvpsklwpgc",
          "https://img.doodcdn.co/splash/fmf8uwri5402060l.jpg","01:01:24 mins",  0],
          [ "https://dood.pm/e/1az14e0kxmrihwy1gaxffh3odquz1rp9",
                "https://i.postimg.cc/zGnkZpsP/ch2-31.jpg","14:54 mins", 1 ]
@@ -62,6 +62,6 @@ let links = [["","",""],["","",""]]
 "https://dood.pm/e/n1qyu88cvpkdtnbo31oxg7iwwm91ezka",
 "http://saurabh4521-001-site1.gtempurl.com/img09.jpg","",10
 ],
-];
+];*/
  links =shuffle (links );
 //console.log(links );
