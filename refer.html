@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload = "timer(1)">
+    <script>
+        const urlParams = new URLSearchParams(location.search);
+        let url ;
+        for (const [key,value] of urlParams) {
+             url = value ;
+        }
+       function myurl()
+       { 
+       window.location.href = "https://"+url;
+       }
+        </script>   
+        <button onclick="timer(0)">CLICK ME</button>
+     <p>You will be redirected in <time><strong id="seconds">2</strong> seconds</time>.</p>
+<script>
+    function timer(a)
+    {
+var el = document.getElementById('seconds'),
+    total = el.innerHTML,
+    timeinterval = setInterval(function () {
+        total = --total;
+        el.textContent = total;
+        if (total <= 0) {
+            clearInterval(timeinterval);
+            if (a==0){
+                myurl();
+            }
+            else if (a==1)
+            {
+                //nothing
+            }
+        }
+    }, 1000);
+}
+</script>
+</body>
+</html>
