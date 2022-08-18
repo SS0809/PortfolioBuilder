@@ -1,0 +1,89 @@
+body {
+    background-color: black;
+  color: white;
+ b {color : white; }
+h {color: white; border: 3px solid whitesmoke; 
+}
+
+ font-size: 15px;
+}
+
+.dark-mode {
+  background-color: white;
+  color: black; 
+  b{ color : black ;}
+ h{ color: black; }
+ 
+}
+ h1  { border: 3px solid whitesmoke; 
+ font-size: 19px; }
+.button {
+  border-radius: 16px;/* Circumference */
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+}
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 1.5px solid #4CAF50;
+}
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: .5px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+.container img {
+  width: 100%;
+  height: auto;
+}
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 6px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  text-align: center;
+}
+.container .btn:hover {
+  background-color: black;
+  color: white;
+}
+.post2 {
+    background-color: #008CBA;
+}
+.post {
+    background-color: #4CAF50;
+}
+#td
+{
+     position:absolute;
+   top:0;
+   right:0;
+}
