@@ -18,8 +18,24 @@ if (! empty($_SESSION["userId"])) {
         $profile_pic = $memberResult[0]["img"];
     }
 }
-echo "<img src='$profile_pic'  width='70%'>";
-echo $displayname;
-echo $username;
-echo $email;
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SERVER</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--BOOTSTRAP-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!--BOOTSTRAP-->
+</head>
+<body>
+<br><br>   
+<img src="<?php echo $profile_pic; ?>"  width="70%">
+<div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
+<div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
+<div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
+</body>
+</html>
