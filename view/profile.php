@@ -10,11 +10,13 @@ if (! empty($_SESSION["userId"])) {
         $displayname = ucwords($memberResult[0]["display_name"]);
         $username = ucwords($memberResult[0]["user_name"]);
         $email = ucwords($memberResult[0]["email"]);
+        $points = ucwords($memberResult[0]["points"]);
         $profile_pic = ucwords($memberResult[0]["img"]);
     } else {
         $displayname = $memberResult[0]["display_name"];
         $username = $memberResult[0]["user_name"];
         $email = $memberResult[0]["email"];
+        $points = $memberResult[0]["points"];
         $profile_pic = $memberResult[0]["img"];
     }
 }
@@ -22,7 +24,7 @@ if (! empty($_SESSION["userId"])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Profile</title>
+  <title>PROFILE</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--BOOTSTRAP-->
@@ -37,5 +39,6 @@ if (! empty($_SESSION["userId"])) {
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
+<div class="member-dashboard">Points : <b><?php echo $points;?></b></div>
 </body>
 </html>
