@@ -12,6 +12,7 @@ if (! empty($_SESSION["userId"])) {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,13 +41,16 @@ if (! empty($_SESSION["userId"])) {
 <!--AJAX--loader-->
 </head>
 <body>
+<div class="float-end"><a href="./view/profile.php" class="btn btn-info">Profile</a></div>
+<div class="float-start"><a href="./logout.php" class="btn btn-danger">Logout</a></div>
+<br><br>
 <div>
-      <h2>
+      <h3>
           <div class="dashboard">
             <div class="member-dashboard">Welcome <b><?php echo $displayName; ?></b>, You have successfully logged in!<br>
             </div>
         </div>
-  </h2>
+  </h3>
     </div>
 <div class="container mt-3">
   <button  type="button" class="btn btn-success" onclick = "loader('01')">01</button>
@@ -56,11 +60,9 @@ if (! empty($_SESSION["userId"])) {
   <button  type="button" class="btn btn-success" onclick = "loader('05')">05</button>
   <br>
     <div id="content">
-      <h1>WELCOME TO THE SERVER</h1>
     </div>
 </div>
 <br>
-Click to <a href="./logout.php" class="logout-button">Logout</a>
  <!--<a href = "/server/refer.html?url=/server/refer2.html?url2=cdn-s.blogspot.com/2022/08/kgf-2.html">REFER</a>-->
 <div class="footer">
   <p>SERVER</p>
