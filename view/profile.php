@@ -34,7 +34,6 @@ if (! empty($_SESSION["userId"])) {
   <!--BOOTSTRAP-->
 </head>
 <body>
-<br><br>   
 <img src="<?php echo $profile_pic; ?>"  width="70%">
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
