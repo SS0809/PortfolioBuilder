@@ -46,6 +46,11 @@ if (isset($_POST['submit'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!--BOOTSTRAP-->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/style.css">
 
@@ -76,7 +81,7 @@ if (isset($_POST['submit'])) {
     <span class="theme-color"></span>
     <span class="theme-color"></span>
   </div>
-
+  <div class="float-start"><a href="../view/dashboard.php" class="btn btn-info">Profile</a></div>
   <div class="downloader">
 <h1>Youtube Downloader</h1>
     <div class="main">
