@@ -49,9 +49,10 @@ $_SESSION["name"] = $name;
   <!--BOOTSTRAP-->
 </head>
 <body>
-<div class="float-end"><a href="./view/movies.php" class="btn btn-info">Movies</a></div>
-<div class="float-end"><a href="../yt/index.php" class="btn btn-info">Youtube Converter</a></div>
-<div class="float-start"><a href="./logout.php" class="btn btn-danger">Logout</a></div>
+<div class="float-end"><a href="./blog" class="btn btn-info me-1">BLOGS</a></div>
+<div class="float-end"><a href="./view/movies.php" class="btn btn-info me-1">Movies</a></div>
+<div class="float-end"><a href="../yt/index.php" class="btn btn-info me-1">Youtube Converter</a></div>
+<div class="float-start"><a href="./logout.php" class="btn btn-danger me-1">Logout</a></div>
 <br><br>
 <div>
       <h3>
@@ -71,5 +72,7 @@ $_SESSION["name"] = $name;
 <div class="footer">
   <p>SERVER</p>
 </div>
+<div class="float-start"><a href="./pp" class="btn btn-info me-1">TERM OF SERVICE</a></div>
+<div class="float-start"><a href="./tos" class="btn btn-info me-1">PRIVACY POLICY</a></div>
 </body>
 </html>
