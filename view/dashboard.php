@@ -36,6 +36,7 @@ if (! empty($_SESSION["userId"])) {
 </head>
 <body>
 <div class="float-end"><a href="./view/movies.php" class="btn btn-info">Movies</a></div>
+<div class="float-end"><a href="#" class="btn btn-info">Youtube Converter</a></div>
 <div class="float-start"><a href="../logout.php" class="btn btn-danger">Logout</a></div>
 <br><br>
 <div>
