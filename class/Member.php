@@ -15,7 +15,6 @@ class Member
         require_once "DataSource.php";
         $this->ds = new DataSource();
     }
-
     function getMemberById($memberId)
     {
         $query = "select * FROM registered_users WHERE id = ?";
@@ -25,8 +24,7 @@ class Member
         
         return $memberResult;
     }
-    
-    public function processLogin($username, $password) {
+      public function processLogin($username, $password) {
         $passwordHash = md5($password);
         $query = "select * FROM registered_users WHERE user_name = ? AND password = ?";
         $paramType = "ss";
