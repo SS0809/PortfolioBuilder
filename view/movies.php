@@ -1,7 +1,11 @@
 <?php
 namespace Php;
-error_reporting(0);
 session_start();
+if($_SESSION["userId"] != true){//check loggin
+    header("Location: ../index.php");
+    exit;
+}
+error_reporting(0);
 use \Php\Member;
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
@@ -14,6 +18,7 @@ if (! empty($_SESSION["userId"])) {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
