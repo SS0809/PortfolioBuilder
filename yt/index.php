@@ -81,7 +81,7 @@ if (isset($_POST['submit'])) {
     <span class="theme-color"></span>
     <span class="theme-color"></span>
   </div>
-  <div class="float-start"><a href="../view/dashboard.php" class="btn btn-info">Profile</a></div>
+  <div class="float-start"><a href="../index.php" class="btn btn-info">Profile</a></div>
   <div class="downloader">
 <h1>Youtube Downloader</h1>
     <div class="main">

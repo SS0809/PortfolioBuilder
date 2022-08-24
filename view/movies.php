@@ -46,7 +46,7 @@ if (! empty($_SESSION["userId"])) {
 <!--AJAX--loader-->
 </head>
 <body>
-<div class="float-end"><a href="./dashboard.php" class="btn btn-info">Profile</a></div>
+<div class="float-end"><a href="../index.php" class="btn btn-info">Profile</a></div>
 <div class="float-start"><a href="../logout.php" class="btn btn-danger">Logout</a></div>
 <br><br>
 <div class="container mt-3">
