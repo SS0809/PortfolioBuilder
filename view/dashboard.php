@@ -44,7 +44,7 @@ if (! empty($_SESSION["userId"])) {
           <div class="dashboard">
             <div class="member-dashboard">Welcome <b><?php echo $displayname; ?></b>, You have successfully logged in!<br>
             </div>
-            <img src="<?php echo $profile_pic; ?>"  width="70%">
+            <img src="<?php echo $profile_pic; ?>"  width="50%">
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
