@@ -1,18 +1,27 @@
 <?php
 namespace Phppot;
+error_reporting(0);
+session_start();
 use \Phppot\Member;
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
     $member = new Member();
     $memberResult = $member->getMemberById($_SESSION["userId"]);
     if(!empty($memberResult[0]["display_name"])) {
-        $displayName = ucwords($memberResult[0]["display_name"]);
+        $displayname = ucwords($memberResult[0]["display_name"]);
+        $username = ucwords($memberResult[0]["user_name"]);
+        $email = ucwords($memberResult[0]["email"]);
+        $points = ucwords($memberResult[0]["points"]);
+        $profile_pic = ucwords($memberResult[0]["img"]);
     } else {
-        $displayName = $memberResult[0]["user_name"];
+        $displayname = $memberResult[0]["display_name"];
+        $username = $memberResult[0]["user_name"];
+        $email = $memberResult[0]["email"];
+        $points = $memberResult[0]["points"];
+        $profile_pic = $memberResult[0]["img"];
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,44 +33,24 @@ if (! empty($_SESSION["userId"])) {
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!--BOOTSTRAP-->
-  <!--AJAX-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!--AJAX-->
-  <!--AJAX--loader-->
-  <script>
-
-    function loader(num){
-       $(document).ready(function(){
-       
-       $('#content').load("pages/"+num+".html");
-    
-    });
-    }
-     </script>
-<!--AJAX--loader-->
 </head>
 <body>
-<div class="float-end"><a href="./view/profile.php" class="btn btn-info">Profile</a></div>
-<div class="float-start"><a href="./logout.php" class="btn btn-danger">Logout</a></div>
+<div class="float-end"><a href="./view/movies.php" class="btn btn-info">Movies</a></div>
+<div class="float-start"><a href="../logout.php" class="btn btn-danger">Logout</a></div>
 <br><br>
 <div>
       <h3>
           <div class="dashboard">
-            <div class="member-dashboard">Welcome <b><?php echo $displayName; ?></b>, You have successfully logged in!<br>
+            <div class="member-dashboard">Welcome <b><?php echo $displayname; ?></b>, You have successfully logged in!<br>
             </div>
+            <img src="<?php echo $profile_pic; ?>"  width="70%">
+<div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
+<div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
+<div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
+<div class="member-dashboard">Points : <b><?php echo $points;?></b></div>
         </div>
   </h3>
     </div>
-<div class="container mt-3">
-  <button  type="button" class="btn btn-success" onclick = "loader('01')">01</button>
-  <button  type="button" class="btn btn-success" onclick = "loader('02')">02</button>
-  <button  type="button" class="btn btn-success" onclick = "loader('03')">03</button>
-  <button  type="button" class="btn btn-success" onclick = "loader('04')">04</button>
-  <button  type="button" class="btn btn-success" onclick = "loader('05')">05</button>
-  <br>
-    <div id="content">
-    </div>
-</div>
 <br>
  <!--<a href = "/server/refer.html?url=/server/refer2.html?url2=cdn-s.blogspot.com/2022/08/kgf-2.html">REFER</a>-->
 <div class="footer">
