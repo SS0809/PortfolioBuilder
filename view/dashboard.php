@@ -1,8 +1,8 @@
 <?php
-namespace Phppot;
+namespace Php;
 error_reporting(0);
 session_start();
-use \Phppot\Member;
+use \Php\Member;
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
     $member = new Member();
@@ -37,7 +37,7 @@ if (! empty($_SESSION["userId"])) {
 <body>
 <div class="float-end"><a href="./view/movies.php" class="btn btn-info">Movies</a></div>
 <div class="float-end"><a href="#" class="btn btn-info">Youtube Converter</a></div>
-<div class="float-start"><a href="../logout.php" class="btn btn-danger">Logout</a></div>
+<div class="float-start"><a href="./logout.php" class="btn btn-danger">Logout</a></div>
 <br><br>
 <div>
       <h3>

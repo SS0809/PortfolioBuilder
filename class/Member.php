@@ -1,7 +1,7 @@
 <?php
-namespace Phppot;
+namespace Php;
 
-use \Phppot\DataSource;
+use \Php\DataSource;
 
 class Member
 {

@@ -1,8 +1,8 @@
 <?php
-namespace Phppot;
+namespace Php;
 error_reporting(0);
 session_start();
-use \Phppot\Member;
+use \Php\Member;
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
     $member = new Member();

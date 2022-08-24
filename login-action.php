@@ -1,7 +1,7 @@
 <?php
-namespace Phppot;
+namespace Php;
 
-use \Phppot\Member;
+use \Php\Member;
 if (! empty($_POST["login"])) {
     session_start();
     $username = filter_var($_POST["user_name"], FILTER_SANITIZE_STRING);

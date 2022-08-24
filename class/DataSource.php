@@ -1,5 +1,5 @@
 <?php
-namespace Phppot;
+namespace Php;
 
 /**
  * Generic datasource class for handling DB operations.
