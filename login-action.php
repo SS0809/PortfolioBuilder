@@ -8,6 +8,19 @@ if (! empty($_POST["login"])) {
     $password = filter_var($_POST["password"], FILTER_SANITIZE_STRING);
     require_once (__DIR__ . "/class/Member.php");
     
+				// Username is stored as cookie for 10 years as
+				// 10years * 365days * 24hrs * 60mins * 60secs
+				setcookie("user", $username, time() +
+									(10 * 365 * 24 * 60 * 60));
+
+				// Password is stored as cookie for 10 years as
+				// 10years * 365days * 24hrs * 60mins * 60secs
+				setcookie("password", $password, time() +
+									(10 * 365 * 24 * 60 * 60));
+
+				// After setting cookies the session variable will be set
+				$_SESSION["name"] = $name;
+
     $member = new Member();
     $isLoggedIn = $member->processLogin($username, $password);
     if (! $isLoggedIn) {

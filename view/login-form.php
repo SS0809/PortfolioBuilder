@@ -65,7 +65,15 @@
             $valid = false;
         }
         return $valid;
-    }
-    </script>
+    } 
+  function getCookie(name)
+  {
+    var re = new RegExp(name + "=([^;]+)");
+    var value = re.exec(document.cookie);
+    return (value != null) ? unescape(value[1]) : null;
+  }
+  document.getElementById('user_name').value = getCookie("user") ;
+  document.getElementById('password').value = getCookie("password") ;
+     </script>
 </body>
 </html>
