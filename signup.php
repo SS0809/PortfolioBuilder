@@ -124,7 +124,7 @@ if($num>0)
 		</div>	
 		<div class="form-group">
 		<input type="hidden" id="suggest"
-			name="suggest">	
+			name="suggest" value ="NO">	
 			</div>	
 		<div class="form-group">
 			<label for="password">Password</label>
