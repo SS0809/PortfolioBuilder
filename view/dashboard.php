@@ -58,9 +58,7 @@ $_SESSION["name"] = $name;
 
    /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText.value);
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
+  navigator.clipboard.writeText(copyText.value);
 }</script>
 </head>
 <body>
@@ -80,10 +78,10 @@ $_SESSION["name"] = $name;
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
 <div class="member-dashboard">Points : <b><?php echo $points;
-if ($points = "5" ){echo "(default)";}?></b></div>
-<h3>copy the following text and share with friends ..... with each friend you get 5 points</h3>
-<input type="text" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
-<button onclick="myFunction()">Copy text</button>
+if ($points = "5" ){echo "(default)";}?></b></div><br><br>
+<h3>Copy the following text and share with friends ..... with each friend you get 5 points</h3>
+<input type="hidden" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
+<button onclick="myFunction()">SHARE</button>
         </div>
   </h3>
     </div>
