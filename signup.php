@@ -114,7 +114,21 @@ if($num>0)
 		</button>
 	</form>
 </div>	
-Already have a account  <a href = "/index.php">login</a>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw"></div>
+      <br/>
+      <input type="submit" value="Submit">
+    </form>
+	<script>
+	var response = grecaptcha.getResponse();
+
+if(response.length == 0)
+    //reCaptcha not verified
+
+else
+    //reCaptch verified
 </script>
+Already have a account  <a href = "/index.php">login</a>
 </body>
 </html>
