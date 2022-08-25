@@ -1,4 +1,18 @@
 <?php
+$showAlert = false;
+$showError = false;
+$exists=false;
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+	// Include file which makes the
+	// Database Connection.
+	include 'dbconnect.php';
+	$username = $_POST["username"];
+	$password = $_POST["password"];
+	$cpassword = $_POST["cpassword"];
+	$sql = "Select * from registered_users where user_name='$username'";
+	$result = mysqli_query($conn, $sql);
+	$num = mysqli_num_rows($result);
+}
 //https://codeforgeek.com/google-recaptcha-tutorial/
         $email;$comment;$captcha;
         if(isset($_POST['username'])){
