@@ -22,9 +22,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			//$hash = password_hash($password,PASSWORD_DEFAULT);
 								$hash  = md5($password);
 			// Password Hashing is used here.
-			$sql = "INSERT INTO `registered_users` ( `user_name`,`display_name`,`password`,`email`)
+			$sql = "INSERT INTO `registered_users` ( `user_name`,`display_name`,`password`,`email`,`suggest`)
 			VALUES ('$username', '$display_name' ,
-				'$hash','$email')";
+				'$hash','$email','$suggest')";
 			$result = mysqli_query($conn, $sql);
 			if ($result) {
 				$showAlert = true;}
