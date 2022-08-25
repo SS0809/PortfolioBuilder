@@ -1,4 +1,5 @@
 <?php
+//https://codeforgeek.com/google-recaptcha-tutorial/
         $email;$comment;$captcha;
         if(isset($_POST['email'])){
           $email=$_POST['email'];

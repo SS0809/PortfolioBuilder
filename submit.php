@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Google recapcha demo - Codeforgeek</title>
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script src='https://www.google.com/recaptcha/api.js' async defer>//https://codeforgeek.com/google-recaptcha-tutorial/</script>
   </head>
   <body>
     <h1>Google reCAPTHA Demo</h1>
