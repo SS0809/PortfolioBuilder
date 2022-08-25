@@ -88,9 +88,10 @@ if($num>0)
 	</div> ';
     }
 ?>
+  <script src='https://www.google.com/recaptcha/api.js' async defer>//https://codeforgeek.com/google-recaptcha-tutorial/</script>
 <div class="container my-4 ">	
 	<h1 class="text-center">Signup Here</h1>
-	<form name = "secure" action="signup.php" method="post">	
+	<form id="comment_form" action="form.php" method="post">
 		<div class="form-group">
 			<label for="username">Username</label>
 		<input type="text" class="form-control" id="username"
@@ -108,26 +109,14 @@ if($num>0)
 			<small id="emailHelp" class="form-text text-muted">
 			Make sure to type the same password
 			</small>
-		</div>	
-		<button type="submit" class="btn btn-primary">
+		</div>
+      <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw"></div>
+		<button type="submit" class="btn btn-primary" name="submit" value="Post comment">
 		SignUp
 		</button>
+
 	</form>
 </div>	
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw"></div>
-      <br/>
-      <input type="submit" class="btn btn-primary" value="Submit-G">
-    </form>
-	<script>
-	var response = grecaptcha.getResponse();
-if(response.length == 0)
-    //reCaptcha not verified
-else
-    //reCaptch verifie
-      document.secure.submit();
-</script>
 Already have a account  <a href = "/index.php">login</a>
 </body>
 </html>
