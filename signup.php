@@ -114,7 +114,7 @@ if($num>0)
 		</button>
 	</form>
 </div>	
-Already have a account  <a href = "/signup.php">login</a>
+Already have a account  <a href = "/index.php">login</a>
 </script>
 </body>
 </html>
