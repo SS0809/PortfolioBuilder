@@ -118,7 +118,7 @@ if($num>0)
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw"></div>
       <br/>
-      <input type="submit" value="Submit">
+      <input type="submit" class="btn btn-primary" value="Submit">
     </form>
 	<script>
 	var response = grecaptcha.getResponse();
