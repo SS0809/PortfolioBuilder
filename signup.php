@@ -126,14 +126,11 @@ if($num>0)
 		<button type="submit" class="btn btn-primary" name="submit" value="Post comment">
 		SignUp
 		</button>
-
 	</form>
 </div>	
 Already have a account  <a href = "/index.php">login</a>
 </body>
 </html>
-
-
 <?php
 //https://codeforgeek.com/google-recaptcha-tutorial/
            $captcha;
