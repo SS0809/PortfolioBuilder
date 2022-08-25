@@ -25,6 +25,7 @@ $arrResponse = json_decode($response, true);
 // verify the response
 if($arrResponse["success"] == '1' && $arrResponse["action"] == $action && $arrResponse["score"] >= 0.5) {
     // valid submission
+    echo "saurabhs";
     // go ahead and do necessary stuff
 } else {
     // spam submission
