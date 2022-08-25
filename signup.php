@@ -19,8 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	// or not in our Database
 	if($num == 0) {
 		if(($password == $cpassword) && $exists==false) {
-			$hash = password_hash($password,
-								PASSWORD_DEFAULT);
+			//$hash = password_hash($password,PASSWORD_DEFAULT);
 								$hash  = md5($password);
 			// Password Hashing is used here.
 			$sql = "INSERT INTO `registered_users` ( `user_name`,`display_name`,`password`,`email`)
@@ -43,6 +42,19 @@ if($num>0)
 <!doctype html>	
 <html lang="en">
 <head>	
+<script>
+        const urlParams = new URLSearchParams(location.search);
+        let suggest ;
+        for (const [key,value] of urlParams) {
+             suggest = value ;
+        }
+      // function myurl()
+       { 
+       //window.location.href = url2;
+	   console.log(suggest);
+	   <?php $suggest = $_POST["suggest"];?>
+       }
+        </script> 
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content=
@@ -109,6 +121,8 @@ if($num>0)
 		<input type="text" class="form-control" id="email"
 			name="email" aria-describedby="emailHelp">	
 		</div>	
+		<input type="hidden" id="suggest"
+			name="suggest">	
 		<div class="form-group">
 			<label for="password">Password</label>
 			<input type="password" class="form-control"
@@ -129,7 +143,7 @@ if($num>0)
 	</form>
 </div>	
 Already have a account  <a href = "/index.php">login</a>
-</body>
+</body> 
 </html>
 <?php
 //https://codeforgeek.com/google-recaptcha-tutorial/
