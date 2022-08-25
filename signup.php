@@ -53,6 +53,7 @@ if($num>0)
        { 
        //window.location.href = url2;
 	   console.log(suggest);
+	   document.getElementById('suggest').value = suggest ;
        }
         </script> 
 	<!-- Required meta tags -->
@@ -121,8 +122,10 @@ if($num>0)
 		<input type="text" class="form-control" id="email"
 			name="email" aria-describedby="emailHelp">	
 		</div>	
+		<div class="form-group">
 		<input type="hidden" id="suggest"
 			name="suggest">	
+			</div>	
 		<div class="form-group">
 			<label for="password">Password</label>
 			<input type="password" class="form-control"
