@@ -78,7 +78,7 @@ $_SESSION["name"] = $name;
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
 <div class="member-dashboard">Points : <b><?php echo $points;
-if ($points = "5" ){echo "(default)";}?></b></div><br><br>
+if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
 <h3>Copy the following text and share with friends ..... with each friend you get 5 points</h3>
 <input type="hidden" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
 <button onclick="myFunction()">SHARE</button>
