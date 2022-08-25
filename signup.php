@@ -43,19 +43,7 @@ if($num>0)
 <!doctype html>	
 <html lang="en">
 <head>	
-<script>
-        const urlParams = new URLSearchParams(location.search);
-        let suggest ;
-        for (const [key,value] of urlParams) {
-             suggest = value ;
-        }
-      // function myurl()
-       { 
-       //window.location.href = url2;
-	   console.log(suggest);
-	   document.getElementById('suggest').value = suggest ;
-       }
-        </script> 
+
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content=
@@ -146,7 +134,19 @@ if($num>0)
 	</form>
 </div>	
 Already have a account  <a href = "/index.php">login</a>
-</body> 
+</body> <script>
+        const urlParams = new URLSearchParams(location.search);
+        let suggest ;
+        for (const [key,value] of urlParams) {
+             suggest = value ;
+        }
+      // function myurl()
+       { 
+       //window.location.href = url2;
+	   console.log(suggest);
+	   document.getElementById('suggest').value = suggest ;
+       }
+        </script> 
 </html>
 <?php
 //https://codeforgeek.com/google-recaptcha-tutorial/
