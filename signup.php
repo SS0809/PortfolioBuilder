@@ -11,6 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$display_name = $_POST["display_name"];
 	$email = $_POST["email"];
 	$cpassword = $_POST["cpassword"];
+	$suggest = $_POST["suggest"];
 	$sql = "Select * from registered_users where user_name='$username'";
 	$result = mysqli_query($conn, $sql);
 	$num = mysqli_num_rows($result);
@@ -52,7 +53,6 @@ if($num>0)
        { 
        //window.location.href = url2;
 	   console.log(suggest);
-	   <?php $suggest = $_POST["suggest"];?>
        }
         </script> 
 	<!-- Required meta tags -->
