@@ -20,8 +20,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			$hash = password_hash($password,
 								PASSWORD_DEFAULT);
 			// Password Hashing is used here.
-			$sql = "INSERT INTO `registered_users` ( `user_name`,
-				`password`) VALUES ('$username',
+			$sql = "INSERT INTO `registered_users` ( `user_name`,`password`)
+			VALUES ('$username',
 				'$hash')";
 			$result = mysqli_query($conn, $sql);
 			if ($result) {
@@ -64,8 +64,8 @@ if($num>0)
 				data-dismiss="alert" aria-label="Close">
 				<span aria-hidden="true">×</span>
 			</button>
-		</div> ';
-		header('Refresh: 2; URL=/index.php');
+		</div> 
+		<script> setTimeout(function(){ window.location="/index.php"; },2000);</script>';
 	}
 	if($showError) {
 		echo ' <div class="alert alert-danger
