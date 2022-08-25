@@ -1,11 +1,11 @@
 <?php
 //https://codeforgeek.com/google-recaptcha-tutorial/
         $email;$comment;$captcha;
-        if(isset($_POST['email'])){
-          $email=$_POST['email'];
+        if(isset($_POST['username'])){
+          $email=$_POST['username'];
         }
-        if(isset($_POST['comment'])){
-          $comment=$_POST['comment'];
+        if(isset($_POST['password'])){
+          $comment=$_POST['password'];
         }
         if(isset($_POST['g-recaptcha-response'])){
           $captcha=$_POST['g-recaptcha-response'];
