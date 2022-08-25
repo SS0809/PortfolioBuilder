@@ -46,6 +46,7 @@
             </div>
         </form>
     </div>
+    Don't have a account  <a href = "/signup.php">Sign up</a>
     <script>
     function validate() {
         var $valid = true;
