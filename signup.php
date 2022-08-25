@@ -24,11 +24,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			// Password Hashing is used here.
 			$sql = "INSERT INTO `registered_users` ( `user_name`,`display_name`,`password`,`email`)
 			VALUES ('$username', '$display_name' ,
-				'$hash','$email')";
+				'$password','$email')";
 			$result = mysqli_query($conn, $sql);
 			if ($result) {
-				$showAlert = true;
-			}
+				$showAlert = true;}
 		}
 		else {
 			$showError = "Passwords do not match";
@@ -138,9 +137,7 @@ Already have a account  <a href = "/index.php">login</a>
           $captcha=$_POST['g-recaptcha-response'];
         }
         if(!$captcha){
-          echo '
-Please check the the captcha form.
-';
+          echo 'Please check the the captcha form.';
           exit;
         }
         $secretKey = "6Lcg9achAAAAAFD2N47nbdn0aodPL5OKyYKEO5MR";
@@ -151,12 +148,7 @@ Please check the the captcha form.
         $responseKeys = json_decode($response,true);
         // should return JSON with success as true
         if($responseKeys["success"]) {
-                echo '
-Thanks for posting comment
-';
-        } else {
-                echo '
-You are spammer ! Get the @$%K out
-';
+                echo 'Thanks for posting comment';   
+			     } else { echo 'You are spammer ! Get the @$%K out';
         }
 ?>
