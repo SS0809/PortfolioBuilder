@@ -90,7 +90,7 @@ if($num>0)
 ?>
 <div class="container my-4 ">	
 	<h1 class="text-center">Signup Here</h1>
-	<form action="signup.php" method="post">	
+	<form name = "secure" action="signup.php" method="post">	
 		<div class="form-group">
 			<label for="username">Username</label>
 		<input type="text" class="form-control" id="username"
@@ -122,12 +122,14 @@ if($num>0)
     </form>
 	<script>
 	var response = grecaptcha.getResponse();
-
 if(response.length == 0)
     //reCaptcha not verified
-
 else
     //reCaptch verified
+    function submitform()
+    {
+      document.secure.submit();
+    }
 </script>
 Already have a account  <a href = "/index.php">login</a>
 </body>
