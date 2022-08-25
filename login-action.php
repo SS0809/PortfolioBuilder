@@ -17,10 +17,6 @@ if (! empty($_POST["login"])) {
 				// 10years * 365days * 24hrs * 60mins * 60secs
 				setcookie("password", $password, time() +
 									(10 * 365 * 24 * 60 * 60));
-
-				// After setting cookies the session variable will be set
-				$_SESSION["name"] = $name;
-
     $member = new Member();
     $isLoggedIn = $member->processLogin($username, $password);
     if (! $isLoggedIn) {
