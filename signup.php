@@ -108,28 +108,25 @@ if($num>0)
 			<small id="emailHelp" class="form-text text-muted">
 			Make sure to type the same password
 			</small>
-		</div>	<!--
+		</div>	
 		<button type="submit" class="btn btn-primary">
 		SignUp
-		</button>-->
+		</button>
 	</form>
 </div>	
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <form action="?" method="POST">
       <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw"></div>
       <br/>
-      <input type="submit" class="btn btn-primary" value="Submit">
+      <input type="submit" class="btn btn-primary" value="Submit-G">
     </form>
 	<script>
 	var response = grecaptcha.getResponse();
 if(response.length == 0)
     //reCaptcha not verified
 else
-    //reCaptch verified
-    function submitform()
-    {
+    //reCaptch verifie
       document.secure.submit();
-    }
 </script>
 Already have a account  <a href = "/index.php">login</a>
 </body>
