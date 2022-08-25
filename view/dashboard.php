@@ -47,6 +47,21 @@ $_SESSION["name"] = $name;
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!--BOOTSTRAP-->
+  <script>
+    function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}</script>
 </head>
 <body>
 <div class="float-end"><a href="./blog/index.html" class="btn btn-info me-1">BLOGS</a></div>
@@ -64,11 +79,15 @@ $_SESSION["name"] = $name;
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
-<div class="member-dashboard">Points : <b><?php echo $points;?></b></div>
+<div class="member-dashboard">Points : <b><?php echo $points;
+if ($points = "5" ){echo "(default)";}?></b></div>
+<h3>copy the following text and share with friends ..... with each friend you get 5 points</h3>
+<input type="text" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
+<button onclick="myFunction()">Copy text</button>
         </div>
   </h3>
     </div>
-<br>
+  <br>
  <!--<a href = "/server/refer.html?url=/server/refer2.html?url2=cdn-s.blogspot.com/2022/08/kgf-2.html">REFER</a>-->
 <div class="footer">
   <p>SERVER</p>
