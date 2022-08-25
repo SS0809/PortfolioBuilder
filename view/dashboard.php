@@ -13,7 +13,7 @@ if (! empty($_SESSION["userId"])) {
         $email = ucwords($memberResult[0]["email"]);
         $points = ucwords($memberResult[0]["points"]);
         $profile_pic = ucwords($memberResult[0]["img"]);
-        
+               
 				// Username is stored as cookie for 10 years as
 				// 10years * 365days * 24hrs * 60mins * 60secs
 				setcookie("user_login", $name, time() +
