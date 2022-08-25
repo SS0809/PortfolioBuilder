@@ -8,6 +8,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	include 'dbconnect.php';
 	$username = $_POST["username"];
 	$password = $_POST["password"];
+	$display_name = $_POST["display_name"];
+	$email = $_POST["email"];
 	$cpassword = $_POST["cpassword"];
 	$sql = "Select * from registered_users where user_name='$username'";
 	$result = mysqli_query($conn, $sql);
@@ -20,9 +22,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			$hash = password_hash($password,
 								PASSWORD_DEFAULT);
 			// Password Hashing is used here.
-			$sql = "INSERT INTO `registered_users` ( `user_name`,`password`)
-			VALUES ('$username',
-				'$hash')";
+			$sql = "INSERT INTO `registered_users` ( `user_name`,`display_name`,`password`,`email`)
+			VALUES ('$username', '$display_name' ,
+				'$hash','$email')";
 			$result = mysqli_query($conn, $sql);
 			if ($result) {
 				$showAlert = true;
@@ -98,6 +100,16 @@ if($num>0)
 			name="username" aria-describedby="emailHelp">	
 		</div>	
 		<div class="form-group">
+			<label for="display_name">Display Name</label>
+		<input type="text" class="form-control" id="display_name"
+			name="display_name" aria-describedby="emailHelp">	
+		</div>	
+		<div class="form-group">
+			<label for="email">Email</label>
+		<input type="text" class="form-control" id="email"
+			name="email" aria-describedby="emailHelp">	
+		</div>	
+		<div class="form-group">
 			<label for="password">Password</label>
 			<input type="password" class="form-control"
 			id="password" name="password">
@@ -124,14 +136,8 @@ Already have a account  <a href = "/index.php">login</a>
 
 <?php
 //https://codeforgeek.com/google-recaptcha-tutorial/
-        $email;$comment;$captcha;
-        if(isset($_POST['username'])){
-          $email=$_POST['username'];
-        }
-        if(isset($_POST['password'])){
-          $comment=$_POST['password'];
-        }
-        if(isset($_POST['g-recaptcha-response'])){
+           $captcha;
+            if(isset($_POST['g-recaptcha-response'])){
           $captcha=$_POST['g-recaptcha-response'];
         }
         if(!$captcha){
