@@ -74,6 +74,7 @@ $_SESSION["name"] = $name;
   <p>SERVER</p>
 </div>
 <div class="float-start"><a href="./pp/index.html" class="btn btn-info me-1">TERM OF SERVICE</a></div>
+<div class="float-start"><a href="./aus/index.html" class="btn btn-info me-1">About Us</a></div>
 <div class="float-start"><a href="./tos/index.html" class="btn btn-info me-1">PRIVACY POLICY</a></div>
 </body>
 </html>
