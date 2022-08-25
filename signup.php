@@ -108,10 +108,10 @@ if($num>0)
 			<small id="emailHelp" class="form-text text-muted">
 			Make sure to type the same password
 			</small>
-		</div>	
+		</div>	<!--
 		<button type="submit" class="btn btn-primary">
 		SignUp
-		</button>
+		</button>-->
 	</form>
 </div>	
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
