@@ -23,6 +23,7 @@ if (isset($_POST['upload'])) {
 	mysqli_query($db, $sql);
 	if (move_uploaded_file($tempname, $folder)) {
 		echo "<h3> Image uploaded successfully!</h3>";
+		echo '<script> setTimeout(function(){ window.location="/index.php"; },2000);</script>';
 	} else {
 		echo "<h3> Failed to upload image!</h3>";
 	}
