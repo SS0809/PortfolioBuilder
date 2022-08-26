@@ -34,7 +34,11 @@ if (! empty($_SESSION["userId"])) {
   <!--AJAX-->
   <!--AJAX--loader-->
   <script>
-
+  $(document).ready(function(){
+       
+       $('#content').load("../pages/01.html");
+    
+    });
     function loader(num){
        $(document).ready(function(){
        
