@@ -46,6 +46,7 @@ while ($data = mysqli_fetch_assoc($result)) {
 				<input class="form-control" type="file" name="uploadfile" value="" />
 			</div>
 			<div class="form-group">
+				<h1>YOUR PROFILE ISN'T VISIBLE TO ANYBODY ELSE</h1>
 				<button class="btn btn-primary" type="submit" name="upload">UPLOAD</button>
 			</div>
 		</form>
