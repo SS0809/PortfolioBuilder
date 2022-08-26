@@ -12,7 +12,7 @@ if (! empty($_SESSION["userId"])) {
         $username = ucwords($memberResult[0]["user_name"]);
         $email = ucwords($memberResult[0]["email"]);
         $points = ucwords($memberResult[0]["points"]);
-        $profile_pic = ucwords($memberResult[0]["img"]);
+        $profile_pic = ucwords($memberResult[0]["filename"]);
                
 				// Username is stored as cookie for 10 years as
 				// 10years * 365days * 24hrs * 60mins * 60secs
@@ -32,7 +32,7 @@ $_SESSION["name"] = $name;
         $username = $memberResult[0]["user_name"];
         $email = $memberResult[0]["email"];
         $points = $memberResult[0]["points"];
-        $profile_pic = $memberResult[0]["img"];
+        $profile_pic = $memberResult[0]["filename"];
     }
 }
 ?>
@@ -73,7 +73,7 @@ $_SESSION["name"] = $name;
           <div class="dashboard">
             <div class="member-dashboard">Welcome <b><?php echo $displayname; ?></b>, You have successfully logged in!<br>
             </div>
-            <img src="<?php echo $profile_pic; ?>"  width="10%">
+            <img src="./image/<?php echo $profile_pic; ?>"  width="10%">
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
