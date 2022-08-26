@@ -40,21 +40,38 @@ if($num>0)
 }	
 }//end if	
 ?>	
-<!doctype html>	
+<!DOCTYPE html>
+<html>
 <html lang="en">
-<head>	
-
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content=
-		"width=device-width, initial-scale=1,
-		shrink-to-fit=no">	
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href=
+<head>
+	 <!-- Bootstrap CSS -->
+	 <link rel="stylesheet" href=
 "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
 		integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 		crossorigin="anonymous">
+			 <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+</head>
+<body>
+			<nav class="navbar_manual">
+			    <input type="image" src="new-logo.png" alt="logo" class="logo"> 
+			    <ul class="navbar_list">	
+			    				<li class="nav_li">
+			    							<h2>	<a href="./index.php" class="navbar_element">LOGIN</a></h2>
+			    				</li>			    	   				
+			    </ul>
+		 </nav>		 
+		 <center>
+		 <div class="corousel">
+		 				<img src="logo_sec_01.png" alt="logo" class="head_img">
+		 </div> 
+		   <div class="workbox">
+					<h3 class="workbox_title">Signup Here</h3> 	
+		    </div>
+		 </center>
 </head>
 <body>
 <?php
@@ -93,20 +110,19 @@ if($num>0)
 ?>
   <script src='https://www.google.com/recaptcha/api.js' async defer>//https://codeforgeek.com/google-recaptcha-tutorial/</script>
 <div class="container my-4 ">	
-	<h1 class="text-center">Signup Here</h1>
 	<form id="comment_form" action="signup.php" method="post">
 		<div class="form-group">
-			<label for="username">Username</label>
+			<label  class = "text-white"  for="username">Username</label>
 		<input type="text" class="form-control" id="username"
 			name="username" aria-describedby="emailHelp">	
 		</div>	
 		<div class="form-group">
-			<label for="display_name">Display Name</label>
+			<label  class = "text-white"  for="display_name">Display Name</label>
 		<input type="text" class="form-control" id="display_name"
 			name="display_name" aria-describedby="emailHelp">	
 		</div>	
 		<div class="form-group">
-			<label for="email">Email</label>
+			<label  class = "text-white"  for="email">Email</label>
 		<input type="text" class="form-control" id="email"
 			name="email" aria-describedby="emailHelp">	
 		</div>	
@@ -115,13 +131,13 @@ if($num>0)
 			name="suggest" value ="NO">	
 			</div>	
 		<div class="form-group">
-			<label for="password">Password</label>
+			<label  class = "text-white"  for="password">Password</label>
 			<input type="password" class="form-control"
 			id="password" name="password">
 		</div>	
 		<div class="form-group">
-			<label for="cpassword">Confirm Password</label>
-			<input type="password" class="form-control"
+			<label  class = "text-white"  for="cpassword" >Confirm Password</label>
+			<input type="password" class="form-control" class = "text-white"
 				id="cpassword" name="cpassword">	
 			<small id="emailHelp" class="form-text text-muted">
 			Make sure to type the same password
@@ -133,7 +149,6 @@ if($num>0)
 		</button>
 	</form>
 </div>	
-Already have a account  <a href = "/index.php">login</a>
 </body> <script>
         const urlParams = new URLSearchParams(location.search);
         let suggest ;
@@ -147,6 +162,32 @@ Already have a account  <a href = "/index.php">login</a>
 	   document.getElementById('suggest').value = suggest ;
        }
         </script> 
+    <!--<div class="can_01">
+		<div class="workbox">
+						<h2 class="workbox_title">
+										HOW IT WORKS ?
+						</h2>
+						<ul class="workbox_list">
+										<li class="workbox_list_element">
+														<h3>STEP 1</h3>
+														<p>Paste your Youtube Channel Link / Channel ID above.</p>
+										</li>
+										<li class="workbox_list_element">
+														<h3>STEP 2</h3>
+														<p>Earn credits by Subscribing & Liking other Channels & Videos.</p>
+										</li>
+										<li class="workbox_list_element">
+														<h3>STEP 3</h3>
+														<p>Boost your YouTube Channel using this credits.</p>
+										</li>
+										
+						</ul>
+		</div>
+		</div>-->
+		<?php
+    include '../footer.php';
+?>
+</body>
 </html>
 <?php
 //https://codeforgeek.com/google-recaptcha-tutorial/

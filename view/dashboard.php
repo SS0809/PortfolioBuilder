@@ -36,44 +36,29 @@ $_SESSION["name"] = $name;
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>SERVER</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--BOOTSTRAP-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!--BOOTSTRAP-->
-  <script>
-    function myFunction() {
-  /* Get the text field */
-  var copyText = document.getElementById("myInput");
+<?php
+    include './header.php';
+?>
+<br><br><br><br> 
 
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+<!-- Showing alert -->
+<div  id="alert" class="alert alert-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div class="member-dashboard">Welcome <b><?php echo $displayname; ?></b>, You have successfully logged in!<br>    
+      </div>
 
-   /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copyText.value);
-  navigator.clipboard.writeText(copyText.value);
-}</script>
-</head>
-<body>
-<div class="float-end"><a href="./blog/index.html" class="btn btn-info me-1">BLOGS</a></div>
-<div class="float-end"><a href="./view/movies.php" class="btn btn-info me-1">Movies</a></div>
-<div class="float-end"><a href="../yt/index.php" class="btn btn-info me-1">Youtube Converter</a></div>
-<div class="float-start"><a href="./logout.php" class="btn btn-danger me-1">Logout</a></div>
-<div class="float-start"><a href="./view/upload.php" class="btn btn-danger me-1">Upload</a></div>
-<br><br>
-<div>
-      <h3>
-          <div class="dashboard">
-            <div class="member-dashboard">Welcome <b><?php echo $displayname; ?></b>, You have successfully logged in!<br>
-            </div>
-            <img src="./image/<?php echo $profile_pic; ?>"  width="10%">
+</div>
+ 
+<div class="can_01">
+		<div class="workbox-dashboard">
+      <center><img src="./image/<?php echo $profile_pic; ?>" class ="border_profile" width="30%" alt="logo" class="head_img"></center>
+						<h2 class="workbox_title-dashboard">
+									PROFILE
+						</h2>
+						<ul class="workbox_list">
+										<li class="workbox_list_element">
+													<div>
+          <div class="dashboard">       
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
@@ -83,15 +68,13 @@ if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
 <input type="" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
 <button onclick="myFunction()">SHARE</button>
         </div>
-  </h3>
     </div>
-  <br>
- <!--<a href = "/server/refer.html?url=/server/refer2.html?url2=cdn-s.blogspot.com/2022/08/kgf-2.html">REFER</a>-->
-<div class="footer">
-  <p>SERVER</p>
-</div>
-<div class="float-start"><a href="./pp/index.html" class="btn btn-info me-1">TERM OF SERVICE</a></div>
-<div class="float-start"><a href="./aus/index.html" class="btn btn-info me-1">About Us</a></div>
-<div class="float-start"><a href="./tos/index.html" class="btn btn-info me-1">PRIVACY POLICY</a></div>
+</li>			
+						</ul>
+		</div>
+		</div>
+<?php
+    include './footer.php';
+?>
 </body>
 </html>
