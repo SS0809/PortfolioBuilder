@@ -19,7 +19,14 @@ class DataSource
     const PASSWORD = 'zzrye8TbMy';
 
     const DATABASENAME = 'IIVAjfeDkk';
+    /*const HOST = 'localhost';
 
+    const USERNAME = 'root';
+
+    const PASSWORD = '';
+
+    const DATABASENAME = 'IIVAjfeDkk';
+*/
     private $conn;
 
     /**

@@ -3,28 +3,42 @@ namespace Php;
 error_reporting(0);
 session_start();
 use \Php\Member;
-//https://www.geeksforgeeks.org/how-to-upload-image-into-database-and-display-it-using-php/
+if (! empty($_SESSION["userId"])) {
+    require_once __DIR__ . './../class/Member.php';
+    $member = new Member();
+    $memberResult = $member->getMemberById($_SESSION["userId"]);
+    if(!empty($memberResult[0]["display_name"])) {
+        $username = ucwords($memberResult[0]["user_name"]);
+    } else {
+        $username = $memberResult[0]["user_name"];
+    }
+}
 // If upload button is clicked ...
 if (isset($_POST['upload'])) {
 	$filename = $_FILES["uploadfile"]["name"];
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
-	$folder = "./images/" . $filename;
-	require_once __DIR__ . './../class/Member.php';
-    $member = new Member();
-   setMemberById($filename);
- 	if (move_uploaded_file($tempname, $folder)) {
+	$folder = "../image/" . $filename;
+	$db = mysqli_connect("remotemysql.com", "IIVAjfeDkk", "zzrye8TbMy", "IIVAjfeDkk");
+    $sql = "UPDATE `registered_users` SET `filename` = '$filename' WHERE `user_name` = '$username';";
+	mysqli_query($db, $sql);
+	if (move_uploaded_file($tempname, $folder)) {
 		echo "<h3> Image uploaded successfully!</h3>";
 	} else {
 		echo "<h3> Failed to upload image!</h3>";
 	}
-} 
-  echo $username;
+$query = " select * from registered_users where `user_name`  = '$username'";
+$result = mysqli_query($db, $query);
+while ($data = mysqli_fetch_assoc($result)) {
+?>
+	<img src="../image/<?php echo $data['filename']; ?>">
+<?php
+}}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-</head>
+   </head>
 <body>
 	<div id="content">
 		<form method="POST" action="" enctype="multipart/form-data">
