@@ -73,7 +73,7 @@ $_SESSION["name"] = $name;
           <div class="dashboard">
             <div class="member-dashboard">Welcome <b><?php echo $displayname; ?></b>, You have successfully logged in!<br>
             </div>
-            <img src="./image/<?php echo $profile_pic; ?>"  width="10%">
+            <img src="<?php echo $profile_pic; ?>"  width="10%">
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>

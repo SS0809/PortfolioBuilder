@@ -17,6 +17,7 @@ if (! empty($_SESSION["userId"])) {
 if (isset($_POST['upload'])) {
 	$filename = $_FILES["uploadfile"]["name"];
 	$tempname = $_FILES["uploadfile"]["tmp_name"];
+	$filename = "saurabh";
 	$folder = "../image/" . $filename;
 	$db = mysqli_connect("remotemysql.com", "IIVAjfeDkk", "zzrye8TbMy", "IIVAjfeDkk");
     $sql = "UPDATE `registered_users` SET `filename` = '$filename' WHERE `user_name` = '$username';";

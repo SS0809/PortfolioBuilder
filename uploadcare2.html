@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  UPLOADCARE_PUBLIC_KEY = "b4948793d3044a69aee7";
+
+</script>
+<script charset="utf-8" src="//ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+
+
+<body>
+<input type="hidden" role="uploadcare-uploader" name="my_file" id="uploadcare-file" />
+</body>
+<script>  // get a widget instance
+  const widget = uploadcare.Widget('[role=uploadcare-uploader]');
+  //https://help.uploadcare.com/article/307-get-cdn-url-of-uploaded-file
+  // listen to the "upload completed" event
+  widget.onUploadComplete(info => {
+    // get CDN URL from file information. Here you can generate a thumbnail using the file URL, save the URL to DB, etc.
+    console.log(info.cdnUrl);
+  });</script>
+</html>

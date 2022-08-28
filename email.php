@@ -1,6 +1,7 @@
 <?php
   require 'vendor/autoload.php';
   use \Mailjet\Resources;
+  function sender($email){
   $mj = new \Mailjet\Client('d723ca51192f011a577e3bc37cef491a','95f0e57488e2d7d4a31ec4f9a465bc0d',true,['version' => 'v3.1']);
   $body = [
     'Messages' => [
@@ -11,7 +12,7 @@
         ],
         'To' => [
           [
-            'Email' => "saurabh45215@gmail.com",
+            'Email' => "$email",
             'Name' => "saurabh"
           ]
         ],
@@ -24,4 +25,5 @@
   ];
   $response = $mj->post(Resources::$Email, ['body' => $body]);
   $response->success() && var_dump($response->getData());
+}
 ?>
