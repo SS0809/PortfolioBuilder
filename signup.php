@@ -37,8 +37,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 if($num>0)
 {
 	$exists="Username not available";
-}	
-}//end if	
+}//end if		
+}
+if($suggest != "")//not empty
+{
+	$sql = "UPDATE registered_users SET points=points+5 where user_name = '$suggest';";
+	$result = mysqli_query($conn, $sql); 
+
+	$sql = "UPDATE registered_users SET  suggest = '' where user_name = '$username';";
+	$result = mysqli_query($conn, $sql); 
+}
 ?>	
 <!doctype html>	
 <html lang="en">
