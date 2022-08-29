@@ -9,7 +9,7 @@ if (! empty($_SESSION["userId"])) {
     $memberResult = $member->getMemberById($_SESSION["userId"]);
     if(!empty($memberResult[0]["display_name"])) {
         $displayname = ucwords($memberResult[0]["display_name"]);
-        $username = ucwords($memberResult[0]["user_name"]);
+        $username = $memberResult[0]["user_name"];
         $email = ucwords($memberResult[0]["email"]);
         $points = ucwords($memberResult[0]["points"]);
         $profile_pic = ucwords($memberResult[0]["filename"]);
