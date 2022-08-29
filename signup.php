@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 		}
 		else {
 			$showError = "Passwords do not match";
-		}	
+			
 	}// end if	
 if($num>0)
 {
@@ -46,7 +46,7 @@ if($suggest != "")//not empty
 
 	$sql = "UPDATE registered_users SET  suggest = '' where user_name = '$username';";
 	$result = mysqli_query($conn, $sql); 
-}
+}}
 ?>	
 <!doctype html>	
 <html lang="en">
