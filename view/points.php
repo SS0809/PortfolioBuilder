@@ -43,9 +43,10 @@ if($suggest != "")//not empty
     <meta charset="UTF-8" />
   </head>
 <body>
-<h2>HUMAN VERIFICATION</h2>
+<h2>EARN POINTS</h2>
 <br>
-<h2>Click on the link and come back your link will be ready</h2>
+<div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
+<h2>Click on the IMAGE and close the tab/window and come back you will get 1 point</h2>
 <form id="myForm" action="points.php" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
@@ -69,5 +70,6 @@ button.addEventListener ("click", function() {
 });
 }
 </script>
+<h3>check your points in profile tab</h3>
 </body> 
 </html>
