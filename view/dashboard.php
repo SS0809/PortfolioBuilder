@@ -35,7 +35,7 @@ $_SESSION["name"] = $name;
         $profile_pic = $memberResult[0]["filename"];
     }
 }
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,6 +47,7 @@ $_SESSION["name"] = $name;
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!--BOOTSTRAP-->
+  <?php include "ads3.html" ?>
   <script>
     function myFunction() {
   /* Get the text field */
