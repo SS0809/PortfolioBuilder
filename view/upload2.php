@@ -1,6 +1,6 @@
 <?php
 namespace Php;
-error_reporting(0);
+//error_reporting(0);
 session_start();
 use \Php\Member;
 if (! empty($_SESSION["userId"])) {
@@ -49,3 +49,4 @@ $result = mysqli_query($db, $query);
 document.getElementById("uploadfile").value = info.cdnUrl;
   });</script>
 </html>
+<?php  include "../ads.html" ?>

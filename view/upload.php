@@ -55,3 +55,4 @@ while ($data = mysqli_fetch_assoc($result)) {
 	</div>
 </body>
 </html>
+<?php  include "../ads2.html" ?>

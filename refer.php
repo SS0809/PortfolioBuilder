@@ -11,32 +11,8 @@
   <!--BOOTSTRAP-->
 </head>
 <body>
-  <!------------------------------------------------ads-------------------------------------------------- >
-POP UP
-<script type='text/javascript' src='//sixtybirthsuperstition.com/cd/70/92/cd70926c97da213d025605fbde135e6a.js'></script>
-<script type='text/javascript' src='//sixtybirthsuperstition.com/6e/d3/59/6ed359cecc4e588d925ab2c6321c5e6e.js'></script>
-<! --------------------------------------------------ads-------------------------------------------------->
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/1890edf1c9a79e2d5c416f8ea6a00f7f/invoke.js"></script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'df825c09aa367ac4e4edd87ef0be55c6',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://sixtybirthsuperstition.com/df825c09aa367ac4e4edd87ef0be55c6/invoke.js"></scr' + 'ipt>');
-</script>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '4f393bbc973d0f5680b4d7aac852fe61',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://sixtybirthsuperstition.com/4f393bbc973d0f5680b4d7aac852fe61/invoke.js"></scr' + 'ipt>');
-</script>
+  <!------------------------------------------------ads-------------------------------------------------->
+ <?php include "ads2.html"?>
 
 <!--------------------------------------------------ads-------------------------------------------------->
     <script>
@@ -68,6 +44,6 @@ var el = document.getElementById('seconds'),
     }, 1000);
 }
 </script>
-
+ <?php include "ads.html"?>
 </body>
 </html>

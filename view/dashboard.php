@@ -35,7 +35,7 @@ $_SESSION["name"] = $name;
         $profile_pic = $memberResult[0]["filename"];
     }
 }
-?>
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
