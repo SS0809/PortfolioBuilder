@@ -33,11 +33,14 @@ $result = mysqli_query($db, $query);
 <script charset="utf-8" src="//ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js">   
 </script>
 <body>
-<input type="hidden" role="uploadcare-uploader" name="my_file" id="uploadcare-file" />
+    <div class="float-end"><a href="../index.php" class="btn btn-info">Profile</a></div>
+    <center>
+<input type="hidden" role="uploadcare-uploader" name="my_file" id="uploadcare-file" /><br><br>
 <form method="get" name="form" action="upload2.php">
-        <input type="text" id = "uploadfile" placeholder="WAIT..." name="data">
-		<button class="btn btn-primary" type="submit" name="upload">UPLOAD</button>
-</form>
+        <input type="hidden" id = "uploadfile" placeholder="WAIT..." name="data"><br>
+        <br>
+		<button class="btn btn-primary" type="submit" name="upload">UPLOAD</button><br><br>
+</form></center>
 </body>
 <script>  
   const widget = uploadcare.Widget('[role=uploadcare-uploader]');
