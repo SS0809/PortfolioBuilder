@@ -32,11 +32,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 if($suggest != "")//not empty
 {
-   $sql = "UPDATE registered_users SET points=points+1 where user_name = '$username';";
+   $sql = "UPDATE registered_users SET points=points+10 where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 }}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -49,33 +48,62 @@ if($suggest != "")//not empty
   <!--BOOTSTRAP-->
   </head>
 <body>
+<!--c0123l123i123c546k123c8l123i45812c3458k123-->
 <h2>EARN POINTS</h2>
-<br>
+<h1><br>Points ::<a id = "clicks">000</a><br></h1>
 <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-<h2>Click on the IMAGE and close the tab/window and come back you will get 1 point</h2>
 <form id="myForm" action="points.php" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
-<div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>
+    <h2>CLOSE AND CLICK<small>(window)</small></h2>
+<!--<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
+<div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>-->
+<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/ad9a63ece1ec68cea2edad61aae602a9/invoke.js"></script>
+<div id="container-ad9a63ece1ec68cea2edad61aae602a9"></div>
+SECONDS<time><strong id="seconds">2</strong></time><br>
+
+<!--<button onclick="timer()">00</button>-->
 <script>
-const el = document.getElementById('container-a6359a1d6d37486f74d0d3907a1bc83a');
+        const urlParams = new URLSearchParams(location.search);
+        let suggest ;
+        for (const [key,value] of urlParams) {
+             if (key == 'c0123l123i123c546k123c8l123i45812c3458k123'){suggest = value ; 
+            if (value>=10) {
+ suggest = 0;
+ //alert("10 completed");
+   document.getElementById("myForm").submit();
+
+             }
+              }
+                
+        }
+const el = document.getElementById('container-ad9a63ece1ec68cea2edad61aae602a9');
 el.addEventListener('click', function handleClick(event) {
   console.log('element clicked 🎉🎉🎉', event);
-  create();
+  timer();
 });
+
 function create (){
-var button = document.createElement("button");
-button.innerHTML = "GO";
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(button);
-button.addEventListener ("click", function() {
-      //window.location='#';
-      document.getElementById("myForm").submit();
-});
+      
+      window.location='/view/points.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
 }
+  function timer()
+    { suggest++;       
+    console.log(suggest);
+var el = document.getElementById('seconds'),
+    total = el.innerHTML,
+    timeinterval = setInterval(function () {
+        total = --total;
+        el.textContent = total;
+        if (total <= 0) {
+            clearInterval(timeinterval);
+               create();
+        }
+    }, 1000);
+}
+ su =   document.getElementById('clicks')  ;
+  su.textContent =   suggest  ;
 </script>
-<h3>check your points in profile tab</h3>
 </body> 
 </html>
