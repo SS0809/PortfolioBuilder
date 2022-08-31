@@ -14,9 +14,9 @@ if (! empty($_SESSION["userId"])) {
         $points = ucwords($memberResult[0]["points"]);
         $profile_pic = ucwords($memberResult[0]["filename"]);
                
-				// Username is stored as cookie for 10 years as
-				// 10years * 365days * 24hrs * 60mins * 60secs
-				setcookie("user_login", $name, time() +
+        // Username is stored as cookie for 10 years as
+        // 10years * 365days * 24hrs * 60mins * 60secs
+        setcookie("user_login", $name, time() +
         (10 * 365 * 24 * 60 * 60));
 
 // Password is stored as cookie for 10 years as
@@ -66,6 +66,7 @@ $_SESSION["name"] = $name;
 <div class="float-end"><a href="./view/movies.php" class="btn btn-info me-1">Movies</a></div>
 <div class="float-end"><a href="../yt/index.php" class="btn btn-info me-1">Youtube Converter</a></div>
 <div class="float-end"><a href="/view/points.php" class="btn btn-info me-1">EARN POINTS<small>(new)</small></a></div>
+<div class="float-end"><a href="dashboardnew.php" class="btn btn-info me-1">PROFILE<small>(new)</small></a></div>
 <div class="float-start"><a href="./logout.php" class="btn btn-danger me-1">Logout</a></div>
 <div class="float-start"><a href="./view/upload2.php" class="btn btn-danger me-1">Upload</a></div>
 <br><br>
