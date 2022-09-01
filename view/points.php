@@ -70,6 +70,7 @@ if($suggest != "")//not empty
          name="suggest" value ="NO">   
 </form>
     <h2>CLOSE AND CLICK<small>(window)</small></h2>
+    <h3>upto 10 cycles then it will automatically redirect you</h3>
 <!--<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
 <div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>-->
 <script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/ad9a63ece1ec68cea2edad61aae602a9/invoke.js"></script>
@@ -118,12 +119,6 @@ var el = document.getElementById('seconds'),
  su =   document.getElementById('clicks')  ;
   su.textContent =   suggest  ;
 </script>
-
-
-
-
-points2.php?c0123l123i123c546k123c8l123i45812c3458k123=0
-points1.php?c0123l123i123c546k123c8l123i45812c3458k123=0
 <?php include_once("footer.html") ?>
 </body>
 </html>
