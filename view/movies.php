@@ -1,4 +1,4 @@
-<!--<?php
+<?php
 namespace Php;
 session_start();
 if($_SESSION["userId"] != true){//check loggin
@@ -17,7 +17,7 @@ if (! empty($_SESSION["userId"])) {
         $displayName = $memberResult[0]["user_name"];
     }
 }
-?>-->
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -84,7 +84,7 @@ if (! empty($_SESSION["userId"])) {
      </script>
 <!--AJAX--loader-->
 </head>
-<body>
+<body onload = "loader('01')">
 <div class="container mt-3">
   <button  type="button" class="btn btn-success" onclick = "loader('01')">01</button>
   <button  type="button" class="btn btn-success" onclick = "loader('02')">02</button>
