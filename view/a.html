@@ -27,31 +27,40 @@
         <div class="collapse navbar-collapse">
            <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" id = "home"  aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/view/points.php?c0123l123i123c546k123c8l123i45812c3458k123=0">EARN POINT$</a>
+            <a class="nav-link" id = "points" href="/view/points2.php?c0123l123i123c546k123c8l123i45812c3458k123=0">EARN POINT$</a>
           </li>   
           <li class="nav-item">
-            <a class="nav-link" href="/view/movies.php">Movies</a>
+            <a class="nav-link" id = "movies"  href="/view/movies.php">Movies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../blog/index.html">Blogs</a>
+            <a class="nav-link" id = "blogs"  href="../blog/index.html">Blogs</a>
           </li>
               <li class="nav-item">
-            <a class="nav-link" href="../yt/index.html">Youtube Converter</a>
+            <a class="nav-link" id = "yt"  href="../yt/index.html">Youtube Converter</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="upload2.php">UPLOAD</a>
+            <a class="nav-link" id = "upload"  href="upload2.php">UPLOAD</a>
           </li>
           </ul>
          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                     <li class="nav-item">
-            <a class="nav-link" style="font-weight: 900;" href="../logout.php"><mark>LOGOUT</mark></a>
+            <a class="nav-link" id = "logout" style="font-weight: 900;" href="../logout.php"><mark>LOGOUT</mark></a>
           </li>
         </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<script type="text/javascript">
+          var points = document.getElementById("points"),
+          blogs = document.getElementById("blogs"),
+          movies = document.getElementById("movies"),
+          yt = document.getElementById("yt"),
+          upload = document.getElementById("upload"),
+          logout = document.getElementById("logout"),
+          home = document.getElementById("home");
+          </script>
  </body>
  </html>
