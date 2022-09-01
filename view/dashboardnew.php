@@ -12,7 +12,7 @@ if (! empty($_SESSION["userId"])) {
         $username = $memberResult[0]["user_name"];
         $email = ucwords($memberResult[0]["email"]);
         $points = ucwords($memberResult[0]["points"]);
-        $profile_pic = ucwords($memberResult[0]["filename"]);
+        $profile_pic = $memberResult[0]["filename"];
                
         // Username is stored as cookie for 10 years as
         // 10years * 365days * 24hrs * 60mins * 60secs
@@ -54,7 +54,11 @@ $_SESSION["name"] = $name;
     <link href="./view/carousel.css" rel="stylesheet">
   </head>
   <body> 
-    <script>
+<?php include_once("a.html") ?>    
+<script type="text/javascript">
+          var temp = "<?php echo $profile_pic; ?>";
+         var pic = document.getElementById("pic");
+        pic.setAttribute('src', temp);
     function myFunction() {
   /* Get the text field */
   var copyText = document.getElementById("myInput");
@@ -67,7 +71,7 @@ $_SESSION["name"] = $name;
   navigator.clipboard.writeText(copyText.value);
   navigator.clipboard.writeText(copyText.value);
 }</script>  
-<?php include_once("a.html") ?>
+
 <main>
 <!--
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">

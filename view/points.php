@@ -11,9 +11,11 @@ if (! empty($_SESSION["userId"])) {
     if(!empty($memberResult[0]["display_name"])) {
         $username = $memberResult[0]["user_name"];
         $points = ucwords($memberResult[0]["points"]);
+        $profile_pic = $memberResult[0]["filename"];
     } else {
         $username = $memberResult[0]["user_name"];
         $points = $memberResult[0]["points"];
+                $profile_pic = $memberResult[0]["filename"];
     }
 }
 if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -43,6 +45,9 @@ if($suggest != "")//not empty
 </head>
 <body>
 <script type="text/javascript">
+              var temp = "<?php echo $profile_pic; ?>";
+         var pic = document.getElementById("pic");
+        pic.setAttribute('src', temp);
         points.setAttribute("href", "points.php");
         points.setAttribute("class", "nav-link active");
         blogs.setAttribute("href", "../blog/index.html");
@@ -52,6 +57,7 @@ if($suggest != "")//not empty
         logout.setAttribute("href", "/logout.php");
         home.setAttribute("href", "../index.php");
         home.setAttribute("class", "nav-link");
+        pic.setAttribute("src", "<?php echo $profile_pic ?>");
 </script>
 
       <!--BOOTSTRAP-->
