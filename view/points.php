@@ -65,14 +65,14 @@ if($suggest != "")//not empty
 <h2>EARN POINTS</h2>
 <h1><br>Points ::<a id = "clicks">000</a><br></h1>
 <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-<form id="myForm" action="points2.php" method="post">
+<form id="myForm" action="points.php" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
-    <h2>CLOSE AND CLICK<small>(window)</small></h2><!--
-<div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/ad9a63ece1ec68cea2edad61aae602a9/invoke.js"></script>-->
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
+    <h2>CLOSE AND CLICK<small>(window)</small></h2>
+<!--<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
+<div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>-->
+<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/ad9a63ece1ec68cea2edad61aae602a9/invoke.js"></script>
 <div id="container-ad9a63ece1ec68cea2edad61aae602a9"></div>
 SECONDS<time><strong id="seconds">2</strong></time><br>
 
@@ -99,7 +99,7 @@ el.addEventListener('click', function handleClick(event) {
 
 function create (){
       
-      window.location='/view/points2.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
+      window.location='/view/points.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
 }
   function timer()
     { suggest++;       
