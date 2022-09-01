@@ -59,7 +59,6 @@ if($suggest != "")//not empty
         home.setAttribute("class", "nav-link");
         pic.setAttribute("src", "<?php echo $profile_pic ?>");
 </script>
-
       <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -67,64 +66,13 @@ if($suggest != "")//not empty
   <!--BOOTSTRAP-->
   </head>
 <body>
-<!--c0123l123i123c546k123c8l123i45812c3458k123-->
-<h2>EARN POINTS</h2>
-<h1><br>Points ::<a id = "clicks">000</a><br></h1>
-<div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-<form id="myForm" action="points.php" method="post">
-        <input type="hidden" id="suggest"
-         name="suggest" value ="NO">   
-</form>
-    <h2>CLOSE AND CLICK<small>(window)</small></h2>
-    <h3>upto 10 cycles then it will automatically redirect you</h3>
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
-<div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>
-<!--<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/ad9a63ece1ec68cea2edad61aae602a9/invoke.js"></script>
-<div id="container-ad9a63ece1ec68cea2edad61aae602a9"></div>-->
-SECONDS<time><strong id="seconds">2</strong></time><br>
-
-<!--<button onclick="timer()">00</button>-->
-<script>
-        const urlParams = new URLSearchParams(location.search);
-        let suggest ;
-        for (const [key,value] of urlParams) {
-             if (key == 'c0123l123i123c546k123c8l123i45812c3458k123'){suggest = value ; 
-            if (value>=10) {
- suggest = 0;
- //alert("10 completed");
-   document.getElementById("myForm").submit();
-
-             }
-              }
-                
-        }
-const el = document.getElementById('container-a6359a1d6d37486f74d0d3907a1bc83a');
-el.addEventListener('click', function handleClick(event) {
-  console.log('element clicked 🎉🎉🎉', event);
-  timer();
-});
-
-function create (){
-      
-      window.location='/view/points.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
-}
-  function timer()
-    { suggest++;       
-    console.log(suggest);
-var el = document.getElementById('seconds'),
-    total = el.innerHTML,
-    timeinterval = setInterval(function () {
-        total = --total;
-        el.textContent = total;
-        if (total <= 0) {
-            clearInterval(timeinterval);
-               create();
-        }
-    }, 1000);
-}
- su =   document.getElementById('clicks')  ;
-  su.textContent =   suggest  ;
-</script>
+<br><br><br /><br />
+    <div style="text-align: center;">
+DO NOT REPEAT TH SERVER YOU ALREADY CHOSEN OFR ONE DAY <br>
+    <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;"><a href="/view/points1.php?c0123l123i123c546k123c8l123i45812c3458k123=0">SERVER 1</a></button>
+        <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;"><a href="/view/points2.php?c0123l123i123c546k123c8l123i45812c3458k123=0">SERVER 2</a></button>
+            <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;"><a href="/view/points3.php?c0123l123i123c546k123c8l123i45812c3458k123=0">SERVER 3</a></button>
+</div>
 <?php include_once("footer.html") ?>
 </body>
 </html>
