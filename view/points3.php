@@ -48,7 +48,7 @@ if($suggest != "")//not empty
               var temp = "<?php echo $profile_pic; ?>";
          var pic = document.getElementById("pic");
         pic.setAttribute('src', temp);
-        points.setAttribute("href", "points2.php");
+        points.setAttribute("href", "points3.php");
         points.setAttribute("class", "nav-link active");
         blogs.setAttribute("href", "../blog/index.html");
         movies.setAttribute("href", "movies.php");
@@ -71,7 +71,7 @@ if($suggest != "")//not empty
 <h2>EARN POINTS</h2>
 <h1><br>Points ::<a id = "clicks">000</a><br></h1>
 <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-<form id="myForm" action="points2.php" method="post">
+<form id="myForm" action="points3.php" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
@@ -106,7 +106,7 @@ el.addEventListener('click', function handleClick(event) {
 
 function create (){
       
-      window.location='/view/points.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
+      window.location='/view/points3.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
 }
   function timer()
     { suggest++;       
