@@ -44,7 +44,7 @@ if($suggest != "")//not empty
 <?php include_once("a.html") ?>
 </head>
 <body>
-  <br><br>  <h1>50 COMPLETED</h1>
+  <br><br>  <h1>60 COMPLETED</h1>
   SECONDS<time><strong id="seconds">2</strong></time><br>
 <script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
