@@ -77,10 +77,8 @@ if($suggest != "")//not empty
 </form>
     <h2>CLOSE AND CLICK<small>(window)</small></h2>
     <h3>upto 10 cycles then it will automatically redirect you</h3>
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
-<div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>
-<!--<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/ad9a63ece1ec68cea2edad61aae602a9/invoke.js"></script>
-<div id="container-ad9a63ece1ec68cea2edad61aae602a9"></div>-->
+<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/9c3b8ff5a4bb56c51876db0c6a8ec0c3/invoke.js"></script>
+<div id="container-9c3b8ff5a4bb56c51876db0c6a8ec0c3"></div>
 SECONDS<time><strong id="seconds">2</strong></time><br>
 
 <!--<button onclick="timer()">00</button>-->
@@ -98,7 +96,7 @@ SECONDS<time><strong id="seconds">2</strong></time><br>
               }
                 
         }
-const el = document.getElementById('container-a6359a1d6d37486f74d0d3907a1bc83a');
+const el = document.getElementById('container-9c3b8ff5a4bb56c51876db0c6a8ec0c3');
 el.addEventListener('click', function handleClick(event) {
   console.log('element clicked 🎉🎉🎉', event);
   timer();
