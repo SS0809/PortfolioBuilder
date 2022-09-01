@@ -49,7 +49,7 @@ if($suggest != "")//not empty
               var temp = "<?php echo $profile_pic; ?>";
          var pic = document.getElementById("pic");
         pic.setAttribute('src', temp);
-        points.setAttribute("href", "points5.php");
+        points.setAttribute("href", "points6.php");
         points.setAttribute("class", "nav-link active");
         blogs.setAttribute("href", "../blog/index.html");
         movies.setAttribute("href", "movies.php");
@@ -105,7 +105,7 @@ el.addEventListener('click', function handleClick(event) {
 
 function create (){
       
-      window.location='/view/points5.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
+      window.location='/view/points6.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
 }
   function timer()
     { suggest++;       
