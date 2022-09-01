@@ -66,7 +66,7 @@ if($suggest != "")//not empty
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
 <body>
-<form id="myForm" action="points5.php" method="post">
+<form id="myForm" action="points6.php" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
