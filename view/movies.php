@@ -84,7 +84,7 @@ if (! empty($_SESSION["userId"])) {
      </script>
 <!--AJAX--loader-->
 </head>
-<body>
+<body onload = "loader('01')">
 <div class="container mt-3">
   <button  type="button" class="btn btn-success" onclick = "loader('01')">01</button>
   <button  type="button" class="btn btn-success" onclick = "loader('02')">02</button>
