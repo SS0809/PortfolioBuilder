@@ -47,12 +47,11 @@ $_SESSION["name"] = $name;
     <title>PROXY</title>
       <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/"> 
-<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="css.css" rel="stylesheet">
-    <link href="carousel.css" rel="stylesheet">
+<link href="./view/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./view/css.css" rel="stylesheet">
+    <link href="./view/carousel.css" rel="stylesheet">
   </head>
   <body> 
     <script>
@@ -149,6 +148,6 @@ Copy the following text and share with friends ..... with each friend you get 5 
   </div><!-- /.container -->
 </main>
 <?php include_once("footer.html") ?>
-    <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>      
+    <script src="./view/assets/dist/js/bootstrap.bundle.min.js"></script>      
   </body>
 </html>
