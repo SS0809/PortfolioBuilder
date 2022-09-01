@@ -44,7 +44,7 @@ if($suggest != "")//not empty
 <?php include_once("a.html") ?>
 </head>
 <body>
-  <br><br>  <h1>40 COMPLETED</h1>
+  <br><br>  <h1>50 COMPLETED</h1>
 <script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
          var pic = document.getElementById("pic");
