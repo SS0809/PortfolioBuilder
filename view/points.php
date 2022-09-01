@@ -69,11 +69,11 @@ if($suggest != "")//not empty
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
-    <h2>CLOSE AND CLICK<small>(window)</small></h2>
+    <h2>CLOSE AND CLICK<small>(window)</small></h2><!--
 <div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/ad9a63ece1ec68cea2edad61aae602a9/invoke.js"></script>
-<!--<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
-<div id="container-ad9a63ece1ec68cea2edad61aae602a9"></div>-->
+<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/ad9a63ece1ec68cea2edad61aae602a9/invoke.js"></script>-->
+<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
+<div id="container-ad9a63ece1ec68cea2edad61aae602a9"></div>
 SECONDS<time><strong id="seconds">2</strong></time><br>
 
 <!--<button onclick="timer()">00</button>-->
