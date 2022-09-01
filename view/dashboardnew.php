@@ -13,6 +13,7 @@ if (! empty($_SESSION["userId"])) {
         $email = ucwords($memberResult[0]["email"]);
         $points = ucwords($memberResult[0]["points"]);
         $profile_pic = $memberResult[0]["filename"];
+        $sudo = $memberResult[0]["sudo"];
                
         // Username is stored as cookie for 10 years as
         // 10years * 365days * 24hrs * 60mins * 60secs
@@ -33,6 +34,7 @@ $_SESSION["name"] = $name;
         $email = $memberResult[0]["email"];
         $points = $memberResult[0]["points"];
         $profile_pic = $memberResult[0]["filename"];
+        $sudo = $memberResult[0]["sudo"];
     }
 }
 ?>
@@ -139,6 +141,13 @@ $_SESSION["name"] = $name;
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
+<div class="member-dashboard">Payment :  $ <b>
+  <?php
+if ($sudo == "1" ){echo $points*0.001;}
+
+?>
+
+</b></div>
 <div class="member-dashboard">Points : <b><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
 Copy the following text and share with friends ..... with each friend you get 5 points
