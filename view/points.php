@@ -46,7 +46,7 @@ if($suggest != "")//not empty
         points.setAttribute("href", "points.php");
         points.setAttribute("class", "nav-link active");
         blogs.setAttribute("href", "../blog/index.html");
-        movies.setAttribute("href", "movies.html");
+        movies.setAttribute("href", "movies.php");
         yt.setAttribute("href", "../yt/index.html");
         upload.setAttribute("href", "./upload2.php");
         logout.setAttribute("href", "/logout.php");
