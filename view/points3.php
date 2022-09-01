@@ -44,6 +44,7 @@ if($suggest != "")//not empty
 <?php include_once("a.html") ?>
 </head>
 <body>
+      <br><br>  <h1>20 COMPLETED</h1>
 <script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
          var pic = document.getElementById("pic");
@@ -71,11 +72,11 @@ if($suggest != "")//not empty
 <h2>EARN POINTS</h2>
 <h1><br>Points ::<a id = "clicks">000</a><br></h1>
 <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-<form id="myForm" action="points3.php" method="post">
+<form id="myForm" action="points4.php" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
-    <h2>CLOSE AND CLICK<small>(window)</small></h2>
+    <h2>CLICK AND CLOSE<small>(window)</small></h2>
     <h3>upto 10 cycles then it will automatically redirect you</h3>
 <script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/9c3b8ff5a4bb56c51876db0c6a8ec0c3/invoke.js"></script>
 <div id="container-9c3b8ff5a4bb56c51876db0c6a8ec0c3"></div>

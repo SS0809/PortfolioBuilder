@@ -44,12 +44,13 @@ if($suggest != "")//not empty
 <?php include_once("a.html") ?>
 </head>
 <body>
-       <br><br>  <h1>10 COMPLETED</h1>
+  <br><br>  <h1>50 COMPLETED</h1>
+  SECONDS<time><strong id="seconds">2</strong></time><br>
 <script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
          var pic = document.getElementById("pic");
         pic.setAttribute('src', temp);
-        points.setAttribute("href", "points2.php");
+        points.setAttribute("href", "points5.php");
         points.setAttribute("class", "nav-link active");
         blogs.setAttribute("href", "../blog/index.html");
         movies.setAttribute("href", "movies.php");
@@ -60,29 +61,15 @@ if($suggest != "")//not empty
         home.setAttribute("class", "nav-link");
         pic.setAttribute("src", "<?php echo $profile_pic ?>");
 </script>
-
-      <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!--BOOTSTRAP-->
   </head>
 <body>
-<!--c0123l123i123c546k123c8l123i45812c3458k123-->
-<h2>EARN POINTS</h2>
-<h1><br>Points ::<a id = "clicks">000</a><br></h1>
-<div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-<form id="myForm" action="points3.php" method="post">
+<form id="myForm" action="points5.php" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
-    <h2>CLICK AND CLOSE<small>(window)</small></h2>
-    <h3>upto 10 cycles then it will automatically redirect you</h3>
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/d9ba3583b86d7eb874be137418338203/invoke.js"></script>
-<div id="container-d9ba3583b86d7eb874be137418338203"></div>
-SECONDS<time><strong id="seconds">2</strong></time><br>
-
-<!--<button onclick="timer()">00</button>-->
 <script>
         const urlParams = new URLSearchParams(location.search);
         let suggest ;
@@ -94,22 +81,10 @@ SECONDS<time><strong id="seconds">2</strong></time><br>
    document.getElementById("myForm").submit();
 
              }
-              }
-                
+             }              
         }
-const el = document.getElementById('container-d9ba3583b86d7eb874be137418338203');
-el.addEventListener('click', function handleClick(event) {
-  console.log('element clicked 🎉🎉🎉', event);
-  timer();
-});
-
-function create (){
-      
-      window.location='/view/points2.php?c0123l123i123c546k123c8l123i45812c3458k123='+suggest;
-}
-  function timer()
-    { suggest++;       
-    console.log(suggest);
+          function timer()
+    { 
 var el = document.getElementById('seconds'),
     total = el.innerHTML,
     timeinterval = setInterval(function () {
@@ -117,13 +92,13 @@ var el = document.getElementById('seconds'),
         el.textContent = total;
         if (total <= 0) {
             clearInterval(timeinterval);
-               create();
+                  window.location='/index.php';
         }
-    }, 1000);
+    }, 2000);
 }
- su =   document.getElementById('clicks')  ;
-  su.textContent =   suggest  ;
+timer();
 </script>
+
 <?php include_once("footer.html") ?>
 </body>
 </html>

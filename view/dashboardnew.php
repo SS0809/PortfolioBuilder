@@ -3,6 +3,11 @@ namespace Php;
 error_reporting(0);
 session_start();
 use \Php\Member;
+  if(""!=$new){
+function ne()
+{echo '<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script><div class="alert alert-success" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>  <strong>Success!</strong> You have been signed in successfully!</div><style>@import "compass/css3";body{  padding: 50px;  }</style><script>  window.setTimeout(function() {    $(".alert").fadeTo(500, 0).slideUp(500, function(){        $(this).remove();     });  }, 1000);</script>';
+}
+     }else{function ne(){}}
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
     $member = new Member();
@@ -129,9 +134,7 @@ $_SESSION["name"] = $name;
 -->
 <br><br><br>
   <div class="container marketing">
-    <div class="dashboard">
-            <div class="member-dashboard">Welcome <b><?php echo $displayname; ?></b>, You have successfully logged in!<br>
-            </div>
+    <div class="dashboard">   
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <center><div class="col-lg-4">
@@ -144,10 +147,9 @@ $_SESSION["name"] = $name;
 <div class="member-dashboard">Payment :  $ <b>
   <?php
 if ($sudo == "1" ){echo $points*0.001;}
-
 ?>
 
-</b></div>
+</b></div><?php ne(); ?>
 <div class="member-dashboard">Points : <b><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
 Copy the following text and share with friends ..... with each friend you get 5 points
@@ -161,6 +163,7 @@ Copy the following text and share with friends ..... with each friend you get 5 
   </div><!-- /.container -->
 </main>
 <?php include_once("footer.html") ?>
+
     <script src="./view/assets/dist/js/bootstrap.bundle.min.js"></script>      
-  </body>
+ </body>
 </html>
