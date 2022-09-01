@@ -143,7 +143,7 @@ $_SESSION["name"] = $name;
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
 <div class="member-dashboard">Payment :  $ <b>
   <?php
-if ($sudo == "1" ){echo $points*0.001;}
+if ($sudo == "1" ){echo $points*0.0001;}
 
 ?>
 
