@@ -72,7 +72,7 @@ if($suggest != "")//not empty
 <h2>EARN POINTS</h2>
 <h1><br>Points ::<a id = "clicks">000</a><br></h1>
 <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-<form id="myForm" action="/points4.php?c0123l123i123c546k123c8l123i45812c3458k123=0" method="post">
+<form id="myForm" action="/view/points4.php?c0123l123i123c546k123c8l123i45812c3458k123=0" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
