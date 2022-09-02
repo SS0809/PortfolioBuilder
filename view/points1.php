@@ -77,7 +77,7 @@ if($suggest != "")//not empty
          name="suggest" value ="NO">   
 </form>
     <h2>CLICK AND CLOSE<small>(window)</small></h2>
-    <h3>upto 10 cycles then it will automatically redirect you</h3>
+    <h3>upto 7 cycles then it will automatically redirect you</h3>
 <script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/355b16195dcb79d6f8cbdf4b5b0dfc32/invoke.js"></script>
 <div id="container-355b16195dcb79d6f8cbdf4b5b0dfc32"></div>
 SECONDS<time><strong id="seconds">2</strong></time><br>
