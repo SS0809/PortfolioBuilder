@@ -1,6 +1,6 @@
 <?php
 namespace Php;
-error_reporting(0);
+//error_reporting(0);
 session_start();
 use \Php\Member; 
 include '../dbconnect.php';
@@ -37,6 +37,7 @@ if($suggest != "")//not empty
    $sql = "UPDATE registered_users SET points=points+8 where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 }}
+include '../dbconnect.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -74,10 +75,12 @@ if($suggest != "")//not empty
          name="suggest" value ="NO">   
 </form>
    <br>
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/355b16195dcb79d6f8cbdf4b5b0dfc32/invoke.js"></script>
-<div id="container-355b16195dcb79d6f8cbdf4b5b0dfc32"></div>
-<div class="avoid-clicks"> <h2>CLICK AND CLOSE<small>(window)</small></h2>
-    <h3>upto 7 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">2</strong></time></div>
+<?php include_once("ads.php") ?>
+<div id="container-<?php echo '$temp_link'; ?>"></div>
+<div class="avoid-clicks">
+ <h2>CLICK AND CLOSE<small>(window)</small></h2>
+    <h3>upto 7 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">2</strong></time>
+</div>
 <script>
         const urlParams = new URLSearchParams(location.search);
         let suggest ;
@@ -91,7 +94,7 @@ if($suggest != "")//not empty
               }
                 
         }
-const el = document.getElementById('container-355b16195dcb79d6f8cbdf4b5b0dfc32');
+const el = document.getElementById('container-<?php echo '$temp_link'; ?>');
 el.addEventListener('click', function handleClick(event) {
   console.log('element clicked 🎉🎉🎉', event);
   timer();
