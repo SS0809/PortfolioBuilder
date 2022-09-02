@@ -1,6 +1,8 @@
 <?php
-$linn = array(
-"f0ac4c43a4f5d1b9350bade78235892a",
+  
+  
+  $linn = array(
+"f0ac4c43a4f5d1b9350bade78235892",
 "f0ac4c43a4f5d1b9350bade78235892a",
 "352602af1b204a99db8839c2755af225",
 "a6359a1d6d37486f74d0d3907a1bc83a",
@@ -18,6 +20,8 @@ $linn = array(
   );
 
 $temp_link = $linn[10];
-echo '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
-echo '<div id="container-'.$temp_link.'"></div>';
+$sc= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
+$di= '<div id="container-'.$temp_link.'"></div>';
+
+
 ?>
