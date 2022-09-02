@@ -1,6 +1,6 @@
 <?php
 namespace Php;
-//error_reporting(0);
+error_reporting(0);
 session_start();
 use \Php\Member; 
 include '../dbconnect.php';
@@ -42,9 +42,6 @@ if($suggest != "")//not empty
 <html>
 <head>
 <?php include_once("a.html") ?>
-</head>
-<body>
-  <br><br>  <h1>40 COMPLETED</h1>
 <script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
          var pic = document.getElementById("pic");
@@ -60,29 +57,27 @@ if($suggest != "")//not empty
         home.setAttribute("class", "nav-link");
         pic.setAttribute("src", "<?php echo $profile_pic ?>");
 </script>
-
       <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <!--BOOTSTRAP-->
   </head>
 <body>
+  <br><br><br>  <h1>0 COMPLETED</h1>
 <!--c0123l123i123c546k123c8l123i45812c3458k123-->
 <h2>EARN POINTS</h2>
-<h1><br>Points ::<a id = "clicks">000</a><br></h1>
+<h1>Points ::<a id = "clicks">000</a></h1>
 <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-<form id="myForm" action="/view/points7.php" method="post">
+<form id="myForm" action="/view/points7.php?c0123l123i123c546k123c8l123i45812c3458k123=0" method="post">
         <input type="hidden" id="suggest"
          name="suggest" value ="NO">   
 </form>
-    <h2>CLICK AND CLOSE<small>(window)</small></h2>
-    <h3>upto 7 cycles then it will automatically redirect you</h3>
-<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/a6359a1d6d37486f74d0d3907a1bc83a/invoke.js"></script>
-<div id="container-a6359a1d6d37486f74d0d3907a1bc83a"></div>
-SECONDS<time><strong id="seconds">2</strong></time><br>
-
-<!--<button onclick="timer()">00</button>-->
+   <br>
+<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/355b16195dcb79d6f8cbdf4b5b0dfc32/invoke.js"></script>
+<div id="container-355b16195dcb79d6f8cbdf4b5b0dfc32"></div>
+<div class="avoid-clicks"> <h2>CLICK AND CLOSE<small>(window)</small></h2>
+    <h3>upto 7 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">2</strong></time></div>
 <script>
         const urlParams = new URLSearchParams(location.search);
         let suggest ;
@@ -90,14 +85,13 @@ SECONDS<time><strong id="seconds">2</strong></time><br>
              if (key == 'c0123l123i123c546k123c8l123i45812c3458k123'){suggest = value ; 
             if (value>=8) {
  suggest = 0;
- //alert("10 completed");
    document.getElementById("myForm").submit();
 
              }
               }
                 
         }
-const el = document.getElementById('container-a6359a1d6d37486f74d0d3907a1bc83a');
+const el = document.getElementById('container-355b16195dcb79d6f8cbdf4b5b0dfc32');
 el.addEventListener('click', function handleClick(event) {
   console.log('element clicked 🎉🎉🎉', event);
   timer();
