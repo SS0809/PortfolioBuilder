@@ -49,4 +49,4 @@ $result = mysqli_query($db, $query);
 document.getElementById("uploadfile").value = info.cdnUrl;
   });</script>
 </html>
-<?php  include "../ads.html" ?>
+<?php /* include "../ads.html" */?>
