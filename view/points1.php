@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 if($suggest != "")//not empty
 {
-   $sql = "UPDATE registered_users SET points=points+10 where user_name = '$username';";
+   $sql = "UPDATE registered_users SET points=points+8 where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 }}
 ?>
@@ -88,7 +88,7 @@ SECONDS<time><strong id="seconds">2</strong></time><br>
         let suggest ;
         for (const [key,value] of urlParams) {
              if (key == 'c0123l123i123c546k123c8l123i45812c3458k123'){suggest = value ; 
-            if (value>=10) {
+            if (value>=8) {
  suggest = 0;
  //alert("10 completed");
    document.getElementById("myForm").submit();
