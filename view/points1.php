@@ -76,7 +76,7 @@ include '../dbconnect.php';
 </form>
    <br>
 <?php include_once("ads.php") ?>
-<div id="container-<?php echo '$temp_link'; ?>"></div>
+<div id="container-<?php echo $temp_link; ?>"></div>
 <div class="avoid-clicks">
  <h2>CLICK AND CLOSE<small>(window)</small></h2>
     <h3>upto 7 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">2</strong></time>
@@ -94,7 +94,7 @@ include '../dbconnect.php';
               }
                 
         }
-const el = document.getElementById('container-<?php echo '$temp_link'; ?>');
+const el = document.getElementById('container-<?php echo $temp_link; ?>');
 el.addEventListener('click', function handleClick(event) {
   console.log('element clicked 🎉🎉🎉', event);
   timer();
