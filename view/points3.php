@@ -111,7 +111,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
 
       if (key == 'c0123l123i123c546k123c8l123i45812c3458k123') {
         suggest = value;
-        if (value >= 8) {
+        if (value >= 16) {
           suggest = 0;
           document.getElementById("myForm").submit();
 
