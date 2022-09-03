@@ -79,11 +79,13 @@ include '../dbconnect.php';
   </form>
   <br>
   <?php
+
   
   
 include "ads.php";
 
 $temp_link = $linn[2];
+
 $sc= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
 $di= '<div id="container-'.$temp_link.'"></div>';
 
