@@ -150,7 +150,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
           el.textContent = total;
           if (total <= 0) {
             clearInterval(timeinterval);
-            if(clic==2&&cli==1){create();}
+            if(clic==1&&cli==1){create();}
           }
         }, 1000);
     }
