@@ -19,7 +19,7 @@ if (! empty($_SESSION["userId"])) {
         $points = ucwords($memberResult[0]["points"]);
         $profile_pic = $memberResult[0]["filename"];
         $sudo = $memberResult[0]["sudo"];
-               
+        $chart_data = $memberResult[0]["chart_data"];      
         // Username is stored as cookie for 10 years as
         // 10years * 365days * 24hrs * 60mins * 60secs
         setcookie("user_login", $name, time() +
@@ -40,6 +40,7 @@ $_SESSION["name"] = $name;
         $points = $memberResult[0]["points"];
         $profile_pic = $memberResult[0]["filename"];
         $sudo = $memberResult[0]["sudo"];
+        $chart_data = $memberResult[0]["chart_data"];
     }
 }
 ?>
@@ -144,10 +145,10 @@ $_SESSION["name"] = $name;
 <div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
 <div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
 <div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
-<div class="member-dashboard">Payment :  $ <b>
+
   <?php
 
-if ($sudo == "1" ){echo $points*0.0006;}
+if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  $ <br>'. $points*0.0006;}
 
 ?>
 
@@ -164,6 +165,7 @@ Copy the following text and share with friends ..... with each friend you get 5 
     </div><!-- /.row -->
   </div><!-- /.container -->
 </main>
+<?php if ($sudo == "1" ){ include "chart.php"; }?>
 <?php include_once("footer.html") ?>
 
     <script src="./view/assets/dist/js/bootstrap.bundle.min.js"></script>      
