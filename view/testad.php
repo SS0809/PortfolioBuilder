@@ -83,15 +83,21 @@ include '../dbconnect.php';
   
 include "ads.php";
 
-$temp_link = $linn[3];
+$temp_link = $linn[1];
 $sc= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
 $di= '<div id="container-'.$temp_link.'"></div>';
+
+$temp_link1 = $linn[5+1];
+$sc1= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link1.'/invoke.js"></script>';
+$di1= '<div id="container-'.$temp_link1.'"></div>';
 
 
 ?>
 
-  <?php echo $sc; ?>
+<?php echo $sc; ?>
  <?php echo $di; ?>
+  <?php echo $sc1; ?>
+ <?php echo $di1; ?>
   <div class="avoid-clicks">
     <h2>CLICK AND CLOSE<small>(window)</small></h2>
     <h3>upto 8 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">1</strong></time>
@@ -115,15 +121,23 @@ $di= '<div id="container-'.$temp_link.'"></div>';
       }
 
     }
+    var clic = 0;
     const el = document.getElementById('container-<?php echo $temp_link; ?>');
     el.addEventListener('click', function handleClick(event) {
       console.log('element clicked 🎉🎉🎉', event);
-      timer();
+         clic += 1 ;
+         timer();
+    });
+    const el1 = document.getElementById('container-<?php echo $temp_link1; ?>');
+    el1.addEventListener('click', function handleClick(event) {
+      console.log('1element clicked 🎉🎉🎉', event);
+       clic += 1 ;
+         timer(); 
     });
 
     function create() {
-
       window.location = '/view/testad.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;
+      console.log("2 success");
     }
 
     function timer() {
@@ -136,7 +150,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
           el.textContent = total;
           if (total <= 0) {
             clearInterval(timeinterval);
-            create();
+            if(clic==2){create();}
           }
         }, 1000);
     }
@@ -145,10 +159,4 @@ $di= '<div id="container-'.$temp_link.'"></div>';
   </script>
   <?php include_once("footer.html") ?>
 </body>
-
 </html>
-
-
-
-
-
