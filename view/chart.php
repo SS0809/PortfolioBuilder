@@ -21,11 +21,11 @@
 	width: 70%;
 	margin: 15px auto;
 	}
-	body {
+	/*body {
 	text-align: center;
 	color: green;
 	}
-	/*h2 {
+	h2 {
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	font-size: 30px;
@@ -73,6 +73,5 @@
 $str = '10203040506070'; 
 $str = substr($str, 2);
 $str .="80";
-echo $str ;
 
 ?>
