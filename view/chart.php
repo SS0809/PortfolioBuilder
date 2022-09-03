@@ -25,11 +25,11 @@
 	text-align: center;
 	color: green;
 	}
-	h2 {
+	/*h2 {
 	text-align: center;
 	font-family: "Verdana", sans-serif;
 	font-size: 30px;
-	}
+	}*/
 </style>
 <body>
 		<canvas id="myChart"  style="width:100%;max-width:750px"></canvas>
