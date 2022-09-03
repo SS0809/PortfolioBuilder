@@ -87,7 +87,7 @@ $temp_link = $linn[4];
 $sc= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
 $di= '<div id="container-'.$temp_link.'"></div>';
 
-$temp_link1 = $linn[4];
+$temp_link1 = $linn[4+5];
 $sc1= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link1.'/invoke.js"></script>';
 $di1= '<div id="container-'.$temp_link1.'"></div>';
 
