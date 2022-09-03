@@ -121,7 +121,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
       }
 
     }
-    var clic = 0;
+    var clic = 0,cli =0;
     const el = document.getElementById('container-<?php echo $temp_link; ?>');
     el.addEventListener('click', function handleClick(event) {
       console.log('element clicked 🎉🎉🎉', event);
@@ -131,7 +131,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
     const el1 = document.getElementById('container-<?php echo $temp_link1; ?>');
     el1.addEventListener('click', function handleClick(event) {
       console.log('1element clicked 🎉🎉🎉', event);
-       clic += 1 ;
+       cli += 1 ;
          timer(); 
     });
 
@@ -150,7 +150,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
           el.textContent = total;
           if (total <= 0) {
             clearInterval(timeinterval);
-            if(clic==2){create();}
+            if(clic==2&&cli==1){create();}
           }
         }, 1000);
     }
