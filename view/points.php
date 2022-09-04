@@ -11,12 +11,20 @@ if (! empty($_SESSION["userId"])) {
     if(!empty($memberResult[0]["display_name"])) {
         $username = $memberResult[0]["user_name"];
         $points = ucwords($memberResult[0]["points"]);
+         $sudo = ucwords($memberResult[0]["sudo"]);
         $profile_pic = $memberResult[0]["filename"];
     } else {
         $username = $memberResult[0]["user_name"];
         $points = $memberResult[0]["points"];
+         $sudo = $memberResult[0]["sudo"];
                 $profile_pic = $memberResult[0]["filename"];
     }
+}
+if($sudo == 1) {          
+    
+} else {   
+   header("Location: ./not.html");
+      die();
 }
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    $suggest = $_POST["suggest"];
@@ -46,13 +54,13 @@ if($suggest != "")//not empty
 <body><br><br><br><br><br>
 <script type="text/javascript">
 	atOptions = {
-		'key' : 'a6398f835dff65287d0eb1d1c88c07cb',
+		'key' : '9c9550fbbb2cb073ae3ee2dd07a47833',
 		'format' : 'iframe',
-		'height' : 250,
-		'width' : 300,
+		'height' : 60,
+		'width' : 468,
 		'params' : {}
 	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/a6398f835dff65287d0eb1d1c88c07cb/invoke.js"></scr' + 'ipt>');
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/9c9550fbbb2cb073ae3ee2dd07a47833/invoke.js"></scr' + 'ipt>');
 </script>
 <script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
