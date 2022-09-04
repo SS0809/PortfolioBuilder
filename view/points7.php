@@ -74,7 +74,7 @@ include '../dbconnect.php';
   <h2>click on both</h2>
   <h1>Points ::<a id="clicks">000</a></h1>
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-  <form id="myForm" action="/view/points6.php?c0123l123i123c546k123c8l123i45812c3458k123=0" method="post">
+  <form id="myForm" action="/view/points7.php?c0123l123i123c546k123c8l123i45812c3458k123=0" method="post">
     <input type="hidden" id="suggest" name="suggest" value="NO">
   </form>
   <br>
@@ -83,11 +83,11 @@ include '../dbconnect.php';
   
 include "ads.php";
 
-$temp_link = $linn[5];
+$temp_link = $linn[14];
 $sc= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
 $di= '<div id="container-'.$temp_link.'"></div>';
 
-$temp_link1 = $linn[5+5];
+$temp_link1 = $linn[14+1];
 $sc1= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link1.'/invoke.js"></script>';
 $di1= '<div id="container-'.$temp_link1.'"></div>';
 
@@ -136,7 +136,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
     });
 
     function create() {
-      window.location = '/view/points5.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;
+      window.location = '/view/points7.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;
       console.log("2 success");
     }
 

@@ -55,11 +55,18 @@
 		{
 			label: "points earned by session",
 
-              data:  [<?php  echo $chart_data ?>],
+              data:  [<?php 
+			  echo $chart_data;
+			    $chart_data = substr($chart_data, 2);//delete first
+			 $chart_data = substr_replace($chart_data ,"80",2);//delete last
+			 
+			  
+			 
+			 echo $temp1; ?>],
 			backgroundColor: "rgba(153,205,1,0.6)",
 		},
-		/*{
-			label: "free hours",
+			/*{
+		label: "free hours",
 			data: [2, 2, 5, 5, 2, 1, 10],
 			backgroundColor: "rgba(155,153,10,0.6)",
 		},*/

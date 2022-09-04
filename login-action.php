@@ -1,6 +1,5 @@
 <?php
 namespace Php;
-
 use \Php\Member;
 if (! empty($_POST["login"])) {
     session_start();
