@@ -72,11 +72,11 @@ include '../dbconnect.php';
   <br><br> <?php
 
 if ($sudo == "1" ){
-  echo '<div class="member-dashboard">Points :  Rs. <br>'. $points;}
+  }
  else {   
    header("Location: ./not.html");
       die();
-}
+}echo '<div class="member-dashboard">Points :  Rs. <br>'. $points;
 ?>
   <h1>PAGE B1</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
