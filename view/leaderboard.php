@@ -8,6 +8,7 @@ table, th, td {
 }
 </style>
 <body>
+	<h2>TOP 5 USERS</h2>
 <table style="width:100%">
   <tr>
     <th>Username</th>
