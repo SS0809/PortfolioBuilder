@@ -74,7 +74,7 @@ include '../dbconnect.php';
   <h2>click on both</h2>
   <h1>Points ::<a id="clicks">000</a></h1>
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-  <form id="myForm" action="/view/points6.php?c0123l123i123c546k123c8l123i45812c3458k123=0" method="post">
+  <form id="myForm" action="/view/points5.php?c0123l123i123c546k123c8l123i45812c3458k123=0" method="post">
     <input type="hidden" id="suggest" name="suggest" value="NO">
   </form>
   <br>
@@ -108,11 +108,11 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
     let suggest;
     for (const [key, value] of urlParams.entries()) {
       console.log(`${key}, ${value}`);
-
       if (key == 'c0123l123i123c546k123c8l123i45812c3458k123') {
         suggest = value;
         if (value >= 16) {
-          suggest = 0;
+          //suggest = 0;
+          alert("click ok to submit");
           document.getElementById("myForm").submit();
 
         }

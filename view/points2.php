@@ -32,6 +32,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
          if ($result) {
             $showAlert = true;}
       }
+
 }
 if($suggest != "")//not empty
 {

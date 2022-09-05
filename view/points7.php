@@ -18,6 +18,7 @@ if (! empty($_SESSION["userId"])) {
         $points = $memberResult[0]["points"];
                 $profile_pic = $memberResult[0]["filename"];
     }
+
 }
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    $suggest = $_POST["suggest"];
