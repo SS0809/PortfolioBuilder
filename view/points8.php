@@ -70,7 +70,7 @@ include '../dbconnect.php';
 
 <body>
   <br><br><br>
-  <h1>PAGE B2</h1>
+  <h1>PAGE B3</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
   <h2>click on both</h2>
   <h1>Points ::<a id="clicks">000</a></h1>
@@ -84,11 +84,11 @@ include '../dbconnect.php';
   
 include "ads.php";
 
-$temp_link = $linn[14];
+$temp_link = $linn[16];
 $sc= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
 $di= '<div id="container-'.$temp_link.'"></div>';
 
-$temp_link1 = $linn[14+1];
+$temp_link1 = $linn[16+1];
 $sc1= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link1.'/invoke.js"></script>';
 $di1= '<div id="container-'.$temp_link1.'"></div>';
 
@@ -137,7 +137,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
     });
 
     function create() {
-      window.location = '/view/points7.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;
+      window.location = '/view/points8.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;
       console.log("2 success");
     }
 
