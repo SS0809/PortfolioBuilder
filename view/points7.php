@@ -70,7 +70,7 @@ include '../dbconnect.php';
 
 <body>
   <br><br><br>
-  <h1>96 COMPLETED</h1>
+  <h1>PAGE B2</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
   <h2>click on both</h2>
   <h1>Points ::<a id="clicks">000</a></h1>
