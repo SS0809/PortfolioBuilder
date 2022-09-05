@@ -69,15 +69,7 @@ include '../dbconnect.php';
 </head>
 
 <body>
-  <br><br> <?php
-
-if ($sudo == "1" ){
-  echo '<div class="member-dashboard">Points :  Rs. <br>'. $points;}
- else {   
-   header("Location: ./not.html");
-      die();
-}
-?>
+  <br><br><br>
   <h1>PAGE B2</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
   <h2>click on both</h2>
