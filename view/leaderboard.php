@@ -2,6 +2,8 @@
 namespace Php;?>
 <!DOCTYPE html>
 <html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 table, th, td {
   border:1px solid black;
