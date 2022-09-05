@@ -155,7 +155,7 @@ if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  $ <br>'. $poin
 </b></div><?php ne(); ?>
 <div class="member-dashboard">Points : <b><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
-Copy the following text and share with friends ..... with each friend you get 5 points
+Copy the following text and share with friends ..... with each friend you get 50 points
 <input type="" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
 <button onclick="myFunction()">SHARE</button>
         </div>
