@@ -148,7 +148,7 @@ $_SESSION["name"] = $name;
 
   <?php
 
-if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  $ <br>'. $points*0.0006;}
+if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <br>'. $points*0.04;}
 
 ?>
 
