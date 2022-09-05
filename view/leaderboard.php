@@ -9,7 +9,7 @@ table, th, td {
   border:1px solid black;
 }
 </style>
-<body>
+<body> <a class="nav-link active" id = "home"  aria-current="page" href="/index.php">Home</a>
 	<h2>TOP 5 USERS</h2>
 <table style="width:100%">
   <tr>
