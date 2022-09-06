@@ -24,7 +24,7 @@
 					<div class="container box_1620">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<a class="navbar-brand logo_h" href="/index.php" style="color: orange;"><h1 style="position: auto;
-  background: linear-gradient(to right, #f32170, #cf23cf);
+  background: linear-gradient(to right,#9421f3, #cf23cf);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
       ">$$_name</h1></a>
