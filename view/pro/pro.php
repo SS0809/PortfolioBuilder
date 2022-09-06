@@ -23,7 +23,7 @@
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container box_1620">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="/index.php" style="color: orange;"><h1>$$$$$$</h1></a>
+						<a class="navbar-brand logo_h" href="/index.php" style="color: orange;"><h1>$$_name</h1></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -47,20 +47,20 @@
 					<div class="banner_content">
 						<div class="media">
 							<div class="d-flex">
-								<img src="img/personal_.webp" alt="..." loading="lazy" width="10%" alt="main_image">
+								<img src="$$_pic" loading="lazy" width="10%" alt="main_image">
 							</div>
 							<div class="media-body">
 								<div class="personal_text">
 									<h5>Hi everyone, this is</h5>
-									<div class="Hello"> <h3>$$$$$$$</h3> </div>
-									<h4>$$$$$$$$$$$$$$</h4>
-									<p>$$$$$$$$$$$$$$$$$$</p>																											
+									<div class="Hello"> <h3>$$_name</h3> </div>
+									<h4>$$_goal</h4>
+									<p>$$_sabout</p>																												
 									<ul class="list basic_info">
-											<li ><a href="mailto:#@gmail.com" target="_blank" ><i class="fa fa-envelope-o" aria-hidden="true"></i>Mail-Box</a></li> 
+											<li ><a href="$$_mail" target="_blank" ><i class="fa fa-envelope-o" aria-hidden="true"></i>Mail-Box</a></li> 
 									</ul>
 									<ul class="list personal_social">
-										<li><a href="$$$$$$$" target="_blank"><i class="fa fa-instagram"></i></a></li>
-										<li><a href="$$$$$$$" target=" _blank"><i class="fa fa-youtube"></i></a></li>
+										<li><a href="$$_insta" target="_blank"><i class="fa fa-instagram"></i></a></li>
+										<li><a href="$$_youtube" target=" _blank"><i class="fa fa-youtube"></i></a></li>
 									</ul>
 								</div>
 							</div>
@@ -76,9 +76,7 @@
         			<div class="col-lg-6">
         				<div class="welcome_text">
         					<h4>About Me</h4>
-        					<p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla <br>
-								<br>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla <br>								
-								<br>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla </p>						
+        					<p>$$_about</p>						
         				</div>
         			</div>
         		</div>
@@ -96,17 +94,7 @@
 							</p>
 							<p><h4>Made with ❤️️ and JavaScript in India.</h4></p>							
         				</aside>
-        			</div>
-					<div class="col-lg-5 col-sm-6">
-        				<aside class="f_widget news_widget">
-        					<div class="f_title">
-        						<h2>$$$$$$$</h2>
-        					</div>
-							<p> <h4>GKFYLGIGLUIGFILGUIHGFUIHRUIHB<br>  </h4>																										
-							</p>
-							<p><h4>GKFYLGIGLUIGFILGUIHGFUIHRUIHB</h4></p>											
-        				</aside>
-        			</div>        		
+        			</div>			     		
         		</div>
         	</div>
         </footer>
