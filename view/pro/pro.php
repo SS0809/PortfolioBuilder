@@ -52,9 +52,7 @@
 							<div class="media-body">
 								<div class="personal_text">
 									<h5>Hi everyone, this is</h5>
-									<div class="Hello"> <h3 style=" background-image: linear-gradient(60deg, #E21143, #FFB03A);
-  background-clip: text;
-  color: transparent;">$$_name</h3> </div>
+									<div class="Hello"> <h3>$$_name</h3> </div>
 									<h4>$$_goal</h4>
 									<p>$$_sabout</p>																												
 									<ul class="list basic_info">
