@@ -1,7 +1,7 @@
 <?php
 include '../../dbconnect.php';
-if($_SERVER["REQUEST_METHOD"] == "GET") {
-   $user = $_GET["user"];
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+   $user = $_POST["user"];
    $sql = "Select * from registered_users where user_name='$user'";
    $result = mysqli_query($conn, $sql);
    $num = mysqli_num_rows($result);
