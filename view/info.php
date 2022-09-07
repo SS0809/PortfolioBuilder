@@ -20,24 +20,43 @@ if (! empty($_SESSION["userId"])) {
     }
 }
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-   $suggest = $_POST["suggest"];
-   $sql = "Select * from registered_users where user_name='$username'";
-   $result = mysqli_query($conn, $sql);
-   $num = mysqli_num_rows($result);
-   if($num == 0) {
-      if(($password == $cpassword) && $exists==false) {
-         $sql = "INSERT INTO `registered_users` ( `user_name`,`suggest`)
-         VALUES ('$username', '$suggest')";
-         $result = mysqli_query($conn, $sql);
-         if ($result) {
-            $showAlert = true;}
-      }
+   $goal = $_POST["goal"];
+      $sabout = $_POST["sabout"];
+         $about = $_POST["about"];
+            $youtube = $_POST["youtube"];
+               $insta = $_POST["insta"];
 
-}
-if($suggest != "")//not empty
+if($goal != "")//not empty
 {
-   $sql = "UPDATE registered_users SET points=points+8 where user_name = '$username';";
+   $sql = "UPDATE registered_users SET goal='$goal' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
+}
+if($sabout != "")//not empty
+{
+   $sql = "UPDATE registered_users SET sabout='$sabout' where user_name = '$username';";
+   $result = mysqli_query($conn, $sql); 
+}
+if($about != "")//not empty
+{
+   $sql = "UPDATE registered_users SET about='$about' where user_name = '$username';";
+   $result = mysqli_query($conn, $sql); 
+}
+if($insta != "")//not empty
+{
+   $sql = "UPDATE registered_users SET insta='$insta' where user_name = '$username';";
+   $result = mysqli_query($conn, $sql); 
+}
+if($youtube != "")//not empty
+{
+   $sql = "UPDATE registered_users SET youtube='$youtube' where user_name = '$username';";
+   $result = mysqli_query($conn, $sql); 
+}
+if($sudo == 1) {          
+    
+}
+ else {   
+   header("Location: ./not.html");
+      die();
 }}
 include '../dbconnect.php';
 ?>  
@@ -70,94 +89,21 @@ include '../dbconnect.php';
 
 <body>
   <br><br><br>
-  <h1>PAGE A3</h1>
-  <!--c0123l123i123c546k123c8l123i45812c3458k123-->
-  <h2>click on both</h2>
-  <h1>Points ::<a id="clicks">000</a></h1>
+
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-  <form id="myForm" action="/view/points4.php?c0123l123i123c546k123c8l123i45812c3458k123=0" method="post">
-    <input type="hidden" id="suggest" name="suggest" value="NO">
+  <form id="myForm" action="#" method="post">
+    <label for="username">Goal</label>
+    <input type="input" id="goal" name="goal"><br>
+        <label for="username">small about</label>
+        <input type="input" id="sabout" name="sabout"><br>
+            <label for="username">about</label>
+            <input type="input" id="about" name="about"><br>
+                <label for="username">instagram</label>
+                <input type="input" id="insta" name="insta"><br>
+                    <label for="username">youtube</label>
+                    <input type="input" id="youtube" name="youtube"><br>
   </form>
   <br>
-  <?php
-  
-  
-include "ads.php";
-
-$temp_link = $linn[3];
-$sc= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
-$di= '<div id="container-'.$temp_link.'"></div>';
-
-$temp_link1 = $linn[5+3];
-$sc1= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link1.'/invoke.js"></script>';
-$di1= '<div id="container-'.$temp_link1.'"></div>';
-
-
-?>
-
-<?php echo $sc; ?>
- <?php echo $di; ?>
-  <?php echo $sc1; ?>
- <?php echo $di1; ?>
-  <div class="avoid-clicks">
-    <h2>CLICK AND CLOSE<small>(window)</small></h2>
-    <h3>upto 8 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">1</strong></time>
-  </div>
-  <script>
-    var p = 0;
-    const urlParams = new URLSearchParams(location.search);
-    let suggest;
-    for (const [key, value] of urlParams.entries()) {
-      console.log(`${key}, ${value}`);
-
-      if (key == 'c0123l123i123c546k123c8l123i45812c3458k123') {
-        suggest = value;
-        if (value >= 16) {
-          suggest = 0;
-          document.getElementById("myForm").submit();
-
-        }
-      } else {
-        p = value;
-      }
-
-    }
-    var clic = 0,cli=0;
-    const el = document.getElementById('container-<?php echo $temp_link; ?>');
-    el.addEventListener('click', function handleClick(event) {
-      console.log('element clicked 🎉🎉🎉', event);
-         clic += 1 ;
-         timer();
-    });
-    const el1 = document.getElementById('container-<?php echo $temp_link1; ?>');
-    el1.addEventListener('click', function handleClick(event) {
-      console.log('1element clicked 🎉🎉🎉', event);
-       cli += 1 ;
-         timer(); 
-    });
-
-    function create() {
-      window.location = '/view/points3.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;
-      console.log("2 success");
-    }
-
-    function timer() {
-      suggest++;
-      console.log(suggest);
-      var el = document.getElementById('seconds'),
-        total = el.innerHTML,
-        timeinterval = setInterval(function () {
-          total = --total;
-          el.textContent = total;
-          if (total <= 0) {
-            clearInterval(timeinterval);
-            if(clic==1&&cli==1){create();}
-          }
-        }, 1000);
-    }
-    su = document.getElementById('clicks');
-    su.textContent = suggest;
-  </script>
   <?php include_once("footer.html") ?>
 </body>
 </html>
