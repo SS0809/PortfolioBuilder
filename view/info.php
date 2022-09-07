@@ -102,6 +102,10 @@ include '../dbconnect.php';
                 <input type="input" id="insta" name="insta"><br>
                     <label for="username">youtube</label>
                     <input type="input" id="youtube" name="youtube"><br>
+<div>
+                        <input type="submit" name="login" value="Login"
+                        class="btnLogin"></span>
+                    </div>
   </form>
   <br>
   <?php include_once("footer.html") ?>
