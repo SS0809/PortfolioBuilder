@@ -14,19 +14,6 @@ if (! empty($_SESSION["userId"])) {
         $points = ucwords($memberResult[0]["points"]);
         $profile_pic = ucwords($memberResult[0]["filename"]);
          $pay = ucwords($memberResult[0]["pay"]);
-               
-        // Username is stored as cookie for 10 years as
-        // 10years * 365days * 24hrs * 60mins * 60secs
-        setcookie("user_login", $name, time() +
-        (10 * 365 * 24 * 60 * 60));
-
-// Password is stored as cookie for 10 years as
-// 10years * 365days * 24hrs * 60mins * 60secs
-setcookie("user_password", $password, time() +
-        (10 * 365 * 24 * 60 * 60));
-
-// After setting cookies the session variable will be set
-$_SESSION["name"] = $name;
 
     } else {
         $displayname = $memberResult[0]["display_name"];
