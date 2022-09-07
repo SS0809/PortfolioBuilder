@@ -1,38 +1,24 @@
 <?php
-namespace Php;
-error_reporting(0);
-session_start();
-use \Php\Member;
-if (! empty($_SESSION["userId"])) {
-    require_once __DIR__ . './.././../class/Member.php';
-    $member = new Member();
-    $memberResult = $member->getMemberById($_SESSION["userId"]);
-    if(!empty($memberResult[0]["display_name"])) {
-        $displayname = ucwords($memberResult[0]["display_name"]);
-        $username = $memberResult[0]["user_name"];
-        $email = ucwords($memberResult[0]["email"]);
-        $points = ucwords($memberResult[0]["points"]);
-        $profile_pic = ucwords($memberResult[0]["filename"]);
-         $pay = ucwords($memberResult[0]["pay"]);
-
-    } else {
-        $displayname = $memberResult[0]["display_name"];
-        $username = $memberResult[0]["user_name"];
-        $email = $memberResult[0]["email"];
-        $points = $memberResult[0]["points"];
-        $profile_pic = $memberResult[0]["filename"];
-        $pay = $memberResult[0]["pay"];
-    }
+include '../../dbconnect.php';
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+   $user = $_POST["user"];
+   $sql = "Select * from registered_users where user_name='$user'";
+   $result = mysqli_query($conn, $sql);
+   $num = mysqli_num_rows($result);
+   while($row = mysqli_fetch_assoc($result)) {
+   $name = $row["user_name"];
+   $pay = $row["pay"];
+  $tempp = "saurabh";
+  $insta =  $row["insta"];
+$youtube =  $row["youtube"];
+$mail =  $row["email"];
+$profile_pic =  $row["filename"];
+$about =  $row["about"];
+$sabout =  $row["sabout"];
+$goal =  $row["goal"];
+  }
 if ($pay=="1") {
 $newcontent = file_get_contents("pro.php");
-$tempp = "saurabh";
-$name = $username;
-$insta = "Saurabh";
-$youtube = "Saurabh";
-$mail = $email;
-$about = "bjfoigbvibvi igfidbvhiuy gviregvuieurvgrehv uiregvgreui vgi regvuigrevuireun8ghvrueihvrgeivghr78e uireu4h grueghure g7yu";
-$sabout = "bjfoigbvibvi igfidbvhiuy";
-$goal = "Developer";
 $newcontent = str_replace('$$_name',$name, $newcontent);
 $newcontent = str_replace('$$_pic',$profile_pic, $newcontent);
 $newcontent = str_replace('$$_about',$about, $newcontent);
