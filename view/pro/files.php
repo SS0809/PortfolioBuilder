@@ -30,7 +30,7 @@ $newcontent = str_replace('$$_mail',$mail, $newcontent);
 echo $newcontent;
 }
 else
-{
+{ 
    include "../not1.html";
 }
 }

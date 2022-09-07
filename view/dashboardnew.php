@@ -2,6 +2,20 @@
 namespace Php;
 error_reporting(0);
 session_start();
+    $servername = "remotemysql.com";
+    $username = "IIVAjfeDkk";
+    $password = "zzrye8TbMy";
+    $database = "IIVAjfeDkk";
+    $conn = mysqli_connect($servername,
+        $username, $password, $database);
+
+    if($conn) {
+    //  echo "success";
+    }
+    else {
+        die("Error". mysqli_connect_error());
+}
+
 use \Php\Member;
   if(""!=$new){
 function ne()
@@ -42,6 +56,13 @@ $_SESSION["name"] = $name;
         $sudo = $memberResult[0]["sudo"];
         $chart_data = $memberResult[0]["chart_data"];
     }
+if($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+  $pay_o = $_POST["pay_o"];
+   $sql = "UPDATE registered_users SET pay = '$pay_o' where user_name = '$username';";
+      $result = mysqli_query($conn, $sql); 
+}
+
 }
 ?>
 <!doctype html>
@@ -79,6 +100,11 @@ $_SESSION["name"] = $name;
 
 <main>
 <br><br><br>
+
+
+ 
+
+
   <div class="container marketing">
     <div class="dashboard">   
     <!-- Three columns of text below the carousel -->
@@ -100,6 +126,12 @@ if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <br>'. $po
 </b></div><?php ne(); ?>
 <div class="member-dashboard">Points : <b><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
+      <h4>enter 1 to server your web && 0 to not</h4>
+      <form id="myForm" action="#" method="post">
+    <input type="input" id="pay_o" name="pay_o">
+  
+   <input type="submit" name="login" value="Done"
+                        class="btnLogin"></form>
 Copy the following text and share with friends ..... with each friend you get 50 points
 <input type="" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
 <button onclick="myFunction()">SHARE</button>
