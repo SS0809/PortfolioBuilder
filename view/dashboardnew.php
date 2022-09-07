@@ -132,9 +132,12 @@ if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
   
    <input type="submit" name="login" value="Done"
                         class="btnLogin"></form>
+ <input type="" value="https://subxsub.me/pages?a=<?php echo $username; ?>" id="myInput">
+ <button onclick="myFunction()">COPY</button>
+<a href="https://subxsub.me/pages?a=<?php echo $username; ?>" target="_blank" class="btn btn-info me-1" role="button">postfolio</a><br>
 Copy the following text and share with friends ..... with each friend you get 50 points
 <input type="" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
-<button onclick="myFunction()">SHARE</button>
+<button onclick="myFunction()">COPY</button>
         </div>
   </h6>
     </div>
