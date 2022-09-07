@@ -1,6 +1,6 @@
 <?php
 namespace Php;
-//error_reporting(0);
+error_reporting(0);
 session_start();
 use \Php\Member;
 if (! empty($_SESSION["userId"])) {
@@ -13,6 +13,7 @@ if (! empty($_SESSION["userId"])) {
         $email = ucwords($memberResult[0]["email"]);
         $points = ucwords($memberResult[0]["points"]);
         $profile_pic = ucwords($memberResult[0]["filename"]);
+         $pay = ucwords($memberResult[0]["pay"]);
                
         // Username is stored as cookie for 10 years as
         // 10years * 365days * 24hrs * 60mins * 60secs
@@ -33,8 +34,9 @@ $_SESSION["name"] = $name;
         $email = $memberResult[0]["email"];
         $points = $memberResult[0]["points"];
         $profile_pic = $memberResult[0]["filename"];
+        $pay = $memberResult[0]["pay"];
     }
-
+if ($pay=="1") {
 $newcontent = file_get_contents("pro.php");
 $tempp = "saurabh";
 $name = $username;
@@ -53,5 +55,10 @@ $newcontent = str_replace('$$_insta',$insta, $newcontent);
 $newcontent = str_replace('$$_youtube',$youtube, $newcontent);
 $newcontent = str_replace('$$_mail',$mail, $newcontent);
 echo $newcontent;
+}
+else
+{
+   include "../not1.html";
+}
 }
 ?>
