@@ -126,18 +126,17 @@ if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <br>'. $po
 </b></div><?php ne(); ?>
 <div class="member-dashboard">Points : <b><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
-      <h4>enter 1 to server your web && 0 to not</h4>
+      <h4>Enter 1 to serve your web && 0 to not we charge 2 points per hour</h4>
       <form id="myForm" action="#" method="post">
-    <input type="input" id="pay_o" name="pay_o">
-  
+    <input type="input" id="pay_o" name="pay_o" value="0 or 1">
    <input type="submit" name="login" value="Done"
                         class="btnLogin"></form>
  <input type="" value="https://subxsub.me/pages?a=<?php echo $username; ?>" id="myInput">
- <button onclick="myFunction()">COPY</button>
-<a href="https://subxsub.me/pages?a=<?php echo $username; ?>" target="_blank" class="btn btn-info me-1" role="button">postfolio</a><br>
-Copy the following text and share with friends ..... with each friend you get 50 points
+   <button onclick="myFunction()">COPY</button><br>
+<a href="https://subxsub.me/pages?a=<?php echo $username; ?>" target="_blank" class="btn btn-info me-1" role="button">portfolio</a><br>
+Copy the following text and share with friends ..... with each friend you get 50 points<br>
 <input type="" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
-<button onclick="myFunction()">COPY</button>
+<button onclick="myFunction()">COPY</button><br>
         </div>
   </h6>
     </div>
