@@ -88,17 +88,13 @@ $temp_link = $linn[1];
 $sc= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link.'/invoke.js"></script>';
 $di= '<div id="container-'.$temp_link.'"></div>';
 
-$temp_link1 = $linn[5+1];
-$sc1= '<script async="async" data-cfasync="false" src="//sixtybirthsuperstition.com/'.$temp_link1.'/invoke.js"></script>';
-$di1= '<div id="container-'.$temp_link1.'"></div>';
 
 
 ?>
 
 <?php echo $sc; ?>
  <?php echo $di; ?>
-  <?php echo $sc1; ?>
- <?php echo $di1; ?>
+
   <div class="avoid-clicks">
     <h2>CLICK AND CLOSE<small>(window)</small></h2>
     <h3>upto 8 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">1</strong></time>
@@ -112,7 +108,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
 
       if (key == 'c0123l123i123c546k123c8l123i45812c3458k123') {
         suggest = value;
-        if (value >= 16) {
+        if (value >= 8) {
           suggest = 0;
           document.getElementById("myForm").submit();
 
@@ -122,19 +118,14 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
       }
 
     }
-    var clic = 0,cli = 0;
+
     const el = document.getElementById('container-<?php echo $temp_link; ?>');
     el.addEventListener('click', function handleClick(event) {
       console.log('element clicked 🎉🎉🎉', event);
-         clic += 1 ;
+
          timer();
     });
-    const el1 = document.getElementById('container-<?php echo $temp_link1; ?>');
-    el1.addEventListener('click', function handleClick(event) {
-      console.log('1element clicked 🎉🎉🎉', event);
-       cli += 1 ;
-         timer(); 
-    });
+
 
     function create() {
       window.location = '/view/points1.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;
@@ -151,7 +142,7 @@ $di1= '<div id="container-'.$temp_link1.'"></div>';
           el.textContent = total;
           if (total <= 0) {
             clearInterval(timeinterval);
-            if(clic==1&&cli==1){create();}
+            create();
           }
         }, 1000);
     }
