@@ -17,13 +17,7 @@ if (! empty($_SESSION["userId"])) {
         $username = $memberResult[0]["user_name"];
         $points = $memberResult[0]["points"];
                 $profile_pic = $memberResult[0]["filename"];
-    }if($sudo == 1) {          
-    
-}
- else {   
-   header("Location: ./not.html");
-      die();
-}
+    }
 }
 if($_SERVER["REQUEST_METHOD"] == "POST") {
    $goal = $_POST["goal"];
@@ -56,6 +50,13 @@ if($youtube != "")//not empty
 {
    $sql = "UPDATE registered_users SET youtube='$youtube' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
+}
+if($sudo == 1) {          
+    
+}
+ else {   
+   header("Location: ./not.html");
+      die();
 }
 }
 include '../dbconnect.php';
