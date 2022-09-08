@@ -2,20 +2,6 @@
 namespace Php;
 error_reporting(0);
 session_start();
-    $servername = "remotemysql.com";
-    $username = "IIVAjfeDkk";
-    $password = "zzrye8TbMy";
-    $database = "IIVAjfeDkk";
-    $conn = mysqli_connect($servername,
-        $username, $password, $database);
-
-    if($conn) {
-    //  echo "success";
-    }
-    else {
-        die("Error". mysqli_connect_error());
-}
-
 use \Php\Member;
   if(""!=$new){
 function ne()
@@ -56,13 +42,6 @@ $_SESSION["name"] = $name;
         $sudo = $memberResult[0]["sudo"];
         $chart_data = $memberResult[0]["chart_data"];
     }
-if($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-  $pay_o = $_POST["pay_o"];
-   $sql = "UPDATE registered_users SET pay = '$pay_o' where user_name = '$username';";
-      $result = mysqli_query($conn, $sql); 
-}
-
 }
 ?>
 <!doctype html>
@@ -70,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SUBXSUB</title>
+    <title>PROXY</title>
       <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -97,77 +76,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   navigator.clipboard.writeText(copyText.value);
   navigator.clipboard.writeText(copyText.value);
 }</script>  
-<style type="text/css">
-     .iconDetails {
- margin-left:2%;
-float:left; 
-height:19%;
-width:19%; 
-} 
 
-.container2 {
-    width:100%;
-    height:auto;
-    padding:1%;
-}
-
-h4 {
-    margin:0px;
-}
-body {
-color:orange;
-  background-color: black;
-  style=" font-weight: 900;"
-}
-</style>
 <main>
 <br><br><br>
-<div class='container2'>
-        <div>
-            <img src='<?php echo $profile_pic; ?>' class='iconDetails'>
-        </div>  
-    <div style='margin-left:60px;'>
-    <div   class = "cc" style="font-size:1em;float:left;">
+  <div class="container marketing">
+    <div class="dashboard">   
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <center><div class="col-lg-4">
+       <img src="<?php echo $profile_pic; ?>" width="50%" height="50%">
+<div>
+      <h6>        
+<div class="member-dashboard">Name : <b><?php echo $displayname; ?></b></div>
+<div class="member-dashboard">Username : <b><?php echo $username; ?></b></div>
+<div class="member-dashboard">Email : <b><?php echo $email;?></b></div>
 
-      <h6>  	
-<div>Name : <b><?php echo $displayname; ?></b></div>
-<div>Username : <b><?php echo $username; ?></b></div>
-<div>Email : <b><?php echo $email;?></b></div>
   <?php
 
-if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <b>'. $points*0.04;}
-?></b>
-<div>Points : <b><?php echo $points;
-if ($points <= "5" ){echo "(default)";}?></b></div>
-</div>
- </div>   <div style="float:right;font-size:.6em">Active : 0 mins ago</div>
-   
-</div>
-</b>  </h6>
+if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <br>'. $points*0.04;}
 
-</div>
-    <br>
-<br>
-<br><br><br><?php ne(); ?>
-<br><br><br><br><br><br><br><br>
-     Enter 1 to serve your web && 0 to not we charge 2 points per hour
-      <form id="myForm" action="#" method="post">
-    <input type="input" id="pay_o" name="pay_o" value="0 or 1">
-   <input class="btn btn-danger me-1" type="submit" name="login" value="Done"
-                        class="btnLogin"></form>
-<a href="https://subxsub.me/pages?a=<?php echo $username; ?>" target="_blank" class="btn btn-success me-1" role="button">portfolio</a>
-<a href="/view/info.php" target="_blank" class="btn btn-success me-1" role="button">EDIT</a><br>
-Copy the following text and share it in your bio {your portfolio}<br>
- <input type="" value="https://subxsub.me/pages?a=<?php echo $username; ?>" id="myInput">
-   <button class="btn btn-info me-1" onclick="myFunction()">COPY</button><br>
-Copy the following text and share with friends ..... with each friend you get 50 points<br>
+?>
+
+</b></div><?php ne(); ?>
+<div class="member-dashboard">Points : <b><?php echo $points;
+if ($points <= "5" ){echo "(default)";}?></b></div><br><br>
+Copy the following text and share with friends ..... with each friend you get 50 points
 <input type="" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
-<button class="btn btn-info me-1" onclick="myFunction()">COPY</button><br>
+<button onclick="myFunction()">SHARE</button>
         </div>
-
+  </h6>
     </div>
+      </div><!-- /.col-lg-4 --></center>
+    </div><!-- /.row -->
+  </div><!-- /.container -->
 </main>
-<?php /*if ($sudo == "1" ){ include "chart.php"; }*/?>
+<?php if ($sudo == "1" ){ include "chart.php"; }?>
 <?php include_once("footer.html") ?>
 
     <script src="./view/assets/dist/js/bootstrap.bundle.min.js"></script>      
