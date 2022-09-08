@@ -127,23 +127,23 @@ color:orange;
             <img src='<?php echo $profile_pic; ?>' class='iconDetails'>
         </div>  
     <div style='margin-left:60px;'>
-    <div   class = "cc" style="font-size:1em;float:left;">
+    <div style="font-size:1em;float:left;">
 
       <h6>  	
-<div>Name : <b><?php echo $displayname; ?></b></div>
-<div>Username : <b><?php echo $username; ?></b></div>
-<div>Email : <b><?php echo $email;?></b></div>
+<div>Name : <b style="color:white;"><?php echo $displayname; ?></b></div>
+<div>Username : <b style="color:white;"><?php echo $username; ?></b></div>
+<div>Email : <b style="color:white;"><?php echo $email;?></b></div>
   <?php
 
-if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <b>'. $points*0.04;}
+if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <b style="color:white;">'. $points*0.04;}
 ?></b>
-<div>Points : <b><?php echo $points;
+<div>Points : <b style="color:white;"><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div>
 </div>
  </div>   <div style="float:right;font-size:.6em">Active : 0 mins ago</div>
    
 </div>
-</b>  </h6>
+  </h6>
 
 </div>
     <br>
