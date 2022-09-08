@@ -166,7 +166,7 @@ Copy the following text and share with friends ..... with each friend you get 50
         </div>
 
     </div>
-</main>
+
 <?php /*if ($sudo == "1" ){ include "chart.php"; }*/?>
 <?php include_once("footer.html") ?>
 
