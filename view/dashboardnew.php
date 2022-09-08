@@ -140,7 +140,7 @@ if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <b style="
 <div>Points : <b style="color:white;"><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div>
 </div>
- </div>   <div style="float:right;font-size:.6em">Active : 0 mins ago</div>
+ </div>   <div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>
    
 </div>
   </h6>
