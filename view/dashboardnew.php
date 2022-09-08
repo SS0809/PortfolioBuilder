@@ -168,6 +168,7 @@ Copy the following text and share with friends ..... with each friend you get 50
     </div>
 
 <?php /*if ($sudo == "1" ){ include "chart.php"; }*/?>
+<br><br><br><br><br><br><br>
 <?php include_once("footer.html") ?>
 
     <script src="./view/assets/dist/js/bootstrap.bundle.min.js"></script>      
