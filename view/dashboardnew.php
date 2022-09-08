@@ -121,7 +121,7 @@ color:orange;
 }
 </style>
 <main>
-<br><br><br>
+<br><br>
 <div>
         <div>
             <img src='<?php echo $profile_pic; ?>' class='iconDetails'>
