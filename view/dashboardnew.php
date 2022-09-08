@@ -117,12 +117,12 @@ h4 {
 body {
 color:orange;
   background-color: black;
-  style=" font-weight: 900;"
+  style=" font-weight: 1000;"
 }
 </style>
 <main>
 <br><br><br>
-<div class='container2'>
+<div>
         <div>
             <img src='<?php echo $profile_pic; ?>' class='iconDetails'>
         </div>  
@@ -149,7 +149,7 @@ if ($points <= "5" ){echo "(default)";}?></b></div>
     <br>
 <br>
 <br><br><br><?php ne(); ?>
-<br><br><br><br><br><br><br><br>
+<br><br><br>
      Enter 1 to serve your web && 0 to not we charge 2 points per hour
       <form id="myForm" action="#" method="post">
     <input type="input" id="pay_o" name="pay_o" value="0 or 1">
