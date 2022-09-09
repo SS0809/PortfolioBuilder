@@ -10,7 +10,7 @@ table, th, td {
 }
 </style>
 <body> <a class="nav-link active" id = "home"  aria-current="page" href="/index.php">Home</a>
-	<h2>TOP 5 USERS</h2>
+	<h2>TOP 15 USERS</h2>
 <table style="width:100%">
   <tr>
     <th>Username</th>
@@ -52,7 +52,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     //echo $row["user_name"]. " ---------- ". $row["points"]. "<br>";
-       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'.. '<td>'.$row["points*0.06"].'</td>'. "<br>";
+       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$row["points*0.06"].'</td>'. "<br>";
   }
 } else {
   echo "0 results";
