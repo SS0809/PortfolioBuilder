@@ -15,6 +15,7 @@ table, th, td {
   <tr>
     <th>Username</th>
     <th>Points</th>
+    <th>Payment</th>
   </tr>
   <?php
 //error_reporting(0);
@@ -51,7 +52,7 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     //echo $row["user_name"]. " ---------- ". $row["points"]. "<br>";
-       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. "<br>";
+       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'.. '<td>'.$row["points*0.06"].'</td>'. "<br>";
   }
 } else {
   echo "0 results";
