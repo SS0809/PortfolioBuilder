@@ -47,13 +47,16 @@ if($sudo == 1) {
 }
 include '../dbconnect.php';
 $sql = "SELECT user_name,points FROM `registered_users` ORDER BY `registered_users`.`points` DESC limit 15";
+$total = 0;
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     //echo $row["user_name"]. " ---------- ". $row["points"]. "<br>";
-       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$row["points"]*0.06.'</td>'. "<br>";
+    $total += $row["points"];
+       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$row["points"]*0.05.'</td>'. "<br>";
   }
+  echo "Total money in server RS:: ".$total*0.05;
 } else {
   echo "0 results";
 }
