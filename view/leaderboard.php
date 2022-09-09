@@ -15,6 +15,7 @@ table, th, td {
   <tr>
     <th>Username</th>
     <th>Points</th>
+     <th>Rank</th>
     <th>Payment</th>
     <th>Portfolio</th>
   </tr>
@@ -62,7 +63,19 @@ if ($result->num_rows > 0) {
        {
          $check = "OFF"; 
        }
-       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>Rs.'.$row["points"]*0.05.'</td>'. '<td>'.$check.'</td>'. "<br>";
+
+
+      if ($row["points"]>100) {
+        $rank = "1&#9734;"; 
+        if ($row["points"]>500)
+       {
+         $rank = "2&#9734;"; 
+       }}
+       else 
+       {
+         $rank = "LOSER"; 
+       }
+       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'. '<td>Rs.'.$row["points"]*0.05.'</td>'. '<td>'.$check.'</td>'. "<br>";
      
   }
   echo "Total money in server RS:: ".$total*0.05;
