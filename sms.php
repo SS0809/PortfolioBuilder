@@ -1,7 +1,7 @@
 <?php
 $ch = curl_init('https://textbelt.com/text');
 $data = array(
-  'phone' => '9343719054',
+  'phone' => '+919343719054',
   'message' => 'Hello world',
   'key' => 'textbelt',
 );
