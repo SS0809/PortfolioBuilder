@@ -45,7 +45,7 @@ if($sudo == 1) {
       die();
 }
 include '../dbconnect.php';
-$sql = "SELECT user_name,points FROM `registered_users` ORDER BY `registered_users`.`points` DESC limit 5";
+$sql = "SELECT user_name,points FROM `registered_users` ORDER BY `registered_users`.`points` DESC limit 15";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
