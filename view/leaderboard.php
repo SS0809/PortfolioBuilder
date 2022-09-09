@@ -8,16 +8,21 @@ namespace Php;?>
 table, th, td {
   border:1px solid black;
 }
+body {
+color:orange;
+  background-color: black;
+  style=" font-weight: 1000;"
+}
 </style>
 <body> <a class="nav-link active" id = "home"  aria-current="page" href="/index.php">Home</a>
-	<h2>TOP SUBXSUB USERS</h2>
+	<h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
 <table style="width:100%">
   <tr>
-    <th>Username</th>
-    <th>Points</th>
-     <th>Rank</th>
-    <th>Payment</th>
-    <th>Portfolio</th>
+    <th style="color:white;">Username</th>
+    <th style="color:white;">Points</th>
+     <th style="color:white;">Rank</th>
+    <th style="color:white;">Payment</th>
+    <th style="color:white;">Portfolio</th>
   </tr>
   <?php
 //error_reporting(0);
@@ -75,10 +80,10 @@ if ($result->num_rows > 0) {
        {
          $rank = "LOSER"; 
        }
-       echo '<tr><td>'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'. '<td>Rs.'.$row["points"]*0.05.'</td>'. '<td>'.$check.'</td>'. "<br>";
+       echo '<tr><td style="color:white;">'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'. '<td>Rs.'.$row["points"]*0.05.'</td>'. '<td>'.$check.'</td>'. "<br>";
      
   }
-  echo "Total money in server RS:: ".$total*0.05;
+  echo "Total money in server RS:: ".$total*0.05."  You will get payment when it reaches rs.7000";
 } else {
   echo "0 results";
 }
