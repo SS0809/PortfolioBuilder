@@ -13,12 +13,12 @@ if (! empty($_SESSION["userId"])) {
         $username = $memberResult[0]["user_name"];
         $user_browser = $memberResult[0]["user_browser"];
         $points = ucwords($memberResult[0]["points"]);
-        $profile_pic = $memberResult[0]["filename"];
+        $sudo = $memberResult[0]["sudo"];
     } else {
         $username = $memberResult[0]["user_name"];
         $user_browser = $memberResult[0]["user_browser"];
         $points = $memberResult[0]["points"];
-                $profile_pic = $memberResult[0]["filename"];
+                $sudo = $memberResult[0]["sudo"];
     }
 $userbrowser= $user_browser;
 }
@@ -65,7 +65,7 @@ if( array_search($current,$unserialized_array)===false)
 
 else
 {
-	if ($last==$current/*%%other condition*/) {
+	if ($last==$current&&$sudo==1) {
 	echo "yes";
 	echo $current;
 		}
