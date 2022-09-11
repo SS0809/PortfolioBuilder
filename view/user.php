@@ -39,7 +39,7 @@ $array = array($_SERVER['HTTP_USER_AGENT']);
 $current= $_SERVER['HTTP_USER_AGENT'];
 
 
-	echo "yes";
+	echo "yes first";
 	$serialized_array = serialize($array); 
    $sql = "UPDATE registered_users SET user_browser='$serialized_array' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
@@ -59,19 +59,19 @@ if( array_search($current,$unserialized_array)===false)
 	$serialized_array = serialize($unserialized_array); 
   $sql = "UPDATE registered_users SET user_browser='$serialized_array' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
-	echo "yes";
+	echo "yes different";
 	echo $current;
 }
 
 else
 {
 	if ($last==$current&&$sudo==1) {
-	echo "yes";
+	echo "yes sudo";
 	echo $current;
 		}
 		else
 		{
-		echo "no";
+		echo "no sudo";
 	    echo $current;
 		}
 }
