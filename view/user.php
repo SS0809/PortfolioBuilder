@@ -53,7 +53,7 @@ $unserialized_array = unserialize($userbrowser);
 
 
 
-if( array_search($current,$unserialized_array)==false)
+if( array_search($current,$unserialized_array)===false)
 {
 	array_push($unserialized_array,$current);
 	$serialized_array = serialize($unserialized_array); 
