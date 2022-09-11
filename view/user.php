@@ -57,6 +57,7 @@ $last = end($unserialized_array );
 
 if ($last==$current) {
 	echo "no";
+	echo $current;
 }
 else
 {
@@ -65,6 +66,7 @@ else
   $sql = "UPDATE registered_users SET user_browser='$serialized_array' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 	echo "yes";
+	echo $current;
 }
 
 
