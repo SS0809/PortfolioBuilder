@@ -148,6 +148,11 @@ $di= '<div id="container-'.$temp_link.'"></div>';
     }
     su = document.getElementById('clicks');
     su.textContent = suggest;
+
+
+
+      var elem = document.getElementById("container-<?php echo $temp_link; ?>");
+  //elem.parentNode.removeChild(elem);
   </script>
   <?php include_once("footer.html") ?>
 </body>
