@@ -13,14 +13,17 @@ if (! empty($_SESSION["userId"])) {
         $username = $memberResult[0]["user_name"];
         $user_browser = $memberResult[0]["user_browser"];
         $points = ucwords($memberResult[0]["points"]);
-        $sudo = $memberResult[0]["sudo"];
+        $pointa = $memberResult[0]["pointa"];
+        $pointb = $memberResult[0]["pointb"];
+        
         $profile_pic = $memberResult[0]["filename"];
     } else {
         $username = $memberResult[0]["user_name"];
         $user_browser = $memberResult[0]["user_browser"];
         $points = $memberResult[0]["points"];
-                $sudo = $memberResult[0]["sudo"]; 
-                $profile_pic = $memberResult[0]["filename"];
+        $pointa = $memberResult[0]["pointa"];
+        $pointb = $memberResult[0]["pointbs];
+          $profile_pic = $memberResult[0]["filename"];
     }
 if ( $userbrowser == "")
 {
