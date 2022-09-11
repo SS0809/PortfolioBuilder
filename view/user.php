@@ -50,7 +50,7 @@ else
 {
 $current= $_SERVER['HTTP_USER_AGENT'];
 $unserialized_array = unserialize($userbrowser); 
-
+$last = end($unserialized_array);
 
 
 if( array_search($current,$unserialized_array)===false)
@@ -64,8 +64,16 @@ if( array_search($current,$unserialized_array)===false)
 }
 
 else
-{echo "no";
+{
+	if ($last==$current/*%%other condition*/) {
+	echo "yes";
 	echo $current;
+		}
+		else
+		{
+		echo "no";
+	    echo $current;
+		}
 }
 
 
