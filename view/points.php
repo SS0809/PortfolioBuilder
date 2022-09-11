@@ -63,8 +63,7 @@ else
         else
         {
         echo "no sudo";
-          header("Location: ./not.html");
-      die();
+
         echo $current;
         }
 }
