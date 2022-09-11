@@ -37,7 +37,17 @@ $current= $_SERVER['HTTP_USER_AGENT'];
     $serialized_array = serialize($array); 
    $sql = "UPDATE registered_users SET user_browser='$serialized_array' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
-
+       if ($pointa==""&&$pointb=="") {
+    echo "yes sudo";
+    echo $current;
+        }
+        else
+        {
+        echo "no sudo";
+   header("Location: ./not.html");
+      die();
+        echo $current;
+        }
 }
 else
 {
@@ -57,7 +67,7 @@ if( array_search($current,$unserialized_array)===false)
 }
 else
 {
-    if ($pointa==""&&$pointb=="") {
+    if ($pointa=="0"&&$pointb=="0") {
     echo "yes sudo";
     echo $current;
         }
