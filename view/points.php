@@ -22,7 +22,7 @@ if (! empty($_SESSION["userId"])) {
         $user_browser = $memberResult[0]["user_browser"];
         $points = $memberResult[0]["points"];
         $pointa = $memberResult[0]["pointa"];
-        $pointb = $memberResult[0]["pointbs];
+        $pointb = $memberResult[0]["pointb"];
           $profile_pic = $memberResult[0]["filename"];
     }
 if ( $userbrowser == "")
