@@ -56,7 +56,7 @@ if( array_search($current,$unserialized_array)===false)
 }
 else
 {
-    if ($last==$current&&$sudo==1) {
+    if ($last==$current&&$pointa==""$pointb=="") {
     echo "yes sudo";
     echo $current;
         }
