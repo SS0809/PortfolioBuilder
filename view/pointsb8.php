@@ -96,7 +96,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 
   <div class="avoid-clicks">
     <h2>CLICK AND CLOSE<small>(window)</small></h2>
-    <h3>upto 8 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">1</strong></time>
+    <h3>upto 8 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">0</strong></time>
   </div>
   <script>
     var p = 0;
@@ -109,6 +109,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
         suggest = value;
         if (value >= 8) {
           suggest = 0;
+             alert("click ok to submit");
           document.getElementById("myForm").submit();
 
         }
