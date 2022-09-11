@@ -45,7 +45,6 @@ $current= $_SERVER['HTTP_USER_AGENT'];
    $result = mysqli_query($conn, $sql); 
 
 }
-
 else
 {
 $current= $_SERVER['HTTP_USER_AGENT'];
@@ -62,7 +61,6 @@ if( array_search($current,$unserialized_array)===false)
 	echo "yes different";
 	echo $current;
 }
-
 else
 {
 	if ($last==$current&&$sudo==1) {
@@ -75,35 +73,5 @@ else
 	    echo $current;
 		}
 }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

@@ -4,21 +4,70 @@ namespace Php;
 session_start();
 use \Php\Member; 
 include '../dbconnect.php';
+$userbrowser;
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
     $member = new Member();
     $memberResult = $member->getMemberById($_SESSION["userId"]);
     if(!empty($memberResult[0]["display_name"])) {
         $username = $memberResult[0]["user_name"];
+        $user_browser = $memberResult[0]["user_browser"];
         $points = ucwords($memberResult[0]["points"]);
-         $sudo = ucwords($memberResult[0]["sudo"]);
+        $sudo = $memberResult[0]["sudo"];
         $profile_pic = $memberResult[0]["filename"];
     } else {
         $username = $memberResult[0]["user_name"];
+        $user_browser = $memberResult[0]["user_browser"];
         $points = $memberResult[0]["points"];
-         $sudo = $memberResult[0]["sudo"];
+                $sudo = $memberResult[0]["sudo"]; 
                 $profile_pic = $memberResult[0]["filename"];
     }
+if ( $userbrowser == "")
+{
+
+$array = array($_SERVER['HTTP_USER_AGENT']);
+$current= $_SERVER['HTTP_USER_AGENT'];
+
+
+    echo "yes first";
+    $serialized_array = serialize($array); 
+   $sql = "UPDATE registered_users SET user_browser='$serialized_array' where user_name = '$username';";
+   $result = mysqli_query($conn, $sql); 
+
+}
+else
+{
+$current= $_SERVER['HTTP_USER_AGENT'];
+$unserialized_array = unserialize($userbrowser); 
+$last = end($unserialized_array);
+
+
+if( array_search($current,$unserialized_array)===false)
+{
+    array_push($unserialized_array,$current);
+    $serialized_array = serialize($unserialized_array); 
+  $sql = "UPDATE registered_users SET user_browser='$serialized_array' where user_name = '$username';";
+   $result = mysqli_query($conn, $sql); 
+    echo "yes different";
+    echo $current;
+}
+else
+{
+    if ($last==$current&&$sudo==1) {
+    echo "yes sudo";
+    echo $current;
+        }
+        else
+        {
+        echo "no sudo";
+          header("Location: ./not.html");
+      die();
+        echo $current;
+        }
+}
+}
+
+
 }
 if($sudo == 1) {          
     

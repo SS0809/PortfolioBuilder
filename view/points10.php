@@ -36,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 if($suggest != "")//not empty
 {
-   $sql = "UPDATE registered_users SET points=points+8 where user_name = '$username';";
+   $sql = "UPDATE registered_users SET points=points+8 ,pointa='1' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 }}
 include '../dbconnect.php';
