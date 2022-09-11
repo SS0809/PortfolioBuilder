@@ -57,14 +57,15 @@ if( array_search($current,$unserialized_array)===false)
 }
 else
 {
-    if ($last==$current) {
+    if ($last==$current&&$pointa==""&&$pointb=="") {
     echo "yes sudo";
     echo $current;
         }
         else
         {
         echo "no sudo";
-
+   header("Location: ./not.html");
+      die();
         echo $current;
         }
 }
