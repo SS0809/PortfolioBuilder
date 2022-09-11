@@ -38,34 +38,33 @@ if ( $userbrowser == "")
 $array = array($_SERVER['HTTP_USER_AGENT']);
 $current= $_SERVER['HTTP_USER_AGENT'];
 
-//print_r($array[0]);
-if(end($array)==$current)
-{
+
 	echo "yes";
 	$serialized_array = serialize($array); 
    $sql = "UPDATE registered_users SET user_browser='$serialized_array' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 
 }
-}
+
 else
 {
 $current= $_SERVER['HTTP_USER_AGENT'];
 $unserialized_array = unserialize($userbrowser); 
-//print_r(end($unserialized_array ));
-$last = end($unserialized_array );
 
-if ($last==$current) {
-	echo "no";
-	echo $current;
-}
-else
+
+
+if( array_search($current,$unserialized_array)==false)
 {
 	array_push($unserialized_array,$current);
 	$serialized_array = serialize($unserialized_array); 
   $sql = "UPDATE registered_users SET user_browser='$serialized_array' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 	echo "yes";
+	echo $current;
+}
+
+else
+{echo "no";
 	echo $current;
 }
 
