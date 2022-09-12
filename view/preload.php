@@ -1,8 +1,4 @@
-<!DOCTYPE>  
-<html lang='en'>
-<head>
-    <title> Loader example </title>
-    <style>
+   <style>
         .loading-gif {
             max-width: 50px;
         }
@@ -46,5 +42,3 @@
         document.querySelector('.pre-loader').className += ' hidden';
     });
 </script>
-</body>
-</html>
