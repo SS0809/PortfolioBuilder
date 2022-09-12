@@ -15,7 +15,7 @@ session_start();
     else {
         die("Error". mysqli_connect_error());
 }
-
+include "preload.php";
 use \Php\Member;
   if(""!=$new){
 function ne()
