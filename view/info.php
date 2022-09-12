@@ -90,7 +90,7 @@ include '../dbconnect.php';
 
 <body>
   <br><br><br>
-
+<br><br>
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
   <form id="myForm" action="#" method="post">
     <label for="username">Goal</label>
