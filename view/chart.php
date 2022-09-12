@@ -53,7 +53,7 @@
 		],
 		datasets: [
 		{
-			label: "points earned by session",
+			/*label: "points earned by session",
 
               data:  [<?php 
 			  echo $chart_data;
@@ -65,11 +65,11 @@
 			 echo $temp1; ?>],
 			backgroundColor: "rgba(153,205,1,0.6)",
 		},
-			/*{
+			*/{
 		label: "free hours",
 			data: [2, 2, 5, 5, 2, 1, 10],
 			backgroundColor: "rgba(155,153,10,0.6)",
-		},*/
+		},
 		],
 	},
 	});
