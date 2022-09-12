@@ -124,7 +124,7 @@ color:orange;
 <br><br>
 <div>
         <div>
-            <img src='<?php echo $profile_pic; ?>' style="max-width:25%;">
+            <img src='<?php echo $profile_pic; ?>' style="max-width:15%;">
         </div> 
     <div style='margin-left:60px;'>
     <div style="font-size:1em;float:left;">
