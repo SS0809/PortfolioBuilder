@@ -93,60 +93,14 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 
 <?php echo $sc; ?>
  <?php echo $di; ?>
-
-  <div class="avoid-clicks">
-    <h2>CLICK AND CLOSE<small>(window)</small></h2>
-    <h3>upto 8 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">0</strong></time>
-  </div>
-  <script>
-    var p = 0;
-    const urlParams = new URLSearchParams(location.search);
-    let suggest;
-    for (const [key, value] of urlParams.entries()) {
-      console.log(`${key}, ${value}`);
-
-      if (key == 'c0123l123i123c546k123c8l123i45812c3458k123') {
-        suggest = value;
-        if (value >= 8) {
-          suggest = 0;
-          document.getElementById("myForm").submit();
-
-        }
-      } else {
-        p = value;
-      }
-
-    }
-
-    const el = document.getElementById('container-<?php echo $temp_link; ?>');
-    el.addEventListener('click', function handleClick(event) {
-      console.log('element clicked 🎉🎉🎉', event);
-
-         timer();
-    });
+    <?php include "searchparam.php";?>
 
 
     function create() {
       window.location = '/view/points7.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;
       console.log("2 success");
     }
-
-    function timer() {
-      suggest++;
-      console.log(suggest);
-      var el = document.getElementById('seconds'),
-        total = el.innerHTML,
-        timeinterval = setInterval(function () {
-          total = --total;
-          el.textContent = total;
-          if (total <= 0) {
-            clearInterval(timeinterval);
-            create();
-          }
-        }, 1000);
-    }
-    su = document.getElementById('clicks');
-    su.textContent = suggest;
+    <?php include "redirector.php";?>
   </script>
   <?php include_once("footer.html") ?>
 </body>
