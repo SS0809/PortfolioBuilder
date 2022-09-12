@@ -24,7 +24,7 @@ if (! empty($_SESSION["userId"])) {
     $url= $_SERVER['REQUEST_URI'];    
   $recieve = parse_url($url, PHP_URL_QUERY);  
 $recieve = substr($recieve, 5);
-echo $recieve; 
+
 if($recieve>0)
 {
 
@@ -54,16 +54,16 @@ $di= '<div id="container-'.$temp_link.'"></div>';
   <br><br><br>
   <h1>PAGE test</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
-  <h2>click on both</h2>
+  <h2>TOKEN <?php echo $recieve; ?></h2>
   <h1>Points ::<a id="clicks">000</a></h1>
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-  <form id="myForm" action="/view/new.php?page=<?php echo  $recieve+1;?>" method="post">
+  <form id="myForm" action="/view/new.php?page=<?php   if(echo $recieve==23){"1"}else{echo $recieve+1;}?>" method="post">
     <input type="hidden" id="suggest" name="suggest" value="NO">
   </form>
   <br>
 <?php echo $sc;  echo $di; include "searchparam.php";?>
     function create() {
-      window.location = '/view/new.php?page=' + <?php echo $recieve + 1 ;?>;
+      window.location = '/view/new.php?page=' + <?php if(echo $recieve==23){"1"}else{echo $recieve+1;}?>;
       console.log("2 success");
     }
  <?php include "redirector.php";?>
