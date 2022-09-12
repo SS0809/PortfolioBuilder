@@ -30,8 +30,6 @@
     </style>
 </head>
 <body>
-<!--- Your content goes here -->
-<p>Page content</p>
 <div class='pre-loader'>
     <img class='loading-gif' alt='loading' src="https://c.tenor.com/UnFx-k_lSckAAAAM/amalie-steiness.gif"/>
 </div>
