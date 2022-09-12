@@ -16,6 +16,7 @@ color:orange;
 </style>
 <body> <a class="nav-link active" id = "home"  aria-current="page" href="/index.php">Home</a>
 	<h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
+    <canvas id="chart"  style="width:50%;max-width:750px"></canvas>
 <table style="width:100%">
   <tr>
     <th style="color:white;">Username</th>
@@ -58,9 +59,11 @@ $total = 0;
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
-  while($row = $result->fetch_assoc()) {
+   $dataa="";   $namee="";while($row = $result->fetch_assoc()) {
     //echo $row["user_name"]. " ---------- ". $row["points"]. "<br>";
-    $total += $row["points"]; 
+    $total += $row["points"];    
+    $dataa = $dataa . $row["points"].","; 
+    $namee = $namee .'"'. $row["user_name"].'",'; 
      if ($row["pay"]==1) {
         $check = "ON"; 
        }
@@ -93,3 +96,69 @@ $conn->close();
 </table>
 </body>
 </html>
+
+<html>
+<link
+	rel=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+	type="text/css"
+/>
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script
+	src=
+"https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+	type="text/javascript"
+></script>
+<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+<style>
+	.container {
+	width: 70%;
+	margin: 15px auto;
+	}
+	/*body {
+	text-align: center;
+	color: green;
+	}
+	h2 {
+	text-align: center;
+	font-family: "Verdana", sans-serif;
+	font-size: 30px;
+	}*/
+</style>
+<body>
+	
+
+</body>
+
+<script>
+	var ctx = document.getElementById("chart").getContext("2d");
+	var myChart = new Chart(ctx, {
+	type: "bar",
+	data: {
+		labels: [
+		<?php echo $namee;?>
+		],
+		datasets: [
+		{
+		label: "SUBXSUB USERS",
+			data: [<?php echo $dataa; ?>],
+			backgroundColor: "orange",
+		},
+		],
+	},
+
+});
+</script>
+</html>
+<?php 
+
+$str = '10203040506070'; 
+$str = substr($str, 2);
+$str .="80";
+
+?>
