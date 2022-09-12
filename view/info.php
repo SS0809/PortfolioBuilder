@@ -104,7 +104,7 @@ include '../dbconnect.php';
                     <label for="username">youtube</label>
                     <input type="input" id="youtube" name="youtube"><br>
 <div>
-                        <input type="submit" name="login" value="Login"
+                        <input type="submit" name="login" value="save"
                         class="btnLogin"></span>
                     </div>
   </form>
