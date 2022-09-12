@@ -123,9 +123,9 @@ color:orange;
 <main>
 <br><br>
 <div>
-        <!--<div>
-            <img src='<?php /*echo $profile_pic; */?>' class='iconDetails'>
-        </div>  -->
+        <div>
+            <img src='<?php echo $profile_pic; ?>' class='iconDetails'>
+        </div> 
     <div style='margin-left:60px;'>
     <div style="font-size:1em;float:left;">
 
