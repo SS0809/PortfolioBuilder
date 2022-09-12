@@ -51,7 +51,7 @@
 					<div class="banner_content">
 						<div class="media">
 							<div class="d-flex">
-								<img src="$$_pic" loading="lazy" width="10%" alt="main_image">
+								<img src="$$_pic" loading="lazy" width="10%" alt="main_image" style="pointer-events: none;">
 							</div>
 							<div class="media-body">
 								<div class="personal_text">
