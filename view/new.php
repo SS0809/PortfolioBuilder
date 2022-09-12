@@ -20,7 +20,7 @@ if (! empty($_SESSION["userId"])) {
     }
 
 }
-    if(isset($_SERVER['HTTPS']) )   
+    //if(isset($_SERVER['HTTPS']) )   
     $url= $_SERVER['REQUEST_URI'];    
   $recieve = parse_url($url, PHP_URL_QUERY);  
 $recieve = substr($recieve, 5);
