@@ -42,6 +42,22 @@ $di= '<div id="container-'.$temp_link.'"></div>';
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
+   <?php include_once("a.html") ?>
+  <script type="text/javascript">
+    var temp = "<?php echo $profile_pic; ?>";
+    var pic = document.getElementById("pic");
+    pic.setAttribute('src', temp);
+    points.setAttribute("href", "points1.php");
+    points.setAttribute("class", "nav-link active");
+    blogs.setAttribute("href", "../blog/index.html");
+    movies.setAttribute("href", "movies.php");
+    yt.setAttribute("href", "../yt/index.html");
+    upload.setAttribute("href", "./upload2.php");
+    logout.setAttribute("href", "/logout.php");
+    home.setAttribute("href", "../index.php");
+    home.setAttribute("class", "nav-link");
+    pic.setAttribute("src", "<?php echo $profile_pic ?>");
+  </script>
 </head>
 <body>
  <!--BOOTSTRAP-->
@@ -52,18 +68,18 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 </head>
 <body>
   <br><br><br>
-  <h1>PAGE test</h1>
+  <h1>PAGE total 46</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
   <h2>TOKEN <?php echo $recieve; ?></h2>
   <h1>Points ::<a id="clicks">000</a></h1>
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-  <form id="myForm" action="/view/new.php?page=<?php   if($recieve==23){echo "1";}else{echo $recieve+1;}?>" method="post">
+  <form id="myForm" action="/view/new.php?page=<?php   if($recieve==46){echo "1";}else{echo $recieve+1;}?>" method="post">
     <input type="hidden" id="suggest" name="suggest" value="NO">
   </form>
   <br>
 <?php echo $sc;  echo $di; include "searchparam.php";?>
     function create() {
-      window.location = '/view/new.php?page=' + <?php if($recieve==23){echo "1";}else{echo $recieve+1;}?>;
+      window.location = '/view/new.php?page=' + <?php if($recieve==46){echo "1";}else{echo $recieve+1;}?>;
       console.log("2 success");
     }
  <?php include "redirector.php";?>
