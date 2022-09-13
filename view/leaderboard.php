@@ -56,7 +56,7 @@ if($sudo == 1) {
       die();
 }
 include '../dbconnect.php';
-$sql = "SELECT user_name,points,pay FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 15";
+$sql = "SELECT user_name,points,pay FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 10";
 $total = 0;
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
