@@ -16,7 +16,7 @@ color:orange;
 </style>
 <body> <a class="nav-link active" id = "home"  aria-current="page" href="/index.php">Home</a>
 	<h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
-    <div style="height: 300px">
+    <div style="height: 800px ;width:200px">
 <canvas id="chart"  style="width:50%;max-width:750px"></canvas>
 </div>
 <table style="width:100%">
