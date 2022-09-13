@@ -56,16 +56,20 @@ if($sudo == 1) {
       die();
 }
 include '../dbconnect.php';
-$sql = "SELECT user_name,points,pay FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 10";
-$total = 0;
+$sql = "SELECT user_name,points,pay FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 20";
+$total = 0;   $alpha = 0 ;
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
    $dataa="";   $namee="";while($row = $result->fetch_assoc()) {
     //echo $row["user_name"]. " ---------- ". $row["points"]. "<br>";
     $total += $row["points"];    
+ 
+    if($alpha<10)
+    {$alpha++;
     $dataa = $dataa . $row["points"].","; 
     $namee = $namee .'"'. $row["user_name"].'",'; 
+    }
      if ($row["pay"]==1) {
         $check = "ON"; 
        }
@@ -75,12 +79,20 @@ if ($result->num_rows > 0) {
        }
 
 
-      if ($row["points"]>100) {
-        $rank = "1&#9734;"; 
-        if ($row["points"]>500)
+      if ($row["points"]>100 && $row["points"]<1000) {
+        $rank = "1&#9734;"; }
+        else if ($row["points"]>999 && $row["points"]<2000)
        {
          $rank = "2&#9734;"; 
-       }}
+       }
+         else if ($row["points"]>1999 && $row["points"]<3000)
+       {
+         $rank = "3&#9734;"; 
+       }
+         else if ($row["points"]>2999 && $row["points"]<4000)
+       {
+         $rank = "4&#9734;"; 
+       }
        else 
        {
          $rank = "LOSER"; 

@@ -132,12 +132,10 @@ color:orange;
       <h6>  	
 <div>Name : <b style="color:white;"><?php
  echo $displayname;
-if ($points > "100" ){
-if ($points > "500" ){echo " 1";}
-if ($points > "1000" ){echo " 2";}
-if ($points > "1500" ){echo " 3";}
-if ($points > "2000" ){echo " 4";}
-echo "&#9734;";}
+if ($points > "100" && $points < "999" ){echo " 1&#9734;";}
+else if ($points > "1000" && $points < "1999"){echo " 2&#9734;";}
+else if ($points > "2000" && $points < "2999"){echo " 3&#9734;";}
+else if ($points > "3000" && $points < "3999"){echo " 4&#9734;";}
   ?></b></div>
 <div>Username : <b style="color:white;"><?php echo $username; ?></b></div>
 <div>Email : <b style="color:white;"><?php echo $email;?></b></div>
