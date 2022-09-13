@@ -16,7 +16,9 @@ color:orange;
 </style>
 <body> <a class="nav-link active" id = "home"  aria-current="page" href="/index.php">Home</a>
 	<h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
-    <canvas id="chart"  style="width:50%;max-width:750px"></canvas>
+    <div style="height: 300px">
+<canvas id="chart"  style="width:50%;max-width:750px"></canvas>
+</div>
 <table style="width:100%">
   <tr>
     <th style="color:white;">Username</th>
@@ -151,7 +153,10 @@ $conn->close();
 		},
 		],
 	},
-
+options: {  
+    responsive: true,
+    maintainAspectRatio: false
+}
 });
 </script>
 </html>
@@ -162,3 +167,4 @@ $str = substr($str, 2);
 $str .="80";
 
 ?>
+
