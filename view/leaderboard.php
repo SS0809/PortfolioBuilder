@@ -140,7 +140,7 @@ $conn->close();
 <script>
 	var ctx = document.getElementById("chart").getContext("2d");
 	var myChart = new Chart(ctx, {
-	type: "line",
+	type: "bar",
 	data: {
 		labels: [
 		<?php echo $namee;?>
