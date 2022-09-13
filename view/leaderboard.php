@@ -17,7 +17,11 @@ color:orange;
 <body> <a class="nav-link active" id = "home"  aria-current="page" href="/index.php">Home</a>
 	<h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
     <div style="height: 600px ;width:400px">
-<canvas id="chart"  style="width:50%;max-width:750px"></canvas>
+<canvas id="chart1"  style="width:50%;max-width:750px"></canvas>
+</div>
+<br><br>
+    <div style="height: 600px ;width:400px">
+<canvas id="chart2"  style="width:50%;max-width:750px"></canvas>
 </div>
 <table style="width:100%">
   <tr>
@@ -150,21 +154,52 @@ $conn->close();
 </body>
 
 <script>
-	var ctx = document.getElementById("chart").getContext("2d");
-	var myChart = new Chart(ctx, {
-	type: "bar",
-	data: {
-		labels: [
-		<?php echo $namee;?>
-		],
-		datasets: [
-		{
-		label: "SUBXSUB USERS",
-			data: [<?php echo $dataa; ?>],
-			backgroundColor: "orange",
-		},
-		],
-	},
+	var ctx = document.getElementById("chart1").getContext("2d");
+  var myChart = new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: [
+    <?php echo $namee;?>
+    ],
+    datasets: [
+    {
+    label: "SUBXSUB USERS",
+      data: [<?php echo $dataa; ?>],
+      backgroundColor: "orange",
+    },
+    ],
+  },
+options: {  
+    responsive: true,
+    maintainAspectRatio: false
+}
+});
+  var ctx = document.getElementById("chart2").getContext("2d");
+  var myChart = new Chart(ctx, {
+  type: "pie",
+  data: {
+    labels: [
+    <?php echo $namee;?>
+    ],
+    datasets: [
+    {
+    label: "SUBXSUB USERS",
+      data: [<?php echo $dataa; ?>],
+      backgroundColor: [
+      "orange",
+         "blue",
+            "green",
+               "pink",
+                  "blue",
+                     "brown",
+                        "purple",
+                           "yellow",
+                              "green",
+                                 "pink",
+      ]    ,
+    },
+    ],
+  },
 options: {  
     responsive: true,
     maintainAspectRatio: false
