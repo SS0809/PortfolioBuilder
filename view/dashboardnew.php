@@ -143,7 +143,7 @@ echo "&#9734;";}
 <div>Email : <b style="color:white;"><?php echo $email;?></b></div>
   <?php
 
-if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <b style="color:white;">'. $points*0.05;}
+if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <b style="color:white;">'. $points*0.04;}
 ?></b>
 <div>Points : <b style="color:white;"><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div>
