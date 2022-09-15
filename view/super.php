@@ -79,7 +79,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
   <!--BOOTSTRAP-->
 </head>
 <body>
-  <br><br><br>
+  <br>
   <h1>PAGE total 10</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
   <h2>TOKEN <?php echo $recieve; ?></h2>
