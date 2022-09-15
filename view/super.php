@@ -38,6 +38,22 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 <!DOCTYPE html>
 <html>
 <head>
+    <?php include_once("a.html") ?>
+  <script type="text/javascript">
+    var temp = "<?php echo $profile_pic; ?>";
+    var pic = document.getElementById("pic");
+    pic.setAttribute('src', temp);
+    points.setAttribute("href", "points1.php");
+    points.setAttribute("class", "nav-link active");
+    blogs.setAttribute("href", "../blog/index.html");
+    movies.setAttribute("href", "movies.php");
+    yt.setAttribute("href", "../yt/index.html");
+    upload.setAttribute("href", "./upload2.php");
+    logout.setAttribute("href", "/logout.php");
+    home.setAttribute("href", "../index.php");
+    home.setAttribute("class", "nav-link");
+    pic.setAttribute("src", "<?php echo $profile_pic ?>");
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>

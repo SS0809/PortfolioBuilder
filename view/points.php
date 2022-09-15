@@ -16,6 +16,7 @@ if (! empty($_SESSION["userId"])) {
         $pointa = $memberResult[0]["pointa"];
         $pointb = $memberResult[0]["pointb"];
         $sudo = $memberResult[0]["sudo"];
+          $lastpoint = $memberResult[0]["lastpoint"];
         $profile_pic = $memberResult[0]["filename"];
     } else {
         $username = $memberResult[0]["user_name"];
@@ -24,6 +25,7 @@ if (! empty($_SESSION["userId"])) {
         $pointa = $memberResult[0]["pointa"];
         $pointb = $memberResult[0]["pointb"];
         $sudo = $memberResult[0]["sudo"];
+          $lastpoint = $memberResult[0]["lastpoint"];
           $profile_pic = $memberResult[0]["filename"];
     }
 if ( $userbrowser == "")
@@ -152,7 +154,7 @@ if($suggest != "")//not empty
 <h1 style="color:red">DO NOT USE SERVER TWICE IN A DEVICE<small>(mobile)</small></h1>
     <div style="text-align: center;">
 START CLICKING ADS ... AND EARN POINTS<small>(series of 46*10)</small><br>
-    <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;" onclick="location.href = '/view/super.php?page=1?cc=1';">Generate Tokenizer</button>
+    <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;" onclick="location.href = <?php echo $lastpoint;?>;">Generate Tokenizer</button>
 
 </div><br>
 
