@@ -104,7 +104,7 @@ console.log(str);
 
 
     function create() {
-      if (str==10){
+      if (str>=10){
       window.location = '/view/new.php?page=' + <?php if($recieve==10){echo "1";}else{echo $recieve+1;}?>;}
       else
       { str++;
