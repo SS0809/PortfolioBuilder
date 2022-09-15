@@ -80,10 +80,10 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 </head>
 <body>
   <br>
-  <h1>PAGE total 10</h1>
+  <h1>PAGE total 46(46*10points)</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
   <h2>TOKEN <?php echo $recieve; ?></h2>
-  <h1>Points ::<a id="clicks">000</a></h1>
+  <!--h1>Points ::<a id="clicks">000</a></h1-->
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
   <form id="myForm" action="/view/super.php?page=<?php   if($recieve==46){echo '1';}else{echo $recieve+1;}?>" method="post">
     <input type="hidden" id="suggest" name="suggest" value="NO">
