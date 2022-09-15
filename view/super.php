@@ -38,6 +38,34 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 ?>
 <!DOCTYPE html>
 <html>
+<?php include_once("a.html") ?>
+</head>
+<body><br><br><br><br><br>
+<script type="text/javascript">
+	atOptions = {
+		'key' : '9c9550fbbb2cb073ae3ee2dd07a47833',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/9c9550fbbb2cb073ae3ee2dd07a47833/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+              var temp = "<?php echo $profile_pic; ?>";
+         var pic = document.getElementById("pic");
+        pic.setAttribute('src', temp);
+        points.setAttribute("href", "points.php");
+        points.setAttribute("class", "nav-link active");
+        blogs.setAttribute("href", "../blog/index.html");
+        movies.setAttribute("href", "movies.php");
+        yt.setAttribute("href", "../yt/index.html");
+        upload.setAttribute("href", "./upload2.php");
+        logout.setAttribute("href", "/logout.php");
+        home.setAttribute("href", "../index.php");
+        home.setAttribute("class", "nav-link");
+        pic.setAttribute("src", "<?php echo $profile_pic ?>");
+</script>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
