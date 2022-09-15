@@ -36,34 +36,6 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 ?>
 <!DOCTYPE html>
 <html>
-<?php include_once("a.html") ?>
-</head>
-<body><br><br><br>
-<script type="text/javascript">
-	atOptions = {
-		'key' : '4ffd6b58ad7e80b4ddc48329052439ae',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/4ffd6b58ad7e80b4ddc48329052439ae/invoke.js"></scr' + 'ipt>');
-</script>
-<script type="text/javascript">
-              var temp = "<?php echo $profile_pic; ?>";
-         var pic = document.getElementById("pic");
-        pic.setAttribute('src', temp);
-        points.setAttribute("href", "points.php");
-        points.setAttribute("class", "nav-link active");
-        blogs.setAttribute("href", "../blog/index.html");
-        movies.setAttribute("href", "movies.php");
-        yt.setAttribute("href", "../yt/index.html");
-        upload.setAttribute("href", "./upload2.php");
-        logout.setAttribute("href", "/logout.php");
-        home.setAttribute("href", "../index.php");
-        home.setAttribute("class", "nav-link");
-        pic.setAttribute("src", "<?php echo $profile_pic ?>");
-</script>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,13 +49,13 @@ $di= '<div id="container-'.$temp_link.'"></div>';
   <!--BOOTSTRAP-->
 </head>
 <body>
-  <br>
-  <h1>PAGE total 46(46*10points)</h1>
+  <br><br><br>
+  <h1>PAGE total 10</h1>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
   <h2>TOKEN <?php echo $recieve; ?></h2>
-  <!--h1>Points ::<a id="clicks">000</a></h1-->
+  <h1>Points ::<a id="clicks">000</a></h1>
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-  <form id="myForm" action="/view/super.php?page=<?php   if($recieve==46){echo '1';}else{echo $recieve+1;}?>" id ="formch" method="post">
+  <form id="myForm" action="/view/new.php?page=<?php   if($recieve==10){echo '1';}else{echo $recieve+1;}?>" method="post">
     <input type="hidden" id="suggest" name="suggest" value="NO">
   </form>
   <br>
@@ -130,13 +102,10 @@ console.log(str);
 
     function create() {
       if (str>=10){
-        document.formch.action = '/view/super.php?page=' + <?php if($recieve==46){echo "1";}else{echo $recieve+1;}?>+'?cc=0';
-          document.getElementById("myForm").submit();
-      }
+      window.location = '/view/new.php?page=' + <?php if($recieve==10){echo "1";}else{echo $recieve+1;}?>+'?cc=0';}
       else
       { str++;
-             document.formch.action  = '/view/super.php?page=' + <?php echo $recieve;?> + '?cc=' + str;
-              document.getElementById("myForm").submit();
+            window.location = '/view/super.php?page=' + <?php echo $recieve;?> + '?cc=' + str;
       }
       console.log("2 success");
     }
