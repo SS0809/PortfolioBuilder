@@ -26,7 +26,8 @@ if (! empty($_SESSION["userId"])) {
 $recieve = substr($recieve, 5);
 $recieve = substr($recieve, 0, strpos($recieve, "?cc"));
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $sql = "UPDATE registered_users SET points=points+1 where user_name = '$username';";
+     $suggest = $_POST["suggest"];
+    $sql = "UPDATE registered_users SET points=points+1 , lastpoint = '$suggest' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 }
 include "ads.php";
@@ -102,10 +103,17 @@ console.log(str);
 
     function create() {
       if (str>=10){
-      window.location = '/view/new.php?page=' + <?php if($recieve==10){echo "1";}else{echo $recieve+1;}?>+'?cc=0';}
+        document.getElementById("myForm").action  = '/view/new.php?page=' + <?php if($recieve==10){echo "1";}else{echo $recieve+1;}?>+'?cc=0';
+    document.getElementById('suggest').value = document.getElementById("myForm").action  = '/view/new.php?page=' + <?php if($recieve==10){echo "1";}else{echo $recieve+1;}?>+'?cc=0';
+       
+         document.getElementById("myForm").submit();
+      }
       else
       { str++;
-            window.location = '/view/super.php?page=' + <?php echo $recieve;?> + '?cc=' + str;
+            document.getElementById("myForm").action  = '/view/super.php?page=' + <?php echo $recieve;?> + '?cc=' + str;
+                 document.getElementById('suggest').value      = '/view/super.php?page=' + <?php echo $recieve;?> + '?cc=' + str;
+
+             document.getElementById("myForm").submit();
       }
       console.log("2 success");
     }
