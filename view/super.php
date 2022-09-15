@@ -72,7 +72,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
   <h2>TOKEN <?php echo $recieve; ?></h2>
   <h1>Points ::<a id="clicks">000</a></h1>
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
-  <form id="myForm" action="/view/new.php?page=<?php   if($recieve==10){echo '1';}else{echo $recieve+1;}?>" method="post">
+  <form id="myForm" action="/view/super.php?page=<?php   if($recieve==10){echo '1';}else{echo $recieve+1;}?>" method="post">
     <input type="hidden" id="suggest" name="suggest" value="NO">
   </form>
   <br>
