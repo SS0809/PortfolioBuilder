@@ -141,7 +141,7 @@ else if ($points > "3000" && $points < "3999"){echo " 4&#9734;";}
 <div>Email : <b style="color:white;"><?php echo $email;?></b></div>
   <?php
 
-if ($sudo == "1" ){echo '<div class="member-dashboard">Payment :  Rs. <b style="color:white;">'. $points*0.035;}
+if ($sudo == "1" ){/*echo '<div class="member-dashboard">Payment :  Rs. <b style="color:white;">'. $points*0.035;*/}
 ?></b>
 <div>Points : <b style="color:white;"><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div>
@@ -155,8 +155,11 @@ if ($points <= "5" ){echo "(default)";}?></b></div>
     <br>
 <br>
 <br><br><br><?php ne(); ?>
-<br><br><br>
-     Enter 1 to serve your web && 0 to not we charge 2 points per hour
+<br>
+MAXIMUM POINTS COLLECTED
+<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%">40%</div>
+<br><br>
+     Enter 1 to serve your web && 0 to not 
       <form id="myForm" action="#" method="post">
     <input type="input" id="pay_o" name="pay_o" value="0 or 1">
    <input class="btn btn-danger me-1" type="submit" name="login" value="Done"

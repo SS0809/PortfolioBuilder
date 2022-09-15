@@ -94,7 +94,20 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 
 <?php echo $sc; ?>
  <?php echo $di; ?>
-    <?php include "searchparam.php";?>
+ <script>
+  var p = 0;
+    const urlParams = new URLSearchParams(location.search);
+    let suggest;
+    for (const [key, value] of urlParams.entries()) {
+      //console.log(`${key}, ${value}`);
+  
+s = value.substring(0, value.indexOf('?cc'));
+console.log(s); 
+var str = "Abc: Lorem ipsum sit amet";
+str = value.substring(value.indexOf("=") + 1);
+console.log(str); 
+
+}
 
     function create() {
       window.location = '/view/points1.php?c0123l123i123c546k123c8l123i45812c3458k123=' + suggest;

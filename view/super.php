@@ -1,4 +1,3 @@
-
 <?php
 namespace Php;
 //error_reporting(0);
@@ -25,7 +24,7 @@ if (! empty($_SESSION["userId"])) {
     $url= $_SERVER['REQUEST_URI'];    
   $recieve = parse_url($url, PHP_URL_QUERY);  
 $recieve = substr($recieve, 5);
-
+$recieve = substr($recieve, 0, strpos($recieve, "?cc"));
 if($recieve>0)
 {
 
@@ -62,7 +61,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
     <input type="hidden" id="suggest" name="suggest" value="NO">
   </form>
   <br>
-<?php echo $sc;  echo $di; ?>
+<?php echo $sc;  echo $di;?>
   <div class="avoid-clicks">
     <h2>CLICK AND CLOSE<small>(window)</small></h2>
     <h3>upto 8 cycles then it will automatically redirect you</h3>SECONDS<time><strong id="seconds">0</strong></time>
@@ -71,9 +70,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
   var p = 0;
     const urlParams = new URLSearchParams(location.search);
     let suggest;
-    for (const [key, value] of urlParams.entries()) {
-      console.log(`${key}, ${value}`);
-
+    /*
       if (key == 'c0123l123i123c546k123c8l123i45812c3458k123') {
         suggest = value;
         if (value >= 8) {
@@ -86,7 +83,17 @@ $di= '<div id="container-'.$temp_link.'"></div>';
         p = value;
       }
 
-    }
+    }*/
+    for (const [key, value] of urlParams.entries()) {
+      //console.log(`${key}, ${value}`);
+  
+s = value.substring(0, value.indexOf('?cc'));
+console.log(s); 
+var str = "Abc: Lorem ipsum sit amet";
+str = value.substring(value.indexOf("=") + 1);
+console.log(str); 
+
+}
     var clic = 0,cli=0;
         const el = document.getElementById('container-<?php echo $temp_link; ?>');
     el.addEventListener('click', function handleClick(event) {
@@ -97,7 +104,12 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 
 
     function create() {
-      window.location = '/view/new.php?page=' + <?php if($recieve==10){echo "1";}else{echo $recieve+1;}?>;
+      if (str==10){
+      window.location = '/view/new.php?page=' + <?php if($recieve==10){echo "1";}else{echo $recieve+1;}?>;}
+      else
+      { str++;
+            window.location = '/view/super.php?page=' + <?php echo $recieve;?> + '?cc=' + str;
+      }
       console.log("2 success");
     }
 
@@ -117,8 +129,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
     }
     su = document.getElementById('clicks');
     su.textContent = suggest;
-  </script>
-
+</script>
    <?php include_once("footer.html") ?>
 </body>
 </html>

@@ -28,7 +28,7 @@ color:orange;
     <th style="color:white;">Username</th>
     <th style="color:white;">Points</th>
      <th style="color:white;">Rank</th>
-    <th style="color:white;">Payment</th>
+    <!--<th style="color:white;">Payment</th>-->
     <th style="color:white;">Portfolio</th>
   </tr>
   <?php
@@ -101,10 +101,10 @@ if ($result->num_rows > 0) {
        {
          $rank = "LOSER"; 
        }
-       echo '<tr><td style="color:white;">'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'. '<td>Rs.'.$row["points"]*0.035.'</td>'. '<td>'.$check.'</td>'. "<br>";
+       echo '<tr><td style="color:white;">'.$row["user_name"].'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'./* '<td>Rs.'.$row["points"]*0.035.*/'</td>'. '<td>'.$check.'</td>'. "<br>";
      
   }
-  echo "Total money in server RS:: ".$total*0.035."  You will get payment when it reaches rs.7000";
+  /*echo "Total money in server RS:: ".$total*0.035."  You will get payment when it reaches rs.7000";*/
 } else {
   echo "0 results";
 }
