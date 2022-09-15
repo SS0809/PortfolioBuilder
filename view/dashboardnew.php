@@ -33,7 +33,8 @@ if (! empty($_SESSION["userId"])) {
         $points = ucwords($memberResult[0]["points"]);
         $profile_pic = $memberResult[0]["filename"];
         $sudo = $memberResult[0]["sudo"];
-        $chart_data = $memberResult[0]["chart_data"];      
+        $chart_data = $memberResult[0]["chart_data"];
+        $lastpoint = $memberResult[0]["lastpoint"];      
         // Username is stored as cookie for 10 years as
         // 10years * 365days * 24hrs * 60mins * 60secs
         setcookie("user_login", $name, time() +
@@ -55,6 +56,7 @@ $_SESSION["name"] = $name;
         $profile_pic = $memberResult[0]["filename"];
         $sudo = $memberResult[0]["sudo"];
         $chart_data = $memberResult[0]["chart_data"];
+        $lastpoint = $memberResult[0]["lastpoint"];
     }
 if($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -157,7 +159,18 @@ if ($points <= "5" ){echo "(default)";}?></b></div>
 <br><br><br><?php ne(); ?>
 <br>
 MAXIMUM POINTS COLLECTED
-<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%">40%</div>
+<div id = "myBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">ZERO POINTS COLLECTED</div>
+<script type="text/javascript">
+  var elem = document.getElementById("myBar");    
+<?php
+if ($lastpoint!="") {
+$lastpoint = substr($lastpoint, 21);
+$lastpoint = substr($lastpoint, 0, strpos($lastpoint, "?cc"));
+}
+?> 
+ elem.style.width = "<?php if ($lastpoint!="") {echo $lastpoint*2;}else echo "50" ?>%";
+elem.textContent = "<?php if ($lastpoint!="") {echo $lastpoint*2;}else echo "ZERO POINTS COLLECTED" ?> %";
+</script>
 <br><br>
      Enter 1 to serve your web && 0 to not 
       <form id="myForm" action="#" method="post">
