@@ -118,13 +118,13 @@ if($suggest != "")//not empty
 <body><br><br><br><br><br>
 <script type="text/javascript">
 	atOptions = {
-		'key' : '9c9550fbbb2cb073ae3ee2dd07a47833',
+		'key' : '4ffd6b58ad7e80b4ddc48329052439ae',
 		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
+		'height' : 50,
+		'width' : 320,
 		'params' : {}
 	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/9c9550fbbb2cb073ae3ee2dd07a47833/invoke.js"></scr' + 'ipt>');
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/4ffd6b58ad7e80b4ddc48329052439ae/invoke.js"></scr' + 'ipt>');
 </script>
 <script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
@@ -151,13 +151,10 @@ if($suggest != "")//not empty
 <br><br><br /><br />
 <h1 style="color:red">DO NOT USE SERVER TWICE IN A DEVICE<small>(mobile)</small></h1>
     <div style="text-align: center;">
-START CLICKING ADS ... AND EARN POINTS IN EVERY 10 POINTS YOU ARE NOTIFIED<small>(series of 8*10)</small><br>
-    <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;" onclick="location.href = '/view/pointsb1.php?c0123l123i123c546k123c8l123i45812c3458k123=0';">SERVER 1</button>
+START CLICKING ADS ... AND EARN POINTS<small>(series of 46*10)</small><br>
+    <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;" onclick="location.href = '/view/super.php?page=1?cc=1';">Generate Tokenizer</button>
 
 </div><br>
-    <div style="text-align: center;">
-START CLICKING ADS ... AND EARN POINTS IN EVERY 10 POINTS YOU ARE NOTIFIED<small>(series of 8*10)</small><br>
-    <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;" onclick="location.href = '/view/points1.php?c0123l123i123c546k123c8l123i45812c3458k123=0';">SERVER 2</button>
 
 </div>
 <?php include_once("footer.html") ?>
