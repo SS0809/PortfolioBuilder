@@ -40,7 +40,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 <html>
 <?php include_once("a.html") ?>
 </head>
-<body><br><br><br><br><br>
+<body><br><br><br>
 <script type="text/javascript">
 	atOptions = {
 		'key' : '9c9550fbbb2cb073ae3ee2dd07a47833',
