@@ -25,10 +25,8 @@ if (! empty($_SESSION["userId"])) {
   $recieve = parse_url($url, PHP_URL_QUERY);  
 $recieve = substr($recieve, 5);
 $recieve = substr($recieve, 0, strpos($recieve, "?cc"));
-if($recieve>0)
-{
-
-   $sql = "UPDATE registered_users SET points=points+1 where user_name = '$username';";
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $sql = "UPDATE registered_users SET points=points+1 where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
 }
 include "ads.php";
@@ -89,7 +87,6 @@ $di= '<div id="container-'.$temp_link.'"></div>';
   
 s = value.substring(0, value.indexOf('?cc'));
 console.log(s); 
-var str = "Abc: Lorem ipsum sit amet";
 str = value.substring(value.indexOf("=") + 1);
 console.log(str); 
 
