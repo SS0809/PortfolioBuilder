@@ -154,7 +154,7 @@ if($suggest != "")//not empty
 <h1 style="color:red">DO NOT USE SERVER TWICE IN A DEVICE<small>(mobile)</small></h1>
     <div style="text-align: center;">
 START CLICKING ADS ... AND EARN POINTS<small>(series of 46*10)</small><br>
-    <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;" onclick="location.href = <?php echo $lastpoint;?>;">Generate Tokenizer</button>
+    <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;" onclick="location.href = '<?php echo $lastpoint;'?>;">Generate Tokenizer</button>
 
 </div><br>
 
