@@ -118,7 +118,7 @@ console.log(str);
 
 
     function create() {
-      if (str>=10){
+      if (str>=8){
         document.getElementById("myForm").action  = '/view/super.php?page=' + <?php if($recieve==46){echo "1";}else{echo $recieve+1;}?>+'?cc=0';
     document.getElementById('suggest').value = document.getElementById("myForm").action  = '/view/super.php?page=' + <?php if($recieve==46){echo "1";}else{echo $recieve+1;}?>+'?cc=0';
        
