@@ -106,7 +106,6 @@ s = value.substring(0, value.indexOf('?cc'));
 console.log(s); 
 str = value.substring(value.indexOf("=") + 1);
 console.log(str); 
-
 }
     var clic = 0,cli=0;
         const el = document.getElementById('container-<?php echo $temp_link; ?>');
@@ -115,7 +114,6 @@ console.log(str);
 
          timer();
     });
-
 
     function create() {
       if (str>=8){
@@ -149,7 +147,7 @@ console.log(str);
         }, 1000);
     }
     su = document.getElementById('clicks');
-    su.textContent = suggest;
+    su.textContent = str;
 </script>
    <?php include_once("footer.html") ?>
 </body>
