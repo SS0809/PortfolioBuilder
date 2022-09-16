@@ -67,15 +67,15 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 </head>
 <body>
   <br><br><br>
-  <h1>PAGE total 46(46*10)</h1>
+  <h3>PAGE total 46(46*10)</h3>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
-  <h2>TOKEN <?php echo $recieve; ?></h2>
-  <h1>Points ::<a id="clicks">000</a></h1>
+  <h4>TOKEN <?php echo $recieve; ?></h4>
+  <h4>TOTAL POINTS <?php echo $points; ?></h4>
+  <h4>Points ::<a id="clicks">000</a></h4>
   <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
   <form id="myForm" action="/view/super.php?page=<?php   if($recieve==46){echo '1';}else{echo $recieve+1;}?>" method="post">
     <input type="hidden" id="suggest" name="suggest" value="NO">
   </form>
-  <br>
 <?php echo $sc;  echo $di;?>
   <div class="avoid-clicks">
     <h2>CLICK AND CLOSE<small>(window)</small></h2>
