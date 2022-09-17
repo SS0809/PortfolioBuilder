@@ -119,14 +119,14 @@ h4 {
 body {
 color:orange;
   background-color: black;
-  style=" font-weight: 1000;"
+  style=" font-weight: 800;"
 }
 </style>
 <main>
 <br><br>
 <div>
         <div>
-            <img src='<?php echo $profile_pic; ?>' style="width:80px;  object-fit: cover;" class ="iconDetails";>
+            <img src='<?php echo $profile_pic; ?>' style="width:60px;  object-fit: cover;" class ="iconDetails";>
         </div> 
     <div style='margin-left:60px;'>
     <div style="font-size:1em;float:left;">
