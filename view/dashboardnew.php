@@ -127,12 +127,12 @@ color:orange;
 <div>
 <div class="container">
   <div class="row">
-    <div class="col">
+    <div class="col-6 col-md-4">
     <div>
             <img src='<?php echo $profile_pic; ?>' style="width:100px;  object-fit: cover;">
         </div> 
     </div>
-    <div class="col-6">
+    <div class="col-md-8">
       <h6>  	
 <div>Name : <b style="color:white;"><?php
  echo $displayname;
