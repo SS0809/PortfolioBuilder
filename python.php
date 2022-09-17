@@ -1,5 +1,8 @@
-<?php
 
+<?php 
 
-include "file.py";
+$command = escapeshellcmd('file.py');
+$output = shell_exec($command);
+echo $output;
+
 ?>
