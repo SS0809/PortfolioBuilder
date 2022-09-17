@@ -126,7 +126,7 @@ color:orange;
 <br><br>
 <div>
         <div>
-            <img src='<?php echo $profile_pic; ?>' style="width:100px;  object-fit: cover;" class ="iconDetails";>
+            <img src='<?php echo $profile_pic; ?>' style="width:80px;  object-fit: cover;" class ="iconDetails";>
         </div> 
     <div style='margin-left:60px;'>
     <div style="font-size:1em;float:left;">
