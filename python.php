@@ -1,4 +1,3 @@
-
 <?php 
 
 $command = escapeshellcmd('file.py');
