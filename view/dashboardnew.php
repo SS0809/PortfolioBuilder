@@ -126,7 +126,7 @@ color:orange;
 <br><br>
 <div>
         <div>
-            <img src='<?php echo $profile_pic; ?>' style="max-width:15%;" class ="iconDetails";>
+            <img src='<?php echo $profile_pic; ?>' style="width:100px;  object-fit: cover;" class ="iconDetails";>
         </div> 
     <div style='margin-left:60px;'>
     <div style="font-size:1em;float:left;">
@@ -140,6 +140,15 @@ else if ($points > "2000" && $points < "2999"){echo " 3&#9734;";}
 else if ($points > "3000" && $points < "3999"){echo " 4&#9734;";}
   ?></b></div>
 <div>Username : <b style="color:white;"><?php echo $username; ?></b></div>
+<div>Timestamp : <b style="color:white;">
+    <?php 
+    date_default_timezone_set('Asia/Kolkata');
+    $t=time();
+
+echo ($t . "<br>"); 
+echo (date("Y-m-d H:i:s",$t));
+?> 
+</b></div>
 <div>Email : <b style="color:white;"><?php echo $email;?></b></div>
   <?php
 
@@ -148,7 +157,7 @@ if ($sudo == "1" ){/*echo '<div class="member-dashboard">Payment :  Rs. <b style
 <div>Points : <b style="color:white;"><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div>
 </div>
- </div>   <div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>
+ </div>   <!--<div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>-->
    
 </div>
   </h6>
