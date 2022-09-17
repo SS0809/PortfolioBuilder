@@ -1,2 +1,5 @@
+pip3 install -U pip
+pip3 uninstall setuptools
+pip3 install 'setuptools<20.2'
 pip3 install flask
-pip2 install gunicorn
+pip3 install gunicorn
