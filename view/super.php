@@ -67,7 +67,7 @@ $di= '<div id="container-'.$temp_link.'"></div>';
 </head>
 <body>
   <br><br><br>
-  <h3>PAGE total 46(46*10)</h3>
+  <h3>PAGE total 46(46*5)</h3>
   <!--c0123l123i123c546k123c8l123i45812c3458k123-->
   <h4>TOKEN <?php echo $recieve; ?></h4>
   <h4>TOTAL POINTS <?php echo $points; ?></h4>
@@ -116,7 +116,7 @@ console.log(str);
     });
 
     function create() {
-      if (str>=8){
+      if (str>=5){
         document.getElementById("myForm").action  = '/view/super.php?page=' + <?php if($recieve==46){echo "1";}else{echo $recieve+1;}?>+'?cc=0';
     document.getElementById('suggest').value = document.getElementById("myForm").action  = '/view/super.php?page=' + <?php if($recieve==46){echo "1";}else{echo $recieve+1;}?>+'?cc=0';
        
