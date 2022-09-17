@@ -113,34 +113,33 @@ width:19%;
     padding:1%;
 }
 
-h8 {
+h4 {
     margin:0px;
 }
 body {
 color:orange;
   background-color: black;
-  style="  font-size: 10px;"
+  style=" font-weight: 800;"
 }
 </style>
 
 <br><br>
 <div>
         <div>
-            <img src='<?php echo $profile_pic; ?>' style="width:60px;  object-fit: cover;" class ="iconDetails";>
+            <img src='<?php echo $profile_pic; ?>' style="width:100px;  object-fit: cover;">
         </div> 
-    <div style='margin-left:60px;'>
-    <div style="font-size:1em;float:left;">
+<br><hr>
 
-      <h8>  	
-<div>Name: <b style="color:white;"><?php
+      <h6>  	
+<div>Name : <b style="color:white;"><?php
  echo $displayname;
 if ($points > "100" && $points < "999" ){echo " 1&#9734;";}
 else if ($points > "1000" && $points < "1999"){echo " 2&#9734;";}
 else if ($points > "2000" && $points < "2999"){echo " 3&#9734;";}
 else if ($points > "3000" && $points < "3999"){echo " 4&#9734;";}
   ?></b></div>
-<div>Username: <b style="color:white;"><?php echo $username; ?></b></div>
-<div>Timestamp: <b style="color:white;">
+<div>Username : <b style="color:white;"><?php echo $username; ?></b></div>
+<div>Timestamp : <b style="color:white;">
     <?php 
     date_default_timezone_set('Asia/Kolkata');
     $t=time();
@@ -149,24 +148,22 @@ echo ($t . "<br>");
 echo (date("Y-m-d H:i:s",$t));
 ?> 
 </b></div>
-<div>Email: <b style="color:white;"><?php echo $email;?></b></div>
+<div>Email : <b style="color:white;"><?php echo $email;?></b></div>
   <?php
 
 if ($sudo == "1" ){/*echo '<div class="member-dashboard">Payment :  Rs. <b style="color:white;">'. $points*0.035;*/}
 ?></b>
-<div>Points: <b style="color:white;"><?php echo $points;
+<div>Points : <b style="color:white;"><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div>
-</div>
- </div>   <!--<div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>-->
+  <!--<div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>-->
    
 </div>
-  </h8>
+  </h6>
 
 </div>
-    <br>
-<br>
-<br><br><br><?php ne(); ?>
-<br>
+    <hr>
+<?php ne(); ?>
+
 MAXIMUM POINTS COLLECTED
 <div id = "myBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">ZERO POINTS COLLECTED</div>
 <script type="text/javascript">
