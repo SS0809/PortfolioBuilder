@@ -127,6 +127,16 @@ if($suggest != "")//not empty
 		'params' : {}
 	};
 	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/4ffd6b58ad7e80b4ddc48329052439ae/invoke.js"></scr' + 'ipt>');
+</script><br>
+<script type="text/javascript">
+    atOptions = {
+        'key' : '11f331744832c0b8cd73521073d1bd75',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+    };
+    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/11f331744832c0b8cd73521073d1bd75/invoke.js"></scr' + 'ipt>');
 </script>
 <script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
@@ -150,7 +160,7 @@ if($suggest != "")//not empty
   <!--BOOTSTRAP-->
   </head>
 <body>
-<br><br><br /><br />
+<br><br>
 <h1 style="color:red">DO NOT USE SERVER TWICE IN A DEVICE<small>(mobile)</small></h1>
     <div style="text-align: center;">
 START CLICKING ADS ... AND EARN POINTS<small>(series of 46*10)</small><br>
