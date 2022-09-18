@@ -1,8 +1,7 @@
 <?php
 namespace Php;
-error_reporting(0);
+//error_reporting(0);
 session_start();
-include "a.html";
 use \Php\Member;
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
@@ -28,14 +27,9 @@ if (! empty($_SESSION["userId"])) {
         $chart_data = $memberResult[0]["chart_data"];
         $lastpoint = $memberResult[0]["lastpoint"];
     }
-if($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-  $pay_o = $_POST["pay_o"];
-   $sql = "UPDATE registered_users SET pay = '$pay_o' where user_name = '$username';";
-      $result = mysqli_query($conn, $sql); 
-}
 
-}
+include "a.html";
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -178,3 +172,9 @@ function showResult(str) {
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>      
   </body>
 </html>
+<?php 
+}else{
+header("Location: ../index.php");
+die();
+}
+?>
