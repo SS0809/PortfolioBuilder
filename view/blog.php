@@ -1,26 +1,84 @@
 <?php
-include "../dbconnect.php";
-include "a.html";
+namespace Php;
+error_reporting(0);
+session_start();
+    $servername = "remotemysql.com";
+    $username = "IIVAjfeDkk";
+    $password = "zzrye8TbMy";
+    $database = "IIVAjfeDkk";
+    $conn = mysqli_connect($servername,
+        $username, $password, $database);
 
+    if($conn) {
+    //  echo "success";
+    }
+    else {
+        die("Error". mysqli_connect_error());
+}
+use \Php\Member;
+  if(""!=$new){
+function ne()
+{echo '<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script><div class="alert alert-success" role="alert"> <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button> --> <strong>Success!</strong> You have been signed in successfully!</div><style>@import "compass/css3";body{  padding: 20px;  }</style><script>  window.setTimeout(function() {    $(".alert").fadeTo(500, 0).slideUp(500, function(){        $(this).remove();     });  }, 2000);</script>';
+}
+     }else{function ne(){}}
+if (! empty($_SESSION["userId"])) {
+    require_once __DIR__ . './../class/Member.php';
+    $member = new Member();
+    $memberResult = $member->getMemberById($_SESSION["userId"]);
+    if(!empty($memberResult[0]["display_name"])) {
+        $displayname = ucwords($memberResult[0]["display_name"]);
+        $username = $memberResult[0]["user_name"];
+        $email = ucwords($memberResult[0]["email"]);
+        $points = ucwords($memberResult[0]["points"]);
+        $profile_pic = $memberResult[0]["filename"];
+        $sudo = $memberResult[0]["sudo"];
+        $chart_data = $memberResult[0]["chart_data"];
+        $lastpoint = $memberResult[0]["lastpoint"];     
+    } else {
+        $displayname = $memberResult[0]["display_name"];
+        $username = $memberResult[0]["user_name"];
+        $email = $memberResult[0]["email"];
+        $points = $memberResult[0]["points"];
+        $profile_pic = $memberResult[0]["filename"];
+        $sudo = $memberResult[0]["sudo"];
+        $chart_data = $memberResult[0]["chart_data"];
+        $lastpoint = $memberResult[0]["lastpoint"];
+    }
+}
 ?>
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--BOOTSTRAP-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SUBXSUB</title>
+      <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!--BOOTSTRAP-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-	<title></title>
-</head>
+<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/"> 
+<link href="./view/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="./view/css.css" rel="stylesheet">
+    <link href="./view/carousel.css" rel="stylesheet">
+  </head>
+  <body> 
+<?php include_once("a.html") ?>    
+<script type="text/javascript">
+          var temp = "<?php echo $profile_pic; ?>";
+         var pic = document.getElementById("pic");
+        pic.setAttribute('src', temp);
+   </script>  
+<style type="text/css">
+     h4 {
+    margin:0px;
+}
+body {
+color:orange;
+  background-color: black;
+  style=" font-weight: 800;"
+}
+</style>
+
+<br><br><br><br>
 <body>
   <br><br>  <br><h3>BLOGS</h3><br>
   <div class="container">
@@ -34,9 +92,10 @@ echo '<div class="col"><hr>'.$row["content"].'<hr></div><br>';
 ?> 
 
 </div>
+<?php /*if ($sudo == "1" ){ include "chart.php"; }*/?>
+<br><br><br><br><br><br><br>
+<?php include_once("footer.html") ?>
 
-</body>
+    <script src="./view/assets/dist/js/bootstrap.bundle.min.js"></script>      
+ </body>
 </html>
-<?php
-include "footer.html";
-?>

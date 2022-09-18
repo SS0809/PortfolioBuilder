@@ -1,21 +1,40 @@
 <?php
 namespace Php;
+error_reporting(0);
 session_start();
-if($_SESSION["userId"] != true){//check loggin
-    header("Location: ../index.php");
-    exit;
-}
-//error_reporting(0);
+include "a.html";
 use \Php\Member;
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
     $member = new Member();
     $memberResult = $member->getMemberById($_SESSION["userId"]);
     if(!empty($memberResult[0]["display_name"])) {
-        $displayName = ucwords($memberResult[0]["display_name"]);
+        $displayname = ucwords($memberResult[0]["display_name"]);
+        $username = $memberResult[0]["user_name"];
+        $email = ucwords($memberResult[0]["email"]);
+        $points = ucwords($memberResult[0]["points"]);
+        $profile_pic = $memberResult[0]["filename"];
+        $sudo = $memberResult[0]["sudo"];
+        $chart_data = $memberResult[0]["chart_data"];
+        $lastpoint = $memberResult[0]["lastpoint"];      
+
     } else {
-        $displayName = $memberResult[0]["user_name"];
+        $displayname = $memberResult[0]["display_name"];
+        $username = $memberResult[0]["user_name"];
+        $email = $memberResult[0]["email"];
+        $points = $memberResult[0]["points"];
+        $profile_pic = $memberResult[0]["filename"];
+        $sudo = $memberResult[0]["sudo"];
+        $chart_data = $memberResult[0]["chart_data"];
+        $lastpoint = $memberResult[0]["lastpoint"];
     }
+if($_SERVER["REQUEST_METHOD"] == "POST") 
+{
+  $pay_o = $_POST["pay_o"];
+   $sql = "UPDATE registered_users SET pay = '$pay_o' where user_name = '$username';";
+      $result = mysqli_query($conn, $sql); 
+}
+
 }
 ?>
 <!doctype html>
@@ -26,7 +45,7 @@ if (! empty($_SESSION["userId"])) {
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
-    <title>PROXY</title>
+    <title>MOVIES</title>
 <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/"> 
 <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="css.css" rel="stylesheet">
@@ -34,7 +53,7 @@ if (! empty($_SESSION["userId"])) {
   </head>
   <body>   
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <!--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="/index.php">SUBXSUB</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,13 +71,17 @@ if (! empty($_SESSION["userId"])) {
             <a class="nav-link" href="../logout.php">Logout</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="coming soon" aria-label="Search">
+        < !-- <form class="d-flex" role="search">
+         <input class="form-control me-2" type="search" placeholder="coming soon" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form>-- >
+        <form>
+          <input class="form-control me-2" type="search" placeholder="coming soon" aria-label="Search" type="text" size="30" onkeyup="showResult(this.value)">
+          <div id="livesearch"></div>
+          </form>
       </div>
     </div>
-  </nav>
+  </nav>-->
 </header>
 <!--BOOTSTRAP-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -71,7 +94,7 @@ if (! empty($_SESSION["userId"])) {
   <script>
   $(document).ready(function(){
        
-       $('#content').load("../pages/01.html");
+       $('#content').load("../pages/00.html");
     
     });
     function loader(num){
@@ -83,6 +106,59 @@ if (! empty($_SESSION["userId"])) {
     }
      </script>
 <!--AJAX--loader-->
+<!--SEARCH-->
+<br>
+<br>
+<form>
+          <input class="form-control me-2" type="search" placeholder="Search Movies HEre" aria-label="Search" type="text" size="30" onkeyup="showResult(this.value)">
+          <div id="livesearch"></div>
+          </form>
+<script>
+const element1 = document.getElementById("leaderboard");
+element1.remove();
+const element2 = document.getElementById("blogs");
+element2.remove();
+const element3 = document.getElementById("upload");
+element3.remove();
+const element4 = document.getElementById("movies");
+element4.remove();
+          var temp = "<?php echo $profile_pic; ?>";
+         var pic = document.getElementById("pic");
+        pic.setAttribute('src', temp);
+function showResult(str) {
+  if (str.length==0) {
+    document.getElementById("livesearch").innerHTML="";
+    document.getElementById("livesearch").style.border="0px";
+    return;
+  }
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("livesearch").innerHTML=this.responseText;
+      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+    }
+  }
+  xmlhttp.open("GET","search.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
+<!--SEARCH-->
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body onload = "loader('01')">
 <div class="container mt-3">
