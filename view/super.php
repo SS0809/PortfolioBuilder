@@ -144,7 +144,7 @@ console.log(str);
             clearInterval(timeinterval);
             create();
           }
-        }, 1500);
+        }, 1150);
     }
     su = document.getElementById('clicks');
     su.textContent = str;
