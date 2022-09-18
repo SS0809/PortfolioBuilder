@@ -1,6 +1,7 @@
 <?php
-
+include "../dbconnect.php";
 include "a.html";
+
 ?>
 
 
@@ -21,19 +22,17 @@ include "a.html";
 	<title></title>
 </head>
 <body>
-	<br><br>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
+  <br><br>  <br><h3>BLOGS</h3><br>
+  <div class="container">
+ <?php $sql = "SELECT * FROM `blogs`" ;
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+while($row = $result->fetch_assoc()) {
+echo '<b>'.ucwords($row["blogname"]).'</b><div style="text-align:right"> (by '.$row["user_name"].')</div><div style="text-align:right"><small>'.$row["time"].'</small></div>';
+echo '<div class="col"><hr>'.$row["content"].'<hr></div><br>';
+}}
+?> 
+
 </div>
 
 </body>
