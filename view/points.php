@@ -160,7 +160,7 @@ else
 }
 else
     {echo "https://server0809.herokuapp.com/view/points2.php?c0123l123i123c546k123c8l123i45812c3458k123=1";}
-?>';" disabled>Generate Tokenizer</button>
+?>';">Generate Tokenizer</button>
 
 
 
