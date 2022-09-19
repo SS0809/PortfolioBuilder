@@ -85,7 +85,9 @@ include "a.html";
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!--AJAX-->
   <!--AJAX--loader-->
+
   <script>
+
   $(document).ready(function(){
        
        $('#content').load("../pages/00.html");
@@ -100,6 +102,16 @@ include "a.html";
     }
      </script>
 <!--AJAX--loader-->
+<script type="text/javascript">
+    atOptions = {
+        'key' : '11f331744832c0b8cd73521073d1bd75',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+    };
+    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/11f331744832c0b8cd73521073d1bd75/invoke.js"></scr' + 'ipt>');
+</script>
 <!--SEARCH-->
 <br>
 <br>
@@ -139,15 +151,6 @@ function showResult(str) {
 <!--SEARCH-->
 
 
-</body>
-</html>
-
-
-
-
-
-
-
 
 
 
@@ -171,6 +174,69 @@ function showResult(str) {
 <?php include_once("footer.html") ?>
     <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>      
   </body>
+  <!---ADS--->
+<script type="text/javascript">
+  atOptions = {
+    'key' : '6201053067b6652a3e4c92c1e0145b6f',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/6201053067b6652a3e4c92c1e0145b6f/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '5dfed61463bd5356ae701e3a69964dc4',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/5dfed61463bd5356ae701e3a69964dc4/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '89d61dc2a52f9413360c65d32714d577',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/89d61dc2a52f9413360c65d32714d577/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : 'f1f0daddbd8ff170fe8a239c5d534ed2',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/f1f0daddbd8ff170fe8a239c5d534ed2/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '742094fc28bb7bf3e0054cbd72d9a763',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/742094fc28bb7bf3e0054cbd72d9a763/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '4ffd6b58ad7e80b4ddc48329052439ae',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/4ffd6b58ad7e80b4ddc48329052439ae/invoke.js"></scr' + 'ipt>');
+</script><br>
+
+<!---ADS--->
 </html>
 <?php 
 }else{
