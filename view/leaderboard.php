@@ -25,12 +25,12 @@ namespace Php;
 "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
 <body><br><br><br><br>
 	<h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
-    <div style="height: 600px ;width:400px">
-<canvas id="chart1"  style="width:50%;max-width:750px"></canvas>
+    <div style="height: 500px ;width:300px">
+<canvas id="chart1"  style="width:40%;max-width:550px"></canvas>
 </div>
 <br><br>
-    <div style="height: 600px ;width:400px">
-<canvas id="chart2"  style="width:50%;max-width:750px"></canvas>
+    <div style="height: 500px ;width:300px">
+<canvas id="chart2"  style="width:40%;max-width:550px"></canvas>
 </div>
 <table style="width:100%">
   <tr>
@@ -112,7 +112,7 @@ if ($result->num_rows > 0) {
          $rank = "LOSER"; 
        }
        if ($alpha==1) {
-         $star="&emsp;&emsp;&emsp;"."<img src='https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/fire_1f525.gif' style='width: 2%;'>"."<b>LORD</b>";
+         $star="<img src='https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/fire_1f525.gif' style='width: 20%;'>"."<b>LORD</b>";
        }
        else
        {
@@ -130,7 +130,7 @@ if ($result->num_rows > 0) {
 <style>
         body
         {
-         margin: 30px;
+         margin: 15px;
         }
       .progress-bar {
         width: 100%;
