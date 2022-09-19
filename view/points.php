@@ -151,7 +151,7 @@ START CLICKING ADS ... AND EARN POINTS<small>(series of 46*10)</small><br>
 }
 else
     {echo "/view/super.php?page=1?cc=1";}
-?>';">Generate Tokenizer</button>
+?>';" disabled>Generate Tokenizer</button>
 
 </div><br><br><br><br><br>
 </div>
