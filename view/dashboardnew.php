@@ -187,7 +187,8 @@ elem.textContent = "<?php if ($lastpoint!="") {echo $lastpoint*2;}else echo "ZER
       <form id="myForm" action="#" method="post">
     <input type="input" id="pay_o" name="pay_o" value="0 or 1">
    <input class="btn btn-danger me-1" type="submit" name="login" value="Done"
-                        class="btnLogin"></form>
+                        class="btnLogin">
+    </form>
 <a href="https://subxsub.me/pages?a=<?php echo $username; ?>" target="_blank" class="btn btn-success me-1" role="button">portfolio</a>
 <a href="/view/info.php" target="_blank" class="btn btn-success me-1" role="button">EDIT</a><br>
 Copy the following text and share it in your bio {your portfolio}<br>

@@ -128,7 +128,10 @@ if ($result->num_rows > 0) {
 <br>
 
 <style>
-
+        body
+        {
+         margin: 30px;
+        }
       .progress-bar {
         width: 100%;
         background-color: #1c1b1b;
