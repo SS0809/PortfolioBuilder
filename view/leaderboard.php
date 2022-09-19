@@ -180,7 +180,7 @@ elem.textContent = "<?php echo $stats ; ?>%";
 }
 $conn->close();
 
-include "footer.html";
+//include "footer.html";
 ?>
   </tr>
 </table>
@@ -268,6 +268,9 @@ options: {
 }
 });
 </script>
+
+
+<br><br><hr>
 <!---ADS--->
 <script type="text/javascript">
   atOptions = {
@@ -309,8 +312,36 @@ options: {
   };
   document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/f1f0daddbd8ff170fe8a239c5d534ed2/invoke.js"></scr' + 'ipt>');
 </script>
-
-
+<script type="text/javascript">
+  atOptions = {
+    'key' : '742094fc28bb7bf3e0054cbd72d9a763',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/742094fc28bb7bf3e0054cbd72d9a763/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '4ffd6b58ad7e80b4ddc48329052439ae',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/4ffd6b58ad7e80b4ddc48329052439ae/invoke.js"></scr' + 'ipt>');
+</script><br>
+<script type="text/javascript">
+    atOptions = {
+        'key' : '11f331744832c0b8cd73521073d1bd75',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+    };
+    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/11f331744832c0b8cd73521073d1bd75/invoke.js"></scr' + 'ipt>');
+</script>
 <!---ADS--->
 </html>
 <?php 
@@ -318,6 +349,32 @@ options: {
 $str = '10203040506070'; 
 $str = substr($str, 2);
 $str .="80";
-echo '<br><br><br><br><br><br><br><br><br><br>';
+echo '<br><br><br><br><br>';
 ?>
+<footer class="footer bg-dark">
+  <div class="container">
+    <div >
+      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="01"><use xlink:href="#bootstrap"/></svg>
+      </a>
+    </div>
 
+    <div >
+
+    </div>
+
+    <div  style=" font-weight: 600;">
+      <h5 style="color: orange;"><b>SUBXSUB</b></h5>
+      <ul class="nav p-6 flex-row">
+       <ul class="nav p-1 flex-column">
+        <a href="#" class="nav-link p-0 text-muted">Features</a>
+        <a href="../pp/index.html" class="nav-link p-0 text-muted">PRIVACY POLICY</a>
+        </ul> 
+          <ul class="nav p-1 flex-column">
+        <a href="../aus/index.html" class="nav-link p-0 text-muted">About Us</a>
+        <a href="../tos/index.html" class="nav-link p-0 text-muted">TOS</a>
+      </ul> 
+       </ul> 
+    </div>
+</div>
+</footer>  

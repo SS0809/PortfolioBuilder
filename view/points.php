@@ -1,6 +1,6 @@
 <?php
 namespace Php;
-//error_reporting(0);
+error_reporting(0);
 session_start();
 use \Php\Member; 
 include '../dbconnect.php';
@@ -119,26 +119,6 @@ if($suggest != "")//not empty
 </head>
 <body><br><br><br><br><br>
 <script type="text/javascript">
-	atOptions = {
-		'key' : '4ffd6b58ad7e80b4ddc48329052439ae',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/4ffd6b58ad7e80b4ddc48329052439ae/invoke.js"></scr' + 'ipt>');
-</script><br>
-<script type="text/javascript">
-    atOptions = {
-        'key' : '11f331744832c0b8cd73521073d1bd75',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/11f331744832c0b8cd73521073d1bd75/invoke.js"></scr' + 'ipt>');
-</script>
-<script type="text/javascript">
               var temp = "<?php echo $profile_pic; ?>";
          var pic = document.getElementById("pic");
         pic.setAttribute('src', temp);
@@ -173,9 +153,80 @@ else
     {echo "/view/super.php?page=1?cc=1";}
 ?>';">Generate Tokenizer</button>
 
-</div><br>
-
+</div><br><br><br><br><br>
 </div>
+<!---ADS--->
+<script type="text/javascript">
+  atOptions = {
+    'key' : '6201053067b6652a3e4c92c1e0145b6f',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/6201053067b6652a3e4c92c1e0145b6f/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '5dfed61463bd5356ae701e3a69964dc4',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/5dfed61463bd5356ae701e3a69964dc4/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '89d61dc2a52f9413360c65d32714d577',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/89d61dc2a52f9413360c65d32714d577/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : 'f1f0daddbd8ff170fe8a239c5d534ed2',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/f1f0daddbd8ff170fe8a239c5d534ed2/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '742094fc28bb7bf3e0054cbd72d9a763',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/742094fc28bb7bf3e0054cbd72d9a763/invoke.js"></scr' + 'ipt>');
+</script>
+<script type="text/javascript">
+  atOptions = {
+    'key' : '4ffd6b58ad7e80b4ddc48329052439ae',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/4ffd6b58ad7e80b4ddc48329052439ae/invoke.js"></scr' + 'ipt>');
+</script><br>
+<script type="text/javascript">
+    atOptions = {
+        'key' : '11f331744832c0b8cd73521073d1bd75',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+    };
+    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/11f331744832c0b8cd73521073d1bd75/invoke.js"></scr' + 'ipt>');
+</script>
+<!---ADS--->
 <?php include_once("footer.html") ?>
 </body>
 </html>
