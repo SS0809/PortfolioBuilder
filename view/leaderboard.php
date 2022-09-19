@@ -1,20 +1,29 @@
 <?php
-namespace Php;?>
+namespace Php;
+?>
 <!DOCTYPE html>
 <html>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-table, th, td {
-  border:1px solid black;
-}
-body {
-color:orange;
-  background-color: black;
-  style=" font-weight: 1000;"
-}
-</style>
-<body> <a class="nav-link active" id = "home"  aria-current="page" href="/index.php">Home</a>
+<link
+	rel=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+	type="text/css"
+/>
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script
+	src=
+"https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+	type="text/javascript"
+></script>
+<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+<body><br><br><br><br>
 	<h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
     <div style="height: 600px ;width:400px">
 <canvas id="chart1"  style="width:50%;max-width:750px"></canvas>
@@ -36,6 +45,7 @@ color:orange;
 session_start();
 use \Php\Member; 
 include '../dbconnect.php';
+include "a.html";
 if (! empty($_SESSION["userId"])) {
     require_once __DIR__ . './../class/Member.php';
     $member = new Member();
@@ -111,35 +121,68 @@ if ($result->num_rows > 0) {
        echo '<tr><td style="color:white;">'.$row["user_name"].$star.'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'./* '<td>Rs.'.$row["points"]*0.035.*/'</td>'. '<td>'.$check.'</td>'. "<br>";
      
   }
-  /*echo "Total money in server RS:: ".$total*0.035."  You will get payment when it reaches rs.7000";*/
+
+  $stats = (($total*0.035)/7000)*100;
+
+?>
+<style>
+
+      .progress-bar {
+        width: 100%;
+        background-color: #1c1b1b;
+        padding: 3px;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+      }
+      
+      .progress-bar-fill {
+        display: block;
+        height: 22px;
+        background-color: #659cef;
+        border-radius: 3px;
+        
+        transition: width 500ms ease-in-out;
+      }
+    </style>
+<b>SERVER EFFICIENCY</b>
+    <div class="wrapper">
+      <div class="progress-bar">
+        <span id="progress-bar-fill" class="progress-bar-fill" style="color:white ; width: 70%;">70%</span>
+      </div>
+    </div>
+
+<!--<div id = "myBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:90% color:blue;">90</div>--->
+<script type="text/javascript">
+  var elem = document.getElementById("progress-bar-fill");    
+
+ elem.style.width = "<?php echo $stats ; ?>%";
+elem.textContent = "<?php echo $stats ; ?>%";
+ var temp = "<?php echo $profile_pic; ?>";
+ var pic = document.getElementById("pic");
+ pic.setAttribute('src', temp);
+</script>
+<?php
+
+
+
+
+
+
+
+
+
 } else {
   echo "0 results";
 }
 $conn->close();
+
+include "footer.html";
 ?>
   </tr>
 </table>
 </body>
 </html>
 
-<html>
-<link
-	rel=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-	type="text/css"
-/>
-<script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script
-	src=
-"https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
-	type="text/javascript"
-></script>
-<script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-<script src=
-"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
 <style>
 	.container {
 	width: 70%;
@@ -154,6 +197,14 @@ $conn->close();
 	font-family: "Verdana", sans-serif;
 	font-size: 30px;
 	}*/
+table, th, td {
+  border:1px solid black;
+}
+body {
+color:orange;
+  background-color: black;
+  style=" font-weight: 1000;"
+}
 </style>
 <body>
 	
@@ -219,6 +270,6 @@ options: {
 $str = '10203040506070'; 
 $str = substr($str, 2);
 $str .="80";
-
+echo '<br><br><br><br><br><br><br><br><br><br>';
 ?>
 
