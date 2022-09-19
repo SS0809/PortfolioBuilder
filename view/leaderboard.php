@@ -136,7 +136,7 @@ if ($result->num_rows > 0) {
          $rank = "LOSER"; 
        }
        if ($alpha==1) {
-         $star="&emsp;&emsp;&emsp;"."&#9734;"."<b>LORD</b>";
+         $star="&emsp;&emsp;&emsp;"."<img src='https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/fire_1f525.gif' style='width: 2%;'>"."<b>LORD</b>";
        }
        else
        {
@@ -150,6 +150,7 @@ if ($result->num_rows > 0) {
 
 ?>
 <br>
+
 <style>
 
       .progress-bar {
