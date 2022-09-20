@@ -90,22 +90,24 @@ include '../dbconnect.php';
 
 <body>
   <br><br><br>
-<br><br>
-  <div class="float-end"><a href="/index.php" class="btn btn-info me-1">Profile</a></div>
+<br><br><h3>SUBXSUB PORTFOLIO</h3>
+ 
   <form id="myForm" action="#" method="post">
-    <label for="username">Goal</label>
+    <hr><center><label for="username"><b>Goal</b></label><br>
     <input type="input" id="goal" name="goal"><br>
-        <label for="username">small about</label>
+        <label for="username"><b>Small About</b></label><br>
         <input type="input" id="sabout" name="sabout"><br>
-            <label for="username">about</label>
+            <label for="username"><b>About</b></label><br>
             <input type="input" id="about" name="about"><br>
-                <label for="username">instagram</label>
+                <label for="username"><b>Instagram</b></label><br>
                 <input type="input" id="insta" name="insta"><br>
-                    <label for="username">youtube</label>
+                    <label for="username"><b>Youtube</b></label><br>
                     <input type="input" id="youtube" name="youtube"><br>
 <div>
-                        <input type="submit" name="login" value="save"
-                        class="btnLogin"></span>
+                        <br>
+ <a href="/index.php" class="btn btn-info me-1">DASHBOARD</a>
+                        <input type="submit" name="login" value="SAVE"
+                        class="btnLogin btn btn-info me-1"></span><hr></center>
                     </div>
   </form>
   <br>

@@ -110,13 +110,11 @@ float:left;
 height:19%;
 width:19%; 
 } 
-
 .container2 {
     width:100%;
     height:auto;
     padding:1%;
 }
-
 h4 {
     margin:0px;
 }
@@ -159,16 +157,13 @@ if ($sudo == "1" ){/*echo '<div class="member-dashboard">Payment :  Rs. <b style
 ?></b>
 <div>Points : <b style="color:white;"><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div>
-  <!--<div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>-->
-   
+  <!--<div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>--> 
 </div>
   </h6>
-
 </div>
     <hr>
 <?php ne(); ?>
 </div>
-
 </div>
 MAXIMUM POINTS COLLECTED
 <div id = "myBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:0%">ZERO POINTS COLLECTED</div>
@@ -199,15 +194,11 @@ Copy the following text and share with friends ..... with each friend you get 50
 <input type="" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">
 <button class="btn btn-info me-1" onclick="myFunction()">COPY</button><br>
         </div>
-
     </div>
-
-
 </div>
 <?php /*if ($sudo == "1" ){ include "chart.php"; }*/?>
 <br><br><br><br><br><br><br>
 <?php include_once("footer.html") ?>
-
     <script src="./view/assets/dist/js/bootstrap.bundle.min.js"></script>      
  </body>
 </html>
