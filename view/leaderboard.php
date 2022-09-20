@@ -37,8 +37,9 @@ namespace Php;
     <th style="color:white;">Username</th>
     <th style="color:white;">Points</th>
      <th style="color:white;">Rank</th>
-    <!--<th style="color:white;">Payment</th>-->
-    <th style="color:white;">Portfolio</th>
+    <!--<th style="color:white;">Payment</th>
+    <th style="color:white;">Portfolio</th>-->
+   <th style="color:white;">last active</th>
   </tr>
   <?php
 //error_reporting(0);
@@ -55,10 +56,12 @@ if (! empty($_SESSION["userId"])) {
         $points = ucwords($memberResult[0]["points"]);
          $sudo = ucwords($memberResult[0]["sudo"]);
         $profile_pic = $memberResult[0]["filename"];
+       $timestampp = $memberResult[0]["timestampp"];
     } else {
         $username = $memberResult[0]["user_name"];
         $points = $memberResult[0]["points"];
          $sudo = $memberResult[0]["sudo"];
+          $timestampp = $memberResult[0]["timestampp"];
                 $profile_pic = $memberResult[0]["filename"];
     }
 }
@@ -70,15 +73,20 @@ if($sudo == 1) {
       die();
 }
 include '../dbconnect.php';
-$sql = "SELECT user_name,points,pay FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 20";
+$sql = "SELECT user_name,points,pay,timestampp FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 20";
 $total = 0;   $alpha = 0 ;
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
    $dataa="";   $namee="";while($row = $result->fetch_assoc()) {
     //echo $row["user_name"]. " ---------- ". $row["points"]. "<br>";
-    $total += $row["points"];    
- 
+    $total += $row["points"];  
+    if ($row["timestampp"]==="1663658128") {
+        $times = "no data";
+      }  
+      else{
+$times = date("H:i:s (d-m-Y)",$row["timestampp"]);
+}
     if($alpha<10)
     {$alpha++;
     $dataa = $dataa . $row["points"].","; 
@@ -118,7 +126,7 @@ if ($result->num_rows > 0) {
        {
          $star="";
        }
-       echo '<tr><td style="color:white;">'.$row["user_name"].$star.'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'./* '<td>Rs.'.$row["points"]*0.035.*/'</td>'. '<td>'.$check.'</td>'. "<br>";
+       echo '<tr><td style="color:white;">'.$row["user_name"].$star.'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'./* '<td>Rs.'.$row["points"]*0.035.*/'</td>'. '<td>'.$times.'</td>'. "<br>";
      
   }
 
@@ -281,66 +289,6 @@ options: {
     'params' : {}
   };
   document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/6201053067b6652a3e4c92c1e0145b6f/invoke.js"></scr' + 'ipt>');
-</script>
-<script type="text/javascript">
-  atOptions = {
-    'key' : '5dfed61463bd5356ae701e3a69964dc4',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/5dfed61463bd5356ae701e3a69964dc4/invoke.js"></scr' + 'ipt>');
-</script>
-<script type="text/javascript">
-  atOptions = {
-    'key' : '89d61dc2a52f9413360c65d32714d577',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/89d61dc2a52f9413360c65d32714d577/invoke.js"></scr' + 'ipt>');
-</script>
-<script type="text/javascript">
-  atOptions = {
-    'key' : 'f1f0daddbd8ff170fe8a239c5d534ed2',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/f1f0daddbd8ff170fe8a239c5d534ed2/invoke.js"></scr' + 'ipt>');
-</script>
-<script type="text/javascript">
-  atOptions = {
-    'key' : '742094fc28bb7bf3e0054cbd72d9a763',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/742094fc28bb7bf3e0054cbd72d9a763/invoke.js"></scr' + 'ipt>');
-</script>
-<script type="text/javascript">
-  atOptions = {
-    'key' : '4ffd6b58ad7e80b4ddc48329052439ae',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-  document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://crossroadparalysisnutshell.com/4ffd6b58ad7e80b4ddc48329052439ae/invoke.js"></scr' + 'ipt>');
-</script><br>
-<script type="text/javascript">
-    atOptions = {
-        'key' : '11f331744832c0b8cd73521073d1bd75',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-    };
-    document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.highperformancedisplayformat.com/11f331744832c0b8cd73521073d1bd75/invoke.js"></scr' + 'ipt>');
 </script>
 <!---ADS--->
 </html>

@@ -2,6 +2,8 @@
 namespace Php;
 error_reporting(0);
 session_start();
+    date_default_timezone_set('Asia/Kolkata');
+    $t=time()+ (3.5*60*60);;
     $servername = "remotemysql.com";
     $username = "IIVAjfeDkk";
     $password = "zzrye8TbMy";
@@ -64,7 +66,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    $sql = "UPDATE registered_users SET pay = '$pay_o' where user_name = '$username';";
       $result = mysqli_query($conn, $sql); 
 }
-
+$timestampp = date($t);
+ $sql = "UPDATE registered_users SET timestampp='$timestampp' where user_name = '$username';";
+   $result = mysqli_query($conn, $sql); 
 }
 ?>
 <!doctype html>
@@ -144,11 +148,8 @@ else if ($points > "3000" && $points < "3999"){echo " 4&#9734;";}
 <div>Username : <b style="color:white;"><?php echo $username; ?></b></div>
 <div>Timestamp : <b style="color:white;">
     <?php 
-    date_default_timezone_set('Asia/Kolkata');
-    $t=time();
-
 echo ($t . "<br>"); 
-echo (date("Y-m-d H:i:s",$t));
+echo (date("Y-m-d H:i:s"/*,$t*/));
 ?> 
 </b></div>
 <div>Email : <b style="color:white;"><?php echo $email;?></b></div>

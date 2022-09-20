@@ -41,6 +41,7 @@ var el = document.getElementById('seconds'),
     }, 1000);
 }
 </script>
+<script type='text/javascript' src='//pl17725899.profitablegatetocontent.com/66/7f/9e/667f9e1b97b56e95f65d9a972baeb0f1.js'></script>
  <?php include "ads2.html"?>
 </body>
 </html>
