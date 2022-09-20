@@ -151,7 +151,7 @@ START CLICKING ADS ... AND EARN POINTS<small>(series of 46*10)</small><br>
 }
 else
     {echo "/view/super.php?page=1?cc=1";}
-?>';" disabled>Generate Tokenizer</button>
+?>';" >Generate Tokenizer</button>
 
 <button style="background: rgb(54, 182, 0); border-radius: 3px; border: transparent; box-shadow: rgb(68, 68, 68) 2px 2px 2px; color: white; font-family: Roboto, sans-serif; font-size: 20px; font-weight: 600; padding: 13px; text-decoration: none;" onclick="location.href = '<?php 
     if($lastpoint!="")
@@ -160,7 +160,7 @@ else
 }
 else
     {echo "https://server0809.herokuapp.com/view/points2.php?c0123l123i123c546k123c8l123i45812c3458k123=1";}
-?>';">Generate Tokenizer</button>
+?>';"disabled>Generate Tokenizer</button>
 
 
 
