@@ -3,7 +3,7 @@ namespace Php;
 error_reporting(0);
 session_start();
     date_default_timezone_set('Asia/Kolkata');
-    $t=time()+ (3.5*60*60);;
+    $t=time()+ (5.5*60*60);;
     $servername = "remotemysql.com";
     $username = "IIVAjfeDkk";
     $password = "zzrye8TbMy";
@@ -36,7 +36,8 @@ if (! empty($_SESSION["userId"])) {
         $profile_pic = $memberResult[0]["filename"];
         $sudo = $memberResult[0]["sudo"];
         $chart_data = $memberResult[0]["chart_data"];
-        $lastpoint = $memberResult[0]["lastpoint"];      
+        $lastpoint = $memberResult[0]["lastpoint"]; 
+        $timestampp = $memberResult[0]["timestampp"];     
         // Username is stored as cookie for 10 years as
         // 10years * 365days * 24hrs * 60mins * 60secs
         setcookie("user_login", $name, time() +
@@ -59,6 +60,7 @@ $_SESSION["name"] = $name;
         $sudo = $memberResult[0]["sudo"];
         $chart_data = $memberResult[0]["chart_data"];
         $lastpoint = $memberResult[0]["lastpoint"];
+        $timestampp = $memberResult[0]["timestampp"];
     }
 if($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -144,12 +146,12 @@ else if ($points > "2000" && $points < "2999"){echo " 3&#9734;";}
 else if ($points > "3000" && $points < "3999"){echo " 4&#9734;";}
   ?></b></div>
 <div>Username : <b style="color:white;"><?php echo $username; ?></b></div>
-<div>Timestamp : <b style="color:white;">
+<!--<div>Timestamp : <b style="color:white;">
     <?php 
-echo ($t . "<br>"); 
-echo (date("Y-m-d H:i:s"/*,$t*/));
+/*$timestampp = date("H:i:s (d-m-Y)",$timestampp);
+echo $timestampp;*/
 ?> 
-</b></div>
+</b></div>-->
 <div>Email : <b style="color:white;"><?php echo $email;?></b></div>
   <?php
 
