@@ -27,8 +27,8 @@
        }
         </script>   
           <div id="container-1890edf1c9a79e2d5c416f8ea6a00f7f"></div> 
-         <center><button  type="button" class="btn btn-success" onclick="timer()">GET LINK</button>
-     <h1>You will be redirected in <time><strong id="seconds">2</strong> seconds</time>.</h1></center> 
+         <button  type="button" class="btn btn-success" onclick="timer()">GET LINK</button>
+     <h1>You will be redirected in <time><strong id="seconds">2</strong> seconds</time>.</h1>
 <script>
     function timer()
     {
@@ -44,6 +44,6 @@ var el = document.getElementById('seconds'),
     }, 1000);
 }
 </script>
- <?php include "ads.html"?>
+ <?php include "ads2.html"?>
 </body>
 </html>
