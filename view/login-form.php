@@ -1,16 +1,23 @@
 <html>
 <head>
-<title>User Login</title>
+<title>SUBXSUB user login</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./view/css/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+    body
+    {
+        background: black;
+         color: white;
+    }
+</style>
 </head>
 <body>
     <div>
         <form action="login-action.php" method="post" id="frmLogin" onSubmit="return validate();">
-            <div class="demo-table">
-
-                <div class="form-head">Login</div>
+            <!--<div class="demo-table">-->
+                     <h1 style="color: blueviolet;">SUBXSUB    </h1>
+                <div class="form-head" style="color: white"; >LOGIN</div><br>
                 <?php 
                 if(isset($_SESSION["errorMessage"])) {
                 ?>
@@ -28,6 +35,7 @@
                             class="demo-input-box">
                     </div>
                 </div>
+                <br>
                 <div class="field-column">
                     <div>
                         <label for="password">Password</label><span id="password_info" class="error-info"></span>
@@ -37,6 +45,7 @@
                             class="demo-input-box">
                     </div>
                 </div>
+                <br>
                 <div class=field-column>
                     <div>
                         <input type="submit" name="login" value="Login"
@@ -45,7 +54,7 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div><br><br>
     Don't have a account  <a href = "/signup.php">Sign up</a>
     <script>
     function validate() {
