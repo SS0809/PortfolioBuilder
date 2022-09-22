@@ -1,0 +1,33 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<style>
+#element{
+  position:absolute;
+  top:-400px;
+  right:120px;
+  border: solid 1px;
+  width:15%;
+  padding:2em;
+  background-color: green;
+  animation: drop 1.4s ease forwards;
+  animation-iteration-count:1;
+}
+@keyframes drop{
+  0%{opacity: 0}
+  70%{transform: translateY(750px)}
+  100%{transform: translateY(700px)}
+}
+</style>
+<div id="element">
+  <a href="a.html">Animation</a>
+</div>
+  
+</body>
+</html>
