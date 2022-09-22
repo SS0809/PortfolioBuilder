@@ -39,6 +39,7 @@ namespace Php;
      <th style="color:white;">Rank</th>
     <!--<th style="color:white;">Payment</th>
     <th style="color:white;">Portfolio</th>-->
+      <th style="color:white;">Streak</th>
    <th style="color:white;">last active</th>
   </tr>
   <?php
@@ -73,19 +74,27 @@ if($sudo == 1) {
       die();
 }
 include '../dbconnect.php';
-$sql = "SELECT user_name,points,pay,timestampp FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 20";
+$sql = "SELECT user_name,points,pay,timestampp,streak FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 20";
 $total = 0;   $alpha = 0 ;
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // output data of each row
    $dataa="";   $namee="";while($row = $result->fetch_assoc()) {
     //echo $row["user_name"]. " ---------- ". $row["points"]. "<br>";
-    $total += $row["points"];  
+    $total += $row["points"]; 
+    if ($row["streak"] !="0") {
+   
+    $st = $row["streak"] . "<img src='https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/fire_1f525.gif' style='width: 40%;'>"; 
+    }
+    else
+    {
+       $st ="no data"; 
+    }
     if ($row["timestampp"]==="1663658128") {
         $times = "no data";
       }  
       else{
-$times = date("H:i:s (d-m-Y)",$row["timestampp"]);
+$times = date(/*"H:i:s*/ "d-m",$row["timestampp"]);
 }
     if($alpha<10)
     {$alpha++;
@@ -126,7 +135,7 @@ $times = date("H:i:s (d-m-Y)",$row["timestampp"]);
        {
          $star="";
        }
-       echo '<tr><td style="color:white;">'.$row["user_name"].$star.'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'./* '<td>Rs.'.$row["points"]*0.035.*/'</td>'. '<td>'.$times.'</td>'. "<br>";
+       echo '<tr><td style="color:white;">'.$row["user_name"].$star.'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'./* '<td>Rs.'.$row["points"]*0.035.*/'</td>'. '<td>'.$st.'</td>'.'<td>'.$times.'</td>'. "<br>";
      
   }
 

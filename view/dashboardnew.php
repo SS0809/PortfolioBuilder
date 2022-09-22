@@ -193,7 +193,7 @@ if ($sudo == "1" ){/*echo '<div class="member-dashboard">Payment :  Rs. <b style
 if ($points <= "5" ){echo "(default)";}?></b></div>
   <!--<div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>--> 
 <div>Streak : <b style="color:white;"><?php 
-echo $streak."<img src='https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/fire_1f525.gif' style='width: 9%;'>";
+echo $streak."<img src='https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/fire_1f525.gif' style='width: 8%;'>";
 
 ?></b></div>
 </div>
