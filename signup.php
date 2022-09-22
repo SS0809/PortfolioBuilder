@@ -63,6 +63,13 @@ if($suggest != "")//not empty
 		integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 		crossorigin="anonymous">
+		<style type="text/css">
+			body
+			{
+				background-color: black;
+				color: white;
+			}
+		</style>
 </head>
 <body>
 <?php
@@ -101,10 +108,11 @@ if($suggest != "")//not empty
 ?>
   <script src='https://www.google.com/recaptcha/api.js' async defer>//https://codeforgeek.com/google-recaptcha-tutorial/</script>
 <div class="container my-4 ">	
-	<h1 class="text-center">Signup Here</h1>
+		<h1 style="color: orange;">SUBXSUB</h1>
+	<h2 class="text-center">Signup Here</h2>
 	<form id="comment_form" action="signup.php" method="post">
 		<div class="form-group">
-			<label for="username">Username</label>
+			<label for="username">Username</label><small style="float:right;">{do not use space}</small>
 		<input type="text" class="form-control" id="username"
 			name="username" aria-describedby="emailHelp">	
 		</div>	
