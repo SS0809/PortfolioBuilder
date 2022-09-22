@@ -3,7 +3,9 @@ namespace Php;
 error_reporting(0);
 session_start();
     date_default_timezone_set('Asia/Kolkata');
-    $t=time()+ (5.5*60*60);;
+    $t=time()+ (5.5*0*0);
+
+
     $servername = "remotemysql.com";
     $username = "IIVAjfeDkk";
     $password = "zzrye8TbMy";
@@ -38,6 +40,8 @@ if (! empty($_SESSION["userId"])) {
         $chart_data = $memberResult[0]["chart_data"];
         $lastpoint = $memberResult[0]["lastpoint"]; 
         $timestampp = $memberResult[0]["timestampp"];     
+        $lasttime = $memberResult[0]["lasttime"];  
+        $streak = $memberResult[0]["streak"];  
         // Username is stored as cookie for 10 years as
         // 10years * 365days * 24hrs * 60mins * 60secs
         setcookie("user_login", $name, time() +
@@ -61,6 +65,8 @@ $_SESSION["name"] = $name;
         $chart_data = $memberResult[0]["chart_data"];
         $lastpoint = $memberResult[0]["lastpoint"];
         $timestampp = $memberResult[0]["timestampp"];
+        $lasttime = $memberResult[0]["lasttime"];
+        $streak = $memberResult[0]["streak"];    
     }
 if($_SERVER["REQUEST_METHOD"] == "POST") 
 {
@@ -71,6 +77,32 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 $timestampp = date($t);
  $sql = "UPDATE registered_users SET timestampp='$timestampp' where user_name = '$username';";
    $result = mysqli_query($conn, $sql); 
+//----------------------------------------------------------------------------------------------------------------
+$t1 = $lasttime;//last time
+if ($t > $t1+ (24*60*60)) {
+   //echo "<br><br><br><br><br><br><br><br><br>"."break streak";
+$sql = "UPDATE registered_users SET streak = 0 where user_name = '$username';";
+      $result = mysqli_query($conn, $sql); 
+$sql = "UPDATE registered_users SET lasttime = '$t' where user_name = '$username';";
+     $result = mysqli_query($conn, $sql); 
+
+}
+else if ($t > $t1+ (12*60*60)) 
+{
+   //echo "<br><br><br><br><br><br><br><br><br>"."increase";
+   //update kal k time in database
+  $sql = "UPDATE registered_users SET streak = streak+1 where user_name = '$username';";
+    $result = mysqli_query($conn, $sql); 
+$sql = "UPDATE registered_users SET lasttime = '$t' where user_name = '$username';";
+        $result = mysqli_query($conn, $sql); 
+
+}
+else 
+{
+   //echo "<br><br><br><br><br><br><br><br><br>"."nothing";
+}
+
+//----------------------------------------------------------------------------------------------------------------
 }
 ?>
 <!doctype html>
@@ -160,6 +192,10 @@ if ($sudo == "1" ){/*echo '<div class="member-dashboard">Payment :  Rs. <b style
 <div>Points : <b style="color:white;"><?php echo $points;
 if ($points <= "5" ){echo "(default)";}?></b></div>
   <!--<div style="float:right;font-size:.6em">Last Active : 0 mins ago</div>--> 
+<div>Streak : <b style="color:white;"><?php 
+echo $streak."<img src='https://emojipedia-us.s3.amazonaws.com/source/noto-emoji-animations/344/fire_1f525.gif' style='width: 20%;'>";
+
+?></b></div>
 </div>
   </h6>
 </div>
