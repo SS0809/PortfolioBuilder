@@ -166,7 +166,8 @@ $times = date(/*"H:i:s*/ "d-m",$row["timestampp"]);
         transition: width 500ms ease-in-out;
       }
     </style>
-<b>SERVER EFFICIENCY</b>
+    <img src="theme_-removebg.png" width="30%">
+<b style="color: blueviolet;">SERVER EFFICIENCY</b>
     <div class="wrapper">
       <div class="progress-bar">
         <span id="progress-bar-fill" class="progress-bar-fill" style="color:white ; width: 70%;">70%</span>
