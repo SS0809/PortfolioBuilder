@@ -5,19 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./view/css/style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-    body
-    {
-        background: black;
-         color: white;
+body
+{
+    background: black;
+     color: white;
+}
+#super{
+  animation: blink 2s ease forwards;
+  animation-iteration-count:1;
     }
+#element{
+  position:absolute;
+  top:-350px;
+  /*right:130px;*/
+  animation: drop 0.9s ease forwards;
+  animation-iteration-count:1;
+}
+#element2{
+  position:absolute;
+  top:-450px;
+  /*right:130px;*/
+  animation: drop 1.1s ease forwards;
+  animation-iteration-count:1;
+}
+#element1{
+  position:absolute;
+  top:-530px;
+  /*right:130px;*/
+  animation: drop 1.2s ease forwards;
+  animation-iteration-count:1;
+}
+#element0{
+  animation: slide1 0.8s ease forwards;
+  animation-iteration-count:1;  
+}
+#element4{
+  animation: slide2 0.8s ease forwards;
+  animation-iteration-count:1;  
+}
+#element5{
+   transform: translateX(220px);
+}
+@keyframes drop{
+  0%{opacity: 0}
+  70%{transform: translateY(750px)}
+  85%{transform: translateY(670px);}
+  100%{transform: translateX(60px)translateY(670px);}
+}
+@keyframes slide1{
+  0%{transform: translateX(-120px)}
+  60%{transform: translateX(100px);}
+  100%{transform: translateX(-90px);}
+}
+@keyframes slide2{
+  0%{transform: translateX(-120px)}
+  100%{transform: translateX(20px);}
+}
+@keyframes blink{
+  0%{opacity: 30%;}
+  80%{opacity: 80%;}
+    90%{opacity: 40%;}
+      95%{opacity: 100%;}
+        100%{opacity: 100%;}
+}
 </style>
+  
 </head>
 <body>
     <div>
         <form action="login-action.php" method="post" id="frmLogin" onSubmit="return validate();">
             <!--<div class="demo-table">-->
-                     <h1 style="color: blueviolet;">SUBXSUB    </h1>
-                <div class="form-head" style="color: white"; >LOGIN</div><br>
+                     <h1 style="color: blueviolet;" id="super">SUBXSUB</h1>
+                <div class="form-head" id="element0" style="color: white"; >LOGIN</div><br>
                 <?php 
                 if(isset($_SESSION["errorMessage"])) {
                 ?>
@@ -26,7 +85,7 @@
                 unset($_SESSION["errorMessage"]);
                 } 
                 ?>
-                <div class="field-column">
+                <div class="field-column" id="element1">
                     <div>
                         <label for="username">Username</label><span id="user_info" class="error-info"></span>
                     </div>
@@ -36,7 +95,7 @@
                     </div>
                 </div>
                 <br>
-                <div class="field-column">
+                <div class="field-column" id="element2">
                     <div>
                         <label for="password">Password</label><span id="password_info" class="error-info"></span>
                     </div>
@@ -46,7 +105,7 @@
                     </div>
                 </div>
                 <br>
-                <div class=field-column>
+                <div class=field-column id="element">
                     <div>
                         <input type="submit" name="login" value="Login"
                         class="btnLogin"></span>
@@ -54,8 +113,10 @@
                 </div>
             </div>
         </form>
-    </div><br><br>
-    Don't have a account  <a href = "/signup.php">Sign up</a>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="element4">Don't have a account  <a href = "/signup.php">Sign up</a></div>
+    <br><br><br><br><br><br>
+    <div id="element5">CSS BY <b style="color: blueviolet;">DEVIL</b></div>
     <script>
     function validate() {
         var $valid = true;
