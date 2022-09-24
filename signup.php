@@ -2,10 +2,28 @@
 $showAlert = false;
 $showError = false;
 $exists=false;
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-	// Include file which makes the
-	// Database Connection.
 	include 'dbconnect.php';
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+	}
+if (isset($_POST['submit'])) {
+//https://codeforgeek.com/google-recaptcha-tutorial/
+           $captcha;
+            if(isset($_POST['g-recaptcha-response'])){
+          $captcha=$_POST['g-recaptcha-response'];
+        }
+        $secretKey = "6Lcg9achAAAAAFD2N47nbdn0aodPL5OKyYKEO5MR";
+        $ip = $_SERVER['REMOTE_ADDR'];
+        // post request to server
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response,true);
+        // should return JSON with success as true
+        if($responseKeys["success"]!=1) {
+                include './view/getlost.php'; 
+                return false;
+			     } else { echo 'done';
+			     // Include file which makes the
+	// Database Connection.
 	$username = $_POST["username"];
 	$password = $_POST["password"];
 	$display_name = $_POST["display_name"];
@@ -46,8 +64,11 @@ if($suggest != "")//not empty
 
 	$sql = "UPDATE registered_users SET  suggest = '' where user_name = '$username';";
 	$result = mysqli_query($conn, $sql); 
-}}
-?>	
+}
+        }
+	// code...
+}
+?>
 <!doctype html>	
 <html lang="en">
 <head>	
@@ -143,7 +164,7 @@ if($suggest != "")//not empty
 			Make sure to type the same password
 			</small>
 		</div>
-      <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw"></div>
+      <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw-k_yD2"></div>
 		<button type="submit" class="btn btn-primary" name="submit" value="Post comment">
 		SignUp
 		</button>
@@ -164,25 +185,3 @@ Already have a account  <a href = "/index.php">login</a>
        }
         </script> 
 </html>
-<?php
-//https://codeforgeek.com/google-recaptcha-tutorial/
-           $captcha;
-            if(isset($_POST['g-recaptcha-response'])){
-          $captcha=$_POST['g-recaptcha-response'];
-        }
-        if(!$captcha){
-          echo 'Please check the the captcha form.';
-          exit;
-        }
-        $secretKey = "6Lcg9achAAAAAFD2N47nbdn0aodPL5OKyYKEO5MR";
-        $ip = $_SERVER['REMOTE_ADDR'];
-        // post request to server
-        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
-        $response = file_get_contents($url);
-        $responseKeys = json_decode($response,true);
-        // should return JSON with success as true
-        if($responseKeys["success"]) {
-                echo 'Thanks for posting comment';   
-			     } else { echo 'You are spammer ! Get the @$%K out';
-        }
-?>
