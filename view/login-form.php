@@ -7,7 +7,6 @@
 <style type="text/css">
 body
 {
-    background: black;
      color: white;
    background-image: linear-gradient(120deg,  black, #1C2A3D);
 }
@@ -43,7 +42,8 @@ body
 }
 #element5{
     font-size: 0.8em;
-   transform: translateX(220px);
+      position:absolute;
+right: 10px;
 }
 #element6{
   padding: 10px;

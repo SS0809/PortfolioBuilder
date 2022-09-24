@@ -153,8 +153,7 @@ h4 {
     margin:0px;
 }
 body {
-color:orange;
-  background-color: black;
+   background-image: linear-gradient(120deg,  black, #1C2A3D);
   style=" font-weight: 800;"
 }
 </style>

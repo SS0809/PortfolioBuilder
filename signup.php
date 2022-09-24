@@ -84,13 +84,87 @@ if($suggest != "")//not empty
 		integrity=
 "sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 		crossorigin="anonymous">
-		<style type="text/css">
-			body
-			{
-				background-color: black;
-				color: white;
-			}
-		</style>
+	<style type="text/css">
+body
+{
+     color: white;
+   background-image: linear-gradient(120deg,  black, #1C2A3D);
+}
+#super{
+  animation: blink 2s ease forwards;
+  animation-iteration-count:1;
+    }
+#element{
+  position:absolute;
+  top:-550px;
+  animation: drop 0.9s ease forwards;
+  animation-iteration-count:1;
+}
+#element2{
+  position:absolute;
+  top:-340px;
+  animation: drop 1.1s ease forwards;
+  animation-iteration-count:1;
+}
+#element1{
+  position:absolute;
+  top:-410px;
+  animation: drop 1.2s ease forwards;
+  animation-iteration-count:1;
+}
+#element0{
+position:absolute;
+  top:-480px;
+  animation: drop 0.8s ease forwards;
+  animation-iteration-count:1;  
+}
+#element4{
+	  position:absolute;
+  top:-270px;
+  animation: drop 0.8s ease forwards;
+  animation-iteration-count:1;  
+}
+#element5{
+	  position:absolute;
+    top:-530px;
+    font-size: 0.8em;
+   transform: translateX(20px);
+}
+#element6{
+  padding: 10px;
+    border: none;
+    border-radius: 10%;
+background-color: #659CE5;
+}
+#element8{
+	    font-size: 0.8em;
+ 	  position:absolute;
+right: 10px;
+}
+
+@keyframes drop{
+  0%{opacity: 0}
+  70%{transform: translateY(750px)}
+  85%{transform: translateY(670px);}
+  100%{transform: translateX(40px)translateY(670px);}
+}
+@keyframes slide1{
+  0%{transform: translateX(-120px)}
+  60%{transform: translateX(100px);}
+  100%{transform: translateX(-90px);}
+}
+@keyframes slide2{
+  0%{transform: translateX(-120px)}
+  100%{transform: translateX(20px);}
+}
+@keyframes blink{
+  0%{opacity: 30%;}
+  80%{opacity: 80%;}
+    90%{opacity: 40%;color: orange;}
+      95%{opacity: 100%;}
+        100%{opacity: 100%;}
+}
+</style>
 </head>
 <body>
 <?php
@@ -128,50 +202,57 @@ if($suggest != "")//not empty
     }
 ?>
   <script src='https://www.google.com/recaptcha/api.js' async defer>//https://codeforgeek.com/google-recaptcha-tutorial/</script>
+		<h2 style="color: blueviolet;"  id="super">SUBXSUB</h2>
 <div class="container my-4 ">	
-		<h1 style="color: orange;">SUBXSUB</h1>
 	<h2 class="text-center">Signup Here</h2>
 	<form id="comment_form" action="signup.php" method="post">
-		<div class="form-group">
+		<div class="form-group" id="element">
 			<label for="username">Username</label><small style="float:right;">{do not use space}</small>
 		<input type="text" class="form-control" id="username"
-			name="username" aria-describedby="emailHelp">	
+			name="username" aria-describedby="emailHelp" value="username">	
 		</div>	
-		<div class="form-group">
+		<div class="form-group" id="element0">
 			<label for="display_name">Display Name</label>
 		<input type="text" class="form-control" id="display_name"
-			name="display_name" aria-describedby="emailHelp">	
+			name="display_name" aria-describedby="emailHelp" value="display_name">	
 		</div>	
-		<div class="form-group">
+		<div class="form-group" id="element1">
 			<label for="email">Email</label>
 		<input type="text" class="form-control" id="email"
-			name="email" aria-describedby="emailHelp">	
+			name="email" aria-describedby="emailHelp" value="email@gmail.com">	
 		</div>	
 		<div class="form-group">
 		<input type="hidden" id="suggest"
 			name="suggest" value ="NO">	
 			</div>	
-		<div class="form-group">
+		<div class="form-group" id="element2">
 			<label for="password">Password</label>
 			<input type="password" class="form-control"
-			id="password" name="password">
+			id="password" name="password" value="NO">
 		</div>	
-		<div class="form-group">
+		<div class="form-group" id="element4">
 			<label for="cpassword">Confirm Password</label>
 			<input type="password" class="form-control"
-				id="cpassword" name="cpassword">	
+				id="cpassword" name="cpassword" value="NO">	
 			<small id="emailHelp" class="form-text text-muted">
 			Make sure to type the same password
 			</small>
-		</div>
+		</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw-k_yD2"></div>
-		<button type="submit" class="btn btn-primary" name="submit" value="Post comment">
+		<button type="submit" name="submit" value="Post comment" id = "element6" onclick="chngcolor();">
 		SignUp
 		</button>
 	</form>
 </div>	
 Already have a account  <a href = "/index.php">login</a>
+<br><br><br><br>
+    <div id="element8">CSS BY <b style="color: blueviolet;">DEVIL</b></div>
+    <br>
 </body> <script>
+	        function chngcolor()
+        {
+        document.getElementById('element6').id = 'element7';
+        }
         const urlParams = new URLSearchParams(location.search);
         let suggest ;
         for (const [key,value] of urlParams) {
