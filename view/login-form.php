@@ -9,6 +9,7 @@ body
 {
     background: black;
      color: white;
+   background-image: linear-gradient(120deg,  black, #1C2A3D);
 }
 #super{
   animation: blink 2s ease forwards;
@@ -17,21 +18,18 @@ body
 #element{
   position:absolute;
   top:-350px;
-  /*right:130px;*/
   animation: drop 0.9s ease forwards;
   animation-iteration-count:1;
 }
 #element2{
   position:absolute;
   top:-450px;
-  /*right:130px;*/
   animation: drop 1.1s ease forwards;
   animation-iteration-count:1;
 }
 #element1{
   position:absolute;
   top:-530px;
-  /*right:130px;*/
   animation: drop 1.2s ease forwards;
   animation-iteration-count:1;
 }
@@ -44,8 +42,23 @@ body
   animation-iteration-count:1;  
 }
 #element5{
+    font-size: 0.8em;
    transform: translateX(220px);
 }
+#element6{
+  padding: 10px;
+    border: none;
+    border-radius: 10%;
+background-color: #659CE5;
+}
+#element7{
+  padding: 10px;
+    border: none;
+    border-radius: 10%;
+background-color: #8CCE5A;
+
+}
+
 @keyframes drop{
   0%{opacity: 0}
   70%{transform: translateY(750px)}
@@ -64,7 +77,7 @@ body
 @keyframes blink{
   0%{opacity: 30%;}
   80%{opacity: 80%;}
-    90%{opacity: 40%;}
+    90%{opacity: 40%;color: orange;}
       95%{opacity: 100%;}
         100%{opacity: 100%;}
 }
@@ -107,8 +120,8 @@ body
                 <br>
                 <div class=field-column id="element">
                     <div>
-                        <input type="submit" name="login" value="Login"
-                        class="btnLogin"></span>
+                        <input type="submit" name="login" value="Login" id ="element6"
+                        onclick="chngcolor();"></span>
                     </div>
                 </div>
             </div>
@@ -118,6 +131,10 @@ body
     <br><br><br><br><br><br>
     <div id="element5">CSS BY <b style="color: blueviolet;">DEVIL</b></div>
     <script>
+        function chngcolor()
+        {
+        document.getElementById('element6').id = 'element7';
+        }
     function validate() {
         var $valid = true;
         document.getElementById("user_info").innerHTML = "";
