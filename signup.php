@@ -238,7 +238,7 @@ right: 10px;
 			Make sure to type the same password
 			</small>
 		</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw-k_yD2"></div>
+      <div class="g-recaptcha" data-sitekey="6Lcg9achAAAAAGQwmDMvU4mRx9qlcYwZj6pGonHw"></div>
 		<button type="submit" name="submit" value="Post comment" id = "element6" onclick="chngcolor();">
 		SignUp
 		</button>
