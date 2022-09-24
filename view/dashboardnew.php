@@ -79,7 +79,7 @@ $timestampp = date($t);
    $result = mysqli_query($conn, $sql); 
 //----------------------------------------------------------------------------------------------------------------
 $t1 = $lasttime;//last time
-if ($t > $t1+ (24*60*60)) {
+if ($t > $t1+ (23*60*60)) {
    //echo "<br><br><br><br><br><br><br><br><br>"."break streak";
 $sql = "UPDATE registered_users SET streak = 0 where user_name = '$username';";
       $result = mysqli_query($conn, $sql); 
@@ -87,7 +87,7 @@ $sql = "UPDATE registered_users SET lasttime = '$t' where user_name = '$username
      $result = mysqli_query($conn, $sql); 
 
 }
-else if ($t > $t1+ (18*60*60)) 
+else if ($t > $t1+ (17*60*60)) 
 {
    //echo "<br><br><br><br><br><br><br><br><br>"."increase";
    //update kal k time in database
