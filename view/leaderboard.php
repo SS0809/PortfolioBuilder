@@ -29,18 +29,18 @@ namespace Php;
 <canvas id="chart1"  style="width:40%;max-width:550px"></canvas>
 </div>
 <br><br>
-    <div style="height: 500px ;width:300px">
+    <div style="height: 450px ;width:200px">
 <canvas id="chart2"  style="width:40%;max-width:550px"></canvas>
 </div>
-<table style="width:100%">
+<table  style="width:100% ">
   <tr>
-    <th style="color:white;">Username</th>
-    <th style="color:white;">Points</th>
-     <th style="color:white;">Rank</th>
+    <th style="color:white; border:hidden;">Username</th>
+    <th style="color:white; border:hidden;">Points</th>
+     <th style="color:white; border:hidden;">Rank</th>
     <!--<th style="color:white;">Payment</th>
     <th style="color:white;">Portfolio</th>-->
-      <th style="color:white;">Streak</th>
-   <th style="color:white;">last active</th>
+      <th style="color:white; border:hidden;">Streak</th>
+   <th style="color:white; border:hidden;">last active</th>
   </tr>
   <?php
 //error_reporting(0);
@@ -135,7 +135,7 @@ $times = date(/*"H:i:s*/ "d-m",$row["timestampp"]);
        {
          $star="";
        }
-       echo '<tr><td style="color:white;">'.$row["user_name"].$star.'</td>'. '<td>'.$row["points"].'</td>'. '<td>'.$rank.'</td>'./* '<td>Rs.'.$row["points"]*0.035.*/'</td>'. '<td>'.$st.'</td>'.'<td>'.$times.'</td>'. "<br>";
+       echo '<tr><td style="color:white;border:hidden;">'.$row["user_name"].$star.'</td>'. '<td style="border:hidden;">'.$row["points"].'</td>'. '<td style="border:hidden;">'.$rank.'</td>'./* '<td>Rs.'.$row["points"]*0.035.*/'</td>'. '<td style="border:hidden;">'.$st.'</td>'.'<td style="border:hidden;">'.$times.'</td>'. "<br>";
      
   }
 
@@ -145,11 +145,15 @@ $times = date(/*"H:i:s*/ "d-m",$row["timestampp"]);
 <br>
 
 <style>
-        body
-        {
-         margin: 15px;
-        }
-      .progress-bar {
+  body {
+   background-image: linear-gradient(120deg,  black, #1C2A3D);
+  style=" font-weight: 800;"
+   margin: 15px;
+         }  
+table, tr, td ,th {
+    border: hidden;
+}
+     .progress-bar {
         width: 100%;
         background-color: #1c1b1b;
         padding: 3px;
@@ -173,7 +177,7 @@ $times = date(/*"H:i:s*/ "d-m",$row["timestampp"]);
         <span id="progress-bar-fill" class="progress-bar-fill" style="color:white ; width: 70%;">70%</span>
       </div>
     </div>
-
+<hr>
 <!--<div id = "myBar" class="progress-bar progress-bar-striped progress-bar-animated" style="width:90% color:blue;">90</div>--->
 <script type="text/javascript">
   var elem = document.getElementById("progress-bar-fill");    
