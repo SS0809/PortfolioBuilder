@@ -1,0 +1,151 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>button</title>
+</head>
+<body>
+  <style>
+  /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: grey;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+input:checked + .slider {
+  background-color: blueviolet;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px blueviolet;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}content: "h";
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<!-- Rounded switch -->
+<form method="post" id="toggleForm">
+          <fieldset>
+<label class="switch">
+<input type="checkbox" class="custom-control-input" id="customSwitch1" name='machine_state'>
+  <span class="slider round">
+  </span>
+</label>
+<div class="custom-control custom-switch">
+<label class="custom-control-label" id="statusText" for="customSwitch1"></label>
+              </div>
+            </form>
+<script>function putStatus() {
+    $.ajax({
+        type: "GET",
+        url: "iindex.php",
+        data: {toggle_select: true},
+        success: function (result) {
+            if (result == 1) {
+                $('#customSwitch1').prop('checked', true);
+                statusText(1);
+            } else {
+                $('#customSwitch1').prop('checked', false);
+                statusText(0);
+            }
+            lastUpdated();
+        }
+    });
+}
+
+function statusText(status_val) {
+    if (status_val == 1) {
+        var status_str = "On (1)";
+    } else {
+        var status_str = "Off (0)";
+    }
+    document.getElementById("statusText").innerText = status_str;
+}
+
+function onToggle() {
+    $('#toggleForm :checkbox').change(function () {
+        if (this.checked) {
+            //alert('checked');
+            updateStatus(1);
+            statusText(1);
+        } else {
+            //alert('NOT checked');
+            updateStatus(0);
+            statusText(0);
+        }
+    });
+}
+
+function updateStatus(status_val) {
+    $.ajax({
+        type: "POST",
+        url: "iindex.php",
+        data: {toggle_update: true, status: status_val},
+        success: function (result) {
+            console.log(result);
+            lastUpdated();
+        }
+    });
+}
+
+function lastUpdated() {
+    $.ajax({
+        type: "GET",
+        url: "iindex.php",
+        data: {toggle_updated: true},
+        success: function (result) {
+            document.getElementById("updatedAt").innerText = "Last updated at: " + result;
+        }
+    });
+}
+
+$(document).ready(function () {
+    //Called on page load:
+    putStatus();
+    onToggle();
+    statusText();
+});
+</script>
+</body>
+</html>
