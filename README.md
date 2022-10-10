@@ -1,3 +1,3 @@
 # server
-A simple php program to login and signup users with automated portfolio making 
+A simple php program to login and signup users with automated portfolio generation 
 
