@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./view/css/style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-
+html
+  {
+      background: linear-gradient(120deg,  black, #1C2A3D);
+  }
   body
 {
      color: white;
