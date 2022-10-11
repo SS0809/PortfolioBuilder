@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./view/css/style.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
-body
+html
+  {
+     background-image: linear-gradient(120deg,  black, #1C2A3D);
+  }
+  body
 {
      color: white;
-   background-image: linear-gradient(120deg,  black, #1C2A3D);
 }
 #super{
   animation: blink 2s ease forwards;
