@@ -3,9 +3,11 @@
 	CONST username = "root";
 	CONST password = "root";
 	CONST database = "music23";
+	CONST port = "3306";
+
 	// Create a connection
 	$conn = mysqli_connect(servername,
-		username, password, database);
+		username, password, database ,port);
 
 	// Code written below is a step taken
 	// to check that our Database is
