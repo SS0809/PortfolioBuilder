@@ -1,11 +1,11 @@
 <?php
-	$servername = "remotemysql.com";
-	$username = "IIVAjfeDkk";
-	$password = "zzrye8TbMy";
-	$database = "IIVAjfeDkk";
+	CONST servername = "172.20.0.10";
+	CONST username = "root";
+	CONST password = "root";
+	CONST database = "music23";
 	// Create a connection
-	$conn = mysqli_connect($servername,
-		$username, $password, $database);
+	$conn = mysqli_connect(servername,
+		username, password, database);
 
 	// Code written below is a step taken
 	// to check that our Database is

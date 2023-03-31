@@ -1,6 +1,6 @@
 <?php
 namespace Php;
-
+include './dbconnect.php';
 /**
  * Generic datasource class for handling DB operations.
  * Uses MySqli and PreparedStatements.
@@ -12,22 +12,15 @@ class DataSource
 
     // PHP 7.1.0 visibility modifiers are allowed for class constants.
     // when using above 7.1.0, declare the below constants as private
-    const HOST = 'remotemysql.com';
+    
+    const HOST = servername;
 
-    const USERNAME = 'IIVAjfeDkk';
+    const USERNAME = username;
 
-    const PASSWORD = 'zzrye8TbMy';
+    const PASSWORD = password ;
 
-    const DATABASENAME = 'IIVAjfeDkk';
-    /*const HOST = 'localhost';
-
-    const USERNAME = 'root';
-
-    const PASSWORD = '';
-
-    const DATABASENAME = 'IIVAjfeDkk';
-*/
-    private $conn;
+    const DATABASENAME = database;
+   private $conn;
 
     /**
      * PHP implicitly takes care of cleanup for default connection types.

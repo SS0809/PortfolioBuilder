@@ -5,18 +5,14 @@ namespace Php;
 <html>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<link
-	rel=
+<link rel=
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-	type="text/css"
-/>
+	type="text/css"/>
 <script src=
 "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script
-	src=
+<script src=
 "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
-	type="text/javascript"
-></script>
+	type="text/javascript"></script>
 <script src=
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -44,7 +40,7 @@ namespace Php;
   </tr>
   <?php
 //error_reporting(0);
-session_start();
+//session_start();
 use \Php\Member; 
 include '../dbconnect.php';
 include "a.html";

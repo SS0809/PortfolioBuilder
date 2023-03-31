@@ -4,21 +4,8 @@ error_reporting(0);
 session_start();
     date_default_timezone_set('Asia/Kolkata');
     $t=time()+ (5.5*0*0);
+include "./dbconnect.php";
 
-
-    $servername = "remotemysql.com";
-    $username = "IIVAjfeDkk";
-    $password = "zzrye8TbMy";
-    $database = "IIVAjfeDkk";
-    $conn = mysqli_connect($servername,
-        $username, $password, $database);
-
-    if($conn) {
-    //  echo "success";
-    }
-    else {
-        die("Error". mysqli_connect_error());
-}
 include "preload.php";
 use \Php\Member;
   if(""!=$new){
