@@ -14,7 +14,7 @@
     <?php echo "<h1>Hi! I'm happy</h1>"; ?>
 
     <?php
-include "dbconnect.php";
+     include "dbconnect.php";
 
 
     $query = 'SELECT * From registered_users';

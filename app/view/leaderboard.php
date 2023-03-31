@@ -69,7 +69,6 @@ if($sudo == 1) {
    header("Location: ./not.html");
       die();
 }
-include '../dbconnect.php';
 $sql = "SELECT user_name,points,pay,timestampp,streak FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 20";
 $total = 0;   $alpha = 0 ;
 $result = $conn->query($sql);
