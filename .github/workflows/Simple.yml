@@ -12,4 +12,4 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
       - name: FIGLET
-        run: figlet saurabh
+        run: sudo apt install figlet && figlet saurabh
