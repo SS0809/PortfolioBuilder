@@ -6,20 +6,13 @@ services:
       - "8080:80"
     restart: always
     depends_on:
-      - mysqldb
-    expose:
-      - 8080
-    networks:
-      mysql:
-        ipv4_address: 172.20.0.12
+      - mysqldb 
   mysqldb:
     image: mysql
     container_name: mysqldb
     hostname: mysqldb
     command: --default-authentication-plugin=mysql_native_password && --init-file /data/application/init.sql 
     restart: always
-    ports:
-      - 3306:3306
     volumes:
         - ./init.sql:/docker-entrypoint-initdb.d/setup.sql        
     environment:
@@ -28,11 +21,6 @@ services:
     - MYSQL_ALLOW_EMPTY_PASSWORD=yes
     ports:
       - 3306:3306
-    networks:
-        mysql:
-          ipv4_address: 172.20.0.10
-    expose:
-      - 3306
   dbadmin:
     image: phpmyadmin:5.2.0-apache
     container_name: dbadmin
@@ -42,12 +30,3 @@ services:
       - 8081:80
     depends_on:
       - mysqldb
-    networks:
-      mysql:
-        ipv4_address: 172.20.0.14
-networks:
-  mysql:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.20.0.0/16
