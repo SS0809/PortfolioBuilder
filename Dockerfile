@@ -1,4 +1,3 @@
-FROM mysql:5
 FROM php:fpm
 FROM phpmyadmin:5.2.0-apache
 RUN apt-get update && apt upgrade -y
