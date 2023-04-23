@@ -1,4 +1,4 @@
-name: Simple github action
+name: Simple github action for FIGLET 
 
 on:
   push:
@@ -12,4 +12,4 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
       - name: FIGLET
-        run: sudo apt install figlet && figlet saurabh
+        run: sudo apt install figlet && figlet saurabh && figlet server
