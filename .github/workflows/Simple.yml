@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: Simple github action
 
 on:
   push:
@@ -11,3 +11,5 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
+      - name: FIGLET
+        run: figlet saurabh
