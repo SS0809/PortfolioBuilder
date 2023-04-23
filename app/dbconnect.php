@@ -1,5 +1,5 @@
 <?php
-	CONST servername = "172.20.0.10";
+	CONST servername = "db";
 	CONST username = "root";
 	CONST password = "root";
 	CONST database = "music23";
