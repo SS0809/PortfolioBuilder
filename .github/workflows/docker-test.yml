@@ -13,4 +13,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: SS0809/server@main
+          tags: v1.3.0
