@@ -28,4 +28,4 @@ jobs:
         with:
           push: true
           file: Dockerfile
-          tags: user/app:latest
+          tags: v1.3.0
