@@ -1,13 +1,12 @@
 <?php
-	$servername = "mysqldb";
+	$servername = "localhost";
 	$username = "root";
-	$password = "root";
-	$database = "music23";
-	$port = "3306";
+	$password = "0111cs211163";
+	$database = "server";
 
 	// Create a connection
 	$conn = mysqli_connect($servername,
-		$username, $password, $database ,$port);
+		$username, $password, $database );
 
 	// Code written below is a step taken
 	// to check that our Database is

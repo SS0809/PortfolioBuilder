@@ -40,7 +40,7 @@ namespace Php;
   </tr>
   <?php
 //error_reporting(0);
-//session_start();
+session_start();
 use \Php\Member; 
 include '../dbconnect.php';
 include "a.html";
