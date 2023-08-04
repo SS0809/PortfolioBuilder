@@ -1,43 +1,40 @@
-<html>
- <head>
-  <title>Hello...</title>
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+$host = "localhost";
+$port = "5432";
+$dbname = "postgres"; 
+$user = "postgres"; 
+$password = "0111cs211163"; 
 
-  <meta charset="utf-8"> 
-
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-</head>
-<body>
-    <div class="container">
-    <?php echo "<h1>Hi! I'm happy</h1>"; ?>
-
-    <?php
-     include "dbconnect.php";
-
-
-    $query = 'SELECT * From registered_users';
-    $result = mysqli_query($conn, $query);
-
-    echo '<table class="table table-striped">';
-    echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
-    while($value = $result->fetch_array(MYSQLI_ASSOC)){
-        echo '<tr>';
-        echo '<td><a href="#"><span class="glyphicon glyphicon-search"></span></a></td>';
-        foreach($value as $element){
-            echo '<td>' . $element . '</td>';
+// Test the connection to PostgreSQL server
+$conn = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password");
+if ($conn === false) {
+    echo "Failed to connect to PostgreSQL server: " . pg_last_error();
+} else {
+    echo "Connected to PostgreSQL server successfully!";
+    
+    // Fetch data from the registered_users table
+    $query = "SELECT id, user_name, display_name, password, email, points, suggest, filename, sudo, chart_data, pay, goal, sabout, about, youtube, insta FROM public.registered_users;";
+    $result = pg_query($conn, $query);
+    
+    if ($result) {
+        // Loop through the rows and access individual columns
+        while ($row = pg_fetch_assoc($result)) {
+            echo "<br>";
+            echo "ID: " . $row['id'] . "<br>";
+            echo "User Name: " . $row['user_name'] . "<br>";
+            echo "Display Name: " . $row['display_name'] . "<br>";
+            echo "Email: " . $row['email'] . "<br>";
+            // Access other columns in a similar manner
         }
-
-        echo '</tr>';
+        // Free the result variable after use
+        pg_free_result($result);
+    } else {
+        echo "Error executing the query: " . pg_last_error($conn);
     }
-    echo '</table>';
-
-    $result->close();
-
-    mysqli_close($conn);
-
-    ?>
-    </div>
-</body>
-</html>
+    
+    // Close the connection
+    pg_close($conn);
+}
+?>
