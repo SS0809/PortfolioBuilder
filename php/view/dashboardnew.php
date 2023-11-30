@@ -348,10 +348,10 @@ elem.textContent = "<?php if ($lastpoint!="") {echo $lastpoint*2;}else echo "ZER
 <label class="custom-control-label" id="statusText" for="customSwitch1"></label>
               </div>
             </form>
-<a href="https://subxsub.me/pages?a=<?php echo $username; ?>" target="_blank" class="btn btn-success me-1" role="button">OPEN</a>
+<a href="https://ss0809.github.io/PortfolioBuilder/pages?a=<?php echo $username; ?>" target="_blank" class="btn btn-success me-1" role="button">OPEN</a>
 <a href="/view/info.php" target="_blank" class="btn btn-success me-1" role="button">EDIT</a><br>
 Copy the following text and share it in your bio {your portfolio}<br>
- <input type="" value="https://subxsub.me/pages?a=<?php echo $username; ?>" id="myInput">
+ <input type="" value="https://ss0809.github.io/PortfolioBuilder/pages?a=<?php echo $username; ?>" id="myInput">
    <button class="btn btn-info me-1" onclick="myFunction()">COPY</button><br>
 Copy the following text and share with friends ..... with each friend you get 50 points<br>
 <input type="" value="https://server0809.herokuapp.com/signup.php?suggest=<?php echo $username; ?>" id="myInput">

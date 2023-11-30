@@ -1,7 +1,3 @@
-CREATE DATABASE IF NOT EXISTS music23;
-
-USE music23;
-
 CREATE TABLE IF NOT EXISTS registered_users (
   id int NOT NULL,
   user_name varchar(100) NOT NULL,
@@ -27,3 +23,28 @@ CREATE TABLE IF NOT EXISTS registered_users (
   streak int DEFAULT 0,
   lasttime int DEFAULT NULL
 );
+
+
+INSERT INTO `registered_users` (`id`, `user_name`, `display_name`, `password`, `email`, `points`, `suggest`, `filename`, `sudo`, `chart_data`, `pay`, `goal`, `sabout`, `about`, `youtube`, `insta`,`user_browser`,`pointa`,`pointb`,`lastpoint`,`timestampp`,`streak`,`lasttime`) VALUES
+(1, 'devil', 'Saurabh Saraswat', 'd81e8213797f23651cf57e59b4bd8da0', 'saurabh45215@gmail.com', 2216, '', 'https://ucarecdn.com/3396501d-4c27-4465-bf4b-e62f54f37c93/', '1', '10203040506070', 0, 'Developer && Dreamer', 'Eat phir repeat ', 'Developing php and myself', NULL, NULL, 'a:1:{i:0;s:113:\"Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Mobile Safari/537.36\";}', NULL, NULL, '/view/super.php?page=4?cc=0', 1670726624, 0, 1670726624),
+(2, 'saurabhss', 'Saurabh Saraswat', 'd81e8213797f23651cf57e59b4bd8da0', 'saurabh45215@gmail.com', 163, '', 'https://ucarecdn.com/40cf449f-7469-4bbb-897e-9004ae15eb51/', '1', '10203040506070', 1,'Developer && Dreamer', 'Eat phir repeat ', 'Developing php and myself', NULL, NULL, 'a:1:{i:0;s:113:\"Mozilla/5.0 (Linux; Android 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Mobile Safari/537.36\";}', NULL, NULL, '/view/super.php?page=4?cc=0', 1670726624, 0, 1670726624);
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `registered_users`
+--
+ALTER TABLE `registered_users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `registered_users`
+--
+ALTER TABLE `registered_users`
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+COMMIT;

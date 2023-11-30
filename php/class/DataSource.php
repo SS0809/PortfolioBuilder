@@ -19,13 +19,13 @@ class DataSource
     const PASSWORD = 'zzrye8TbMy';
 
     const DATABASENAME = 'IIVAjfeDkk';*/
-    const HOST = 'localhost';
+    const HOST = 'db';
 
-    const USERNAME = 'root';
+    const USERNAME = 'USER';
 
-    const PASSWORD = '0111cs211163';
+    const PASSWORD = 'PASS';
 
-    const DATABASENAME = 'server';
+    const DATABASENAME = 'php-app';
 
     const PORT = '3306';
 

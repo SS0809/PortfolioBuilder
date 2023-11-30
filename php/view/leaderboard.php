@@ -7,12 +7,12 @@ namespace Php;
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel=
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-	type="text/css"/>
+  type="text/css"/>
 <script src=
 "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src=
 "https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
-	type="text/javascript"></script>
+  type="text/javascript"></script>
 <script src=
 "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@ namespace Php;
 <script src=
 "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
 <body><br><br><br><br>
-	<h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
+  <h2 style="color:white;">TOP <b style="color:orange;">SUBXSUB</b> SUPER USERS</h2>
     <div style="height: 500px ;width:300px">
 <canvas id="chart1"  style="width:40%;max-width:550px"></canvas>
 </div>
@@ -40,7 +40,7 @@ namespace Php;
   </tr>
   <?php
 //error_reporting(0);
-session_start();
+//session_start();
 use \Php\Member; 
 include '../dbconnect.php';
 include "a.html";
@@ -62,13 +62,14 @@ if (! empty($_SESSION["userId"])) {
                 $profile_pic = $memberResult[0]["filename"];
     }
 }
+/*
 if($sudo == 1) {          
     
 }
  else {   
    header("Location: ./not.html");
       die();
-}
+}*/
 $sql = "SELECT user_name,points,pay,timestampp,streak FROM `registered_users` WHERE points > 5 ORDER BY `registered_users`.`points` DESC limit 20";
 $total = 0;   $alpha = 0 ;
 $result = $conn->query($sql);
@@ -205,19 +206,19 @@ $conn->close();
 </html>
 
 <style>
-	.container {
-	width: 70%;
-	margin: 15px auto;
-	}
-	/*body {
-	text-align: center;
-	color: green;
-	}
-	h2 {
-	text-align: center;
-	font-family: "Verdana", sans-serif;
-	font-size: 30px;
-	}*/
+  .container {
+  width: 70%;
+  margin: 15px auto;
+  }
+  /*body {
+  text-align: center;
+  color: green;
+  }
+  h2 {
+  text-align: center;
+  font-family: "Verdana", sans-serif;
+  font-size: 30px;
+  }*/
 table, th, td {
   border:1px solid black;
 }
@@ -228,12 +229,12 @@ color:orange;
 }
 </style>
 <body>
-	
+  
 
 </body>
 
 <script>
-	var ctx = document.getElementById("chart1").getContext("2d");
+  var ctx = document.getElementById("chart1").getContext("2d");
   var myChart = new Chart(ctx, {
   type: "bar",
   data: {
