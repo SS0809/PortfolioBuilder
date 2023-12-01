@@ -336,6 +336,26 @@ elem.textContent = "<?php if ($lastpoint!="") {echo $lastpoint*2;}else echo "ZER
                         class="btnLogin">
     </form>-->
     <!-- Rounded switch -->
+    <script type="text/javascript">
+        function forwardurl() {
+const currentURL = window.location.href;
+const domain = new URL("/view/pro/files.php", currentURL).href;
+console.log(domain); // http://localhost:8000/view/pro/files.php\
+
+let forwardurl = `https://ss0809.github.io/PortfolioBuilder/pages?a=<?php echo $username; ?>&urll=${encodeURIComponent(domain)}`;
+console.log(forwardurl);
+//https://ss0809.github.io/PortfolioBuilder/pages?a=devil&urll=http%3A%2F%2Flocalhost%3A8000%2Fview%2Fpro%2Ffiles.php
+
+  const linkElement = document.getElementById('forwardurl');
+  if (linkElement) {
+    linkElement.setAttribute('href', forwardurl);
+    console.log("Updated href attribute of the forwardurl link");
+  } else {
+    console.error("Element with ID 'forwardurl' not found.");
+  }
+}
+
+    </script>
 <form method="post" id="toggleForm">
           <fieldset>
 <h5>PORTFOLIO AVAILABILITY </h5>
@@ -348,7 +368,7 @@ elem.textContent = "<?php if ($lastpoint!="") {echo $lastpoint*2;}else echo "ZER
 <label class="custom-control-label" id="statusText" for="customSwitch1"></label>
               </div>
             </form>
-<a href="https://ss0809.github.io/PortfolioBuilder/pages?a=<?php echo $username; ?>" target="_blank" class="btn btn-success me-1" role="button">OPEN</a>
+<a href="" onclick="forwardurl();" target="_blank" id="forwardurl" class="btn btn-success me-1" role="button">OPEN</a>
 <a href="/view/info.php" target="_blank" class="btn btn-success me-1" role="button">EDIT</a><br>
 Copy the following text and share it in your bio {your portfolio}<br>
  <input type="" value="https://ss0809.github.io/PortfolioBuilder/pages?a=<?php echo $username; ?>" id="myInput">
