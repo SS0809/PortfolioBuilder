@@ -130,7 +130,7 @@ background-color: #8CCE5A;
             </div>
         </form>
     </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="element4">Don't have a account  <a href = "/signup.php">Sign up</a></div>
+    <div id="element4">Don't have a account  <a href = "./signup.php">Sign up</a></div>
     <br><br><br><br><br><br>
     <div id="element5">CSS BY <b style="color: blueviolet;">DEVIL</b></div>
     <script>

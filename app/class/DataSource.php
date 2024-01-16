@@ -21,11 +21,11 @@ class DataSource
     const DATABASENAME = 'IIVAjfeDkk';*/
     const HOST = 'localhost';
 
-    const USERNAME = 'root';
+    const USERNAME = 'saurabh';
 
     const PASSWORD = '0111cs211163';
 
-    const DATABASENAME = 'server';
+    const DATABASENAME = 'portfolio';
 
     const PORT = '3306';
 

@@ -27,27 +27,27 @@
         <div class="collapse navbar-collapse">
            <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" id = "home"  aria-current="page" href="../index.php">DASHBOARD</a>
+            <a class="nav-link active" id = "home"  aria-current="page" href="<?php getcwd()?>">DASHBOARD</a>
           </li> 
           <li class="nav-item">
-            <a class="nav-link" id = "movies"  href="/view/movies.php">Movies</a>
+            <a class="nav-link" id = "movies"  href="view/movies.php">Movies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id = "blogs"  href="../blog/index.html">Blogs</a>
+            <a class="nav-link" id = "blogs"  href="./blog/index.html">Blogs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id = "upload"  href="/view/upload2.php">UPLOAD</a>
+            <a class="nav-link" id = "upload"  href="view/upload2.php">UPLOAD</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id = "earnpoints"  href="/view/points.php">EARN POINT$</a>
+            <a class="nav-link" id = "earnpoints"  href="view/points.php">EARN POINT$</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id = "leaderboard"  href="/view/leaderboard.php">LEADERBOARD</a>
+            <a class="nav-link" id="leaderboard" href="view/leaderboard.php">LEADERBOARD</a>
           </li>
           </ul>
          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                     <li class="nav-item">
-            <a class="nav-link" id = "logout" style="font-weight: 900;" href="../logout.php"><mark>LOGOUT</mark></a>
+            <a class="nav-link" id = "logout" style="font-weight: 900;" href="logout.php"><mark>LOGOUT</mark></a>
           </li>
         </ul>
         </div><!-- /.navbar-collapse -->

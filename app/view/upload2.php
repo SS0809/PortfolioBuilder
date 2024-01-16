@@ -19,7 +19,7 @@ if (! empty($_SESSION["userId"])) {
 // If upload button is clicked ...
 if (isset($_GET['upload'])) {
     $filename = $_GET['data'];
-	$db = mysqli_connect("remotemysql.com", "IIVAjfeDkk", "zzrye8TbMy", "IIVAjfeDkk");
+	$db = mysqli_connect("localhost", "saurabh", "0111cs211163", "portfolio");
     $sql = "UPDATE `registered_users` SET `filename` = '$filename' WHERE `user_name` = '$username';";
 	mysqli_query($db, $sql);
 $query = " select * from registered_users where `user_name`  = '$username'";

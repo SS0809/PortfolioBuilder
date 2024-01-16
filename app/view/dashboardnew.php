@@ -107,7 +107,7 @@ else
     <link href="./view/carousel.css" rel="stylesheet">
   </head>
   <body> 
-<?php include_once("a.html") ?>   
+<?php include_once("ahtml.php") ?>   
 
 <script type="text/javascript">
           var temp = "<?php echo $profile_pic; ?>";

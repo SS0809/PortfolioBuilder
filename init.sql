@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS music23;
+CREATE DATABASE IF NOT EXISTS portfolio;
 
-USE music23;
+USE portfolio;
 
 CREATE TABLE IF NOT EXISTS registered_users (
   id int NOT NULL,
